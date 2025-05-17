@@ -1,0 +1,52 @@
+[
+  {
+    "soru": "Siber güvenlik nedir?",
+    "cevap": "Siber güvenlik, bilgisayar sistemlerini, ağları ve verileri yetkisiz erişim ve saldırılardan koruma uygulamalarıdır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Siber güvenlik hakkında bilgi almak istiyorum.",
+    "cevap": "Siber güvenlik çok geniş bir alandır. Ağ güvenliği, zararlı yazılım analizleri, sosyal mühendislik gibi konuları içerir. Belirli bir alandan başlamak ister misiniz?",
+    "etiket": "genel_ilgi"
+  },
+  {
+    "soru": "Firewall nedir?",
+    "cevap": "Firewall, ağ trafiğini kontrol eden ve istenmeyen erişimleri engelleyen güvenlik duvarıdır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Phishing saldırısı nedir?",
+    "cevap": "Phishing, kullanıcıların kişisel bilgilerini çalmak için sahte e-postalar veya web siteleriyle yapılan dolandırıcılıktır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Siber saldırılara karşı nasıl korunabilirim?",
+    "cevap": "Güncel antivirüs kullanmak, güçlü şifreler oluşturmak ve bilinmeyen linklere tıklamamak temel önlemlerdir.",
+    "etiket": "önlem"
+  },
+  {
+    "soru": "Zararlı yazılım nedir?",
+    "cevap": "Zararlı yazılım (malware), sistemlere zarar veren veya yetkisiz erişim sağlayan kötü amaçlı programlardır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Sosyal mühendislik saldırısı nedir?",
+    "cevap": "Sosyal mühendislik, insanları manipüle ederek gizli bilgilerini elde etmeye yönelik saldırılardır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Siber güvenlik kariyerine nasıl başlayabilirim?",
+    "cevap": "Temel ağ ve sistem bilgisi öğrenip, siber güvenlik sertifikaları alarak kariyer yapabilirsiniz.",
+    "etiket": "kariyer"
+  },
+  {
+    "soru": "DDoS saldırısı nedir?",
+    "cevap": "DDoS, bir hedef sistemi çok sayıda istekle aşırı yükleyerek hizmet dışı bırakma saldırısıdır.",
+    "etiket": "tanım"
+  },
+  {
+    "soru": "Siber güvenlik eğitimleri nereden alabilirim?",
+    "cevap": "Çevrimiçi platformlar, üniversiteler ve özel kurs merkezlerinden siber güvenlik eğitimi alabilirsiniz.",
+    "etiket": "eğitim"
+  }
+]
