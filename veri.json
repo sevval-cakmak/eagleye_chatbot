@@ -2,66 +2,71 @@
   {
     "soru": "Siber güvenlik nedir?",
     "cevap": "Siber güvenlik, bilgisayar sistemlerini, ağları ve verileri yetkisiz erişim ve saldırılardan koruma uygulamalarıdır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "siber güvenliğe giriş",
+    "seviye": "başlangıç"
   },
   {
     "soru": "Siber güvenlik hakkında bilgi almak istiyorum.",
     "cevap": "Siber güvenlik çok geniş bir alandır. Ağ güvenliği, zararlı yazılım analizleri, sosyal mühendislik gibi konuları içerir. Belirli bir alandan başlamak ister misiniz?",
-    "etiket": "genel_ilgi"
+    "etiket": "genel_ilgi",
+    "konu": "siber güvenliğe giriş",
+    "seviye": "başlangıç"
   },
   {
     "soru": "Firewall nedir?",
     "cevap": "Firewall, ağ trafiğini kontrol eden ve istenmeyen erişimleri engelleyen güvenlik duvarıdır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
   },
   {
     "soru": "Phishing saldırısı nedir?",
     "cevap": "Phishing, kullanıcıların kişisel bilgilerini çalmak için sahte e-postalar veya web siteleriyle yapılan dolandırıcılıktır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "sosyal mühendislik",
+    "seviye": "orta"
   },
   {
     "soru": "Siber saldırılara karşı nasıl korunabilirim?",
     "cevap": "Güncel antivirüs kullanmak, güçlü şifreler oluşturmak ve bilinmeyen linklere tıklamamak temel önlemlerdir.",
-    "etiket": "önlem"
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
   },
   {
     "soru": "Zararlı yazılım nedir?",
     "cevap": "Zararlı yazılım (malware), sistemlere zarar veren veya yetkisiz erişim sağlayan kötü amaçlı programlardır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "zararlı yazılımlar",
+    "seviye": "başlangıç"
   },
   {
     "soru": "Sosyal mühendislik saldırısı nedir?",
     "cevap": "Sosyal mühendislik, insanları manipüle ederek gizli bilgilerini elde etmeye yönelik saldırılardır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "sosyal mühendislik",
+    "seviye": "orta"
   },
   {
     "soru": "Siber güvenlik kariyerine nasıl başlayabilirim?",
     "cevap": "Temel ağ ve sistem bilgisi öğrenip, siber güvenlik sertifikaları alarak kariyer yapabilirsiniz.",
-    "etiket": "kariyer"
+    "etiket": "kariyer",
+    "konu": "kariyer",
+    "seviye": "başlangıç"
   },
   {
     "soru": "DDoS saldırısı nedir?",
     "cevap": "DDoS, bir hedef sistemi çok sayıda istekle aşırı yükleyerek hizmet dışı bırakma saldırısıdır.",
-    "etiket": "tanım"
+    "etiket": "tanım",
+    "konu": "saldırı türleri",
+    "seviye": "orta"
   },
   {
     "soru": "Siber güvenlik eğitimleri nereden alabilirim?",
     "cevap": "Çevrimiçi platformlar, üniversiteler ve özel kurs merkezlerinden siber güvenlik eğitimi alabilirsiniz.",
-    "etiket": "eğitim"
-  },
-
-    {
-      "etiket": "selamlama",
-      "sorular": ["merhaba", "selam", "naber", "nasılsın", "nbr","napıon", "n'aber", "nabıyon"],
-      "cevaplar": ["Merhaba! Yardımcı olabileceğim bir şey var mı?"],
-      "seviye": "herkes",
-      "konu": "sohbet"
-    },
-    {
-      "etiket": "tesekkur",
-      "sorular": ["teşekkür ederim", "sağ ol"," eyvallah", "çok teşekkürler", "thx", "thanks", "ty"],
-      "cevaplar": ["Rica ederim 😘", "önemli değil ❤️"],
-      "seviye": "herkes",
-      "konu": "sohbet"
-    }
+    "etiket": "eğitim",
+    "konu": "kariyer",
+    "seviye": "başlangıç"
+  }
 ]
