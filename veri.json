@@ -48,5 +48,20 @@
     "soru": "Siber güvenlik eğitimleri nereden alabilirim?",
     "cevap": "Çevrimiçi platformlar, üniversiteler ve özel kurs merkezlerinden siber güvenlik eğitimi alabilirsiniz.",
     "etiket": "eğitim"
-  }
+  },
+
+    {
+      "etiket": "selamlama",
+      "sorular": ["merhaba", "selam", "naber", "nasılsın", "nbr","napıon", "n'aber", "nabıyon"],
+      "cevaplar": ["Merhaba! Yardımcı olabileceğim bir şey var mı?"],
+      "seviye": "herkes",
+      "konu": "sohbet"
+    },
+    {
+      "etiket": "tesekkur",
+      "sorular": ["teşekkür ederim", "sağ ol"," eyvallah", "çok teşekkürler", "thx", "thanks", "ty"],
+      "cevaplar": ["Rica ederim 😘", "önemli değil ❤️"],
+      "seviye": "herkes",
+      "konu": "sohbet"
+    }
 ]
