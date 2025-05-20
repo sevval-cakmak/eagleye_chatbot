@@ -19,12 +19,75 @@ small_talk = {
     "hoşça kal": "Hoşça kal! Güvende kalın!"
 }
 
+# Global değişken: Son quiz soruları ve cevapları burada tutulacak
+last_quiz_answers = []
+
+def filter_by_topic_or_level(user_input):
+    if user_input.startswith("/konu"):
+        topic = user_input.replace("/konu", "").strip().lower()
+        filtered = [f"- {item['soru']} → {item['cevap']}" for item in data_list if item['konu'].lower() == topic]
+        return "\n".join(filtered) if filtered else "Bu konuyla ilgili bir içerik bulunamadı."
+
+    elif user_input.startswith("/seviye"):
+        level = user_input.replace("/seviye", "").strip().lower()
+        filtered = [f"- {item['soru']} → {item['cevap']}" for item in data_list if item['seviye'].lower() == level]
+        return "\n".join(filtered) if filtered else "Bu seviyeye uygun bir içerik bulunamadı."
+
+    return None
+
+def parse_quiz_command(command):
+    topic = None
+    level = None
+
+    if "konu=" in command:
+        topic = command.split("konu=")[1].split()[0].strip().lower()
+    if "seviye=" in command:
+        level = command.split("seviye=")[1].split()[0].strip().lower()
+
+    return topic, level
+
+def generate_quiz(topic=None, level=None, num_questions=3):
+    filtered = data_list
+
+    if topic:
+        filtered = [item for item in filtered if item['konu'].lower() == topic]
+    if level:
+        filtered = [item for item in filtered if item['seviye'].lower() == level]
+
+    if not filtered:
+        return "Bu kriterlere uygun soru bulunamadı."
+
+    selected = filtered[:num_questions]
+    quiz_text = "Mini Quiz:\n"
+    for i, item in enumerate(selected, 1):
+        quiz_text += f"{i}. {item['soru']}\n"
+
+    quiz_text += "\nCevapları görmek için '/cevaplar' yazabilirsin."
+    global last_quiz_answers
+    last_quiz_answers = selected
+    return quiz_text
+
 def chatbot_response(user_input):
     user_input = user_input.lower().strip()
 
     # Small talk kontrolü
     if user_input in small_talk:
         return small_talk[user_input]
+
+    # Quiz komutu kontrolü
+    if user_input.startswith("/quiz"):
+        topic, level = parse_quiz_command(user_input)
+        return generate_quiz(topic, level)
+
+    if user_input == "/cevaplar":
+        if not last_quiz_answers:
+            return "Henüz bir quiz yapılmadı."
+        return "\n".join([f"{i+1}. {item['cevap']}" for i, item in enumerate(last_quiz_answers)])
+
+    # Komut kontrolü
+    komut_cevap = filter_by_topic_or_level(user_input)
+    if komut_cevap:
+        return komut_cevap
 
     # Anlamsal arama
     input_embedding = model.encode(user_input, convert_to_tensor=True)
