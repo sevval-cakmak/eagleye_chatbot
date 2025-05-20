@@ -7,64 +7,141 @@
     "seviye": "başlangıç"
   },
   {
-    "soru": "Siber güvenlik hakkında bilgi almak istiyorum.",
-    "cevap": "Siber güvenlik çok geniş bir alandır. Ağ güvenliği, zararlı yazılım analizleri, sosyal mühendislik gibi konuları içerir. Belirli bir alandan başlamak ister misiniz?",
-    "etiket": "genel_ilgi",
-    "konu": "siber güvenliğe giriş",
-    "seviye": "başlangıç"
-  },
-  {
-    "soru": "Firewall nedir?",
-    "cevap": "Firewall, ağ trafiğini kontrol eden ve istenmeyen erişimleri engelleyen güvenlik duvarıdır.",
+    "soru": "Firewall nasıl çalışır?",
+    "cevap": "Firewall, gelen ve giden ağ trafiğini kontrol ederek istenmeyen erişimleri engeller ve güvenliği sağlar.",
     "etiket": "tanım",
     "konu": "ağ güvenliği",
     "seviye": "başlangıç"
   },
   {
-    "soru": "Phishing saldırısı nedir?",
-    "cevap": "Phishing, kullanıcıların kişisel bilgilerini çalmak için sahte e-postalar veya web siteleriyle yapılan dolandırıcılıktır.",
-    "etiket": "tanım",
+    "soru": "Phishing saldırılarından nasıl korunabilirim?",
+    "cevap": "Şüpheli e-postalardaki linklere tıklamamak, iki faktörlü kimlik doğrulama kullanmak ve bilinçli olmak phishing saldırılarına karşı koruma sağlar.",
+    "etiket": "önlem",
     "konu": "sosyal mühendislik",
     "seviye": "orta"
   },
   {
-    "soru": "Siber saldırılara karşı nasıl korunabilirim?",
-    "cevap": "Güncel antivirüs kullanmak, güçlü şifreler oluşturmak ve bilinmeyen linklere tıklamamak temel önlemlerdir.",
-    "etiket": "önlem",
-    "konu": "temel önlemler",
-    "seviye": "başlangıç"
-  },
-  {
-    "soru": "Zararlı yazılım nedir?",
-    "cevap": "Zararlı yazılım (malware), sistemlere zarar veren veya yetkisiz erişim sağlayan kötü amaçlı programlardır.",
+    "soru": "Zararlı yazılım çeşitleri nelerdir?",
+    "cevap": "Virüs, solucan (worm), trojan, ransomware, spyware gibi farklı zararlı yazılım türleri vardır.",
     "etiket": "tanım",
     "konu": "zararlı yazılımlar",
-    "seviye": "başlangıç"
-  },
-  {
-    "soru": "Sosyal mühendislik saldırısı nedir?",
-    "cevap": "Sosyal mühendislik, insanları manipüle ederek gizli bilgilerini elde etmeye yönelik saldırılardır.",
-    "etiket": "tanım",
-    "konu": "sosyal mühendislik",
     "seviye": "orta"
   },
   {
-    "soru": "Siber güvenlik kariyerine nasıl başlayabilirim?",
-    "cevap": "Temel ağ ve sistem bilgisi öğrenip, siber güvenlik sertifikaları alarak kariyer yapabilirsiniz.",
-    "etiket": "kariyer",
-    "konu": "kariyer",
+    "soru": "Siber güvenlikte kullanılan temel kavramlar nelerdir?",
+    "cevap": "Kimlik doğrulama, yetkilendirme, şifreleme, güvenlik duvarı, saldırı tespit sistemi gibi kavramlar temel güvenlik bileşenleridir.",
+    "etiket": "tanım",
+    "konu": "siber güvenliğe giriş",
     "seviye": "başlangıç"
   },
   {
-    "soru": "DDoS saldırısı nedir?",
-    "cevap": "DDoS, bir hedef sistemi çok sayıda istekle aşırı yükleyerek hizmet dışı bırakma saldırısıdır.",
+    "soru": "DDoS saldırısı nasıl yapılır ve etkileri nelerdir?",
+    "cevap": "Dağıtık Hizmet Engelleme (DDoS) saldırısı, hedef sunucuyu çok sayıda istekle aşırı yükleyerek hizmet dışı bırakır ve genellikle servis kesintisi yaşanır.",
     "etiket": "tanım",
     "konu": "saldırı türleri",
     "seviye": "orta"
   },
   {
-    "soru": "Siber güvenlik eğitimleri nereden alabilirim?",
-    "cevap": "Çevrimiçi platformlar, üniversiteler ve özel kurs merkezlerinden siber güvenlik eğitimi alabilirsiniz.",
+    "soru": "Sosyal mühendislik saldırısı nedir ve örnekleri nelerdir?",
+    "cevap": "İnsanları manipüle ederek gizli bilgi veya erişim sağlamaya çalışan saldırılardır. Örneğin, telefon dolandırıcılığı, sahte e-posta gönderme.",
+    "etiket": "tanım",
+    "konu": "sosyal mühendislik",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Siber güvenlik kariyerine nasıl başlanır?",
+    "cevap": "Temel bilgisayar ve ağ bilgisi edinip, ardından sertifikalar (CompTIA Security+, CEH vb.) alarak kariyere başlayabilirsiniz.",
+    "etiket": "kariyer",
+    "konu": "kariyer",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Penetrasyon testi nedir?",
+    "cevap": "Sistemlerin güvenlik açıklarını bulmak için yapılan kontrollü saldırı ve test sürecidir.",
+    "etiket": "tanım",
+    "konu": "güvenlik testleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Güçlü şifre nasıl oluşturulur?",
+    "cevap": "Uzun, büyük ve küçük harf, rakam ve sembol içeren şifreler güçlü kabul edilir. Ayrıca şifre yöneticisi kullanmak faydalıdır.",
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siber saldırılardan korunmak için hangi yazılımlar kullanılmalı?",
+    "cevap": "Antivirüs, anti-malware, güvenlik duvarı ve güncel yazılımlar kullanılmalı, düzenli güncelleme yapılmalıdır.",
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Yapay zeka siber güvenlikte nasıl kullanılıyor?",
+    "cevap": "Tehdit tespiti, anomali analizi ve otomatik saldırı yanıtı için yapay zeka yöntemleri kullanılıyor.",
+    "etiket": "bilgi",
+    "konu": "gelişmiş konular",
+    "seviye": "ileri"
+  },
+  {
+    "soru": "Siber güvenlikte en çok yapılan hatalar nelerdir?",
+    "cevap": "Güncellemeleri ihmal etmek, zayıf şifre kullanmak, bilinçsiz e-posta açmak en yaygın hatalardandır.",
+    "etiket": "bilgi",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Veri şifreleme nedir?",
+    "cevap": "Verilerin yetkisiz kişiler tarafından okunmasını engellemek için yapılan matematiksel dönüşümdür.",
+    "etiket": "tanım",
+    "konu": "şifreleme",
+    "seviye": "orta"
+  },
+  {
+    "soru": "İki faktörlü kimlik doğrulama nasıl çalışır?",
+    "cevap": "Kullanıcı adı ve şifrenin yanında ikinci bir doğrulama (SMS kodu, uygulama bildirimi) ile kimlik doğrulaması yapılır.",
+    "etiket": "tanım",
+    "konu": "kimlik doğrulama",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siber güvenlikte kullanılan protokoller nelerdir?",
+    "cevap": "TLS, SSL, HTTPS, SSH, IPsec gibi protokoller güvenli iletişim sağlar.",
+    "etiket": "bilgi",
+    "konu": "ağ güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Güvenlik duvarı (Firewall) türleri nelerdir?",
+    "cevap": "Ağ tabanlı, uygulama tabanlı ve durum takibi yapan firewall türleri vardır.",
+    "etiket": "bilgi",
+    "konu": "ağ güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Siber güvenlikte etik hacker kimdir?",
+    "cevap": "Sistemlerdeki açıkları yasal ve izinli şekilde bulan ve raporlayan kişidir.",
+    "etiket": "tanım",
+    "konu": "kariyer",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Siber saldırılar sonrası ne yapılmalıdır?",
+    "cevap": "İzleme, analiz, zarar tespiti, yedeklerden geri yükleme ve güvenlik açıklarını kapatma adımları uygulanmalıdır.",
+    "etiket": "önlem",
+    "konu": "olay müdahalesi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Siber güvenlikte SOC nedir?",
+    "cevap": "Security Operations Center, sürekli tehdit izleme ve müdahale için kurulan merkezdir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Siber güvenlik eğitimlerine nereden başlanabilir?",
+    "cevap": "Üniversiteler, çevrimiçi kurs platformları (Udemy, Coursera), ve sertifika programları ile başlanabilir.",
     "etiket": "eğitim",
     "konu": "kariyer",
     "seviye": "başlangıç"
