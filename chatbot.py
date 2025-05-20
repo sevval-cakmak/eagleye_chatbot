@@ -112,7 +112,8 @@ def chat():
         matched_question = list(faq_data.keys())[hit['corpus_id']]
         return jsonify({"response": faq_data[matched_question]})
     else:
-        return jsonify({"response": "Üzgünüm, bunu anlayamadım. Başka bir soru sorabilir misiniz?"})
+        return jsonify({"response": "Üzgünüm, bunu anlayamadım. Başka bir soru sorabilir misiniz?"}) #yeni özellik eklenerek çıkarım yapabilir (bunu mu demek istediniz?)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+#Flask başlatma
+if __name__ == "_main_":
+    app.run(host="0.0.0.0", port=5000, debug=True)
