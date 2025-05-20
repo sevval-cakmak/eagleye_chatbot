@@ -22,6 +22,8 @@ Komut satırı arayüzü: Basit ve interaktif sohbet deneyimi.
 
 Python 3.7 ve üzeri
 
+Flask
+
 sentence-transformers kütüphanesi
 
 ## İleride Geliştirme Önerileri
