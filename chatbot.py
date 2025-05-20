@@ -76,7 +76,7 @@ def generate_quiz(topic=None, level=None, num_questions=3):
 # Ana sayfa route'u (GET isteği için)
 @app.route("/", methods=["GET"])
 def home():
-    return "SiberRehber Chatbot API çalışıyor."
+    return "Eagle Eye çalışıyor."
 
 # Chat endpoint (POST isteği için)
 @app.route("/chat", methods=["POST"])
@@ -112,7 +112,7 @@ def chat():
         matched_question = list(faq_data.keys())[hit['corpus_id']]
         return jsonify({"response": faq_data[matched_question]})
     else:
-        return jsonify({"response": "Üzgünüm, bunu anlayamadım. Başka bir soru sorabilir misiniz?"}) #yeni özellik eklenerek çıkarım yapabilir (bunu mu demek istediniz?)
+        return jsonify({"response": "Üzgünüm, bunu anlayamadım. Başka bir soru sorabilir misiniz?"}) #özellik eklenerek çıkarım yapabilir (bunu mu demek istediniz?)
 
 #Flask başlatma
 if __name__ == "_main_":
