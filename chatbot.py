@@ -76,7 +76,7 @@ def generate_quiz(topic=None, level=None, num_questions=3):
 # Ana sayfa route'u (GET isteği için)
 @app.route("/", methods=["GET"])
 def home():
-    return "Eagle Eye çalışıyor."
+    return "Eagle Eye çalışıyor..."
 
 # Chat endpoint (POST isteği için)
 @app.route("/chat", methods=["POST"])
