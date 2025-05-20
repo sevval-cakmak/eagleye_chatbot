@@ -145,5 +145,286 @@
     "etiket": "eğitim",
     "konu": "kariyer",
     "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir web sitesine girdiğimde 'HTTPS' görüyorsam bu ne anlama gelir?",
+    "cevap": "HTTPS, verilerin şifrelenerek gönderildiğini ve sitenin kimliğinin doğrulandığını gösterir. Güvenli bağlantıdır.",
+    "etiket": "bilgi",
+    "konu": "şifreleme",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir arkadaşım bana 'kendi IP adresine dikkat et' dedi. Neden?",
+    "cevap": "IP adresi, internetteki kimliğiniz gibidir. Paylaşırsanız kötü niyetli kişiler sizi hedef alabilir.",
+    "etiket": "önlem",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir Wi-Fi ağına bağlanmadan önce nelere dikkat etmeliyim?",
+    "cevap": "Ağın adının tanıdık olup olmadığını kontrol etmelisin. Kamuya açık Wi-Fi’de şifreli sitelere girmek risklidir.",
+    "etiket": "önlem",
+    "konu": "kablosuz ağ güvenliği",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir dosya uzantısı '.exe' ise dikkatli olmam gerekir mi?",
+    "cevap": "Evet, çünkü .exe dosyaları çalıştırılabilir dosyalardır ve zararlı yazılım içerebilir.",
+    "etiket": "önlem",
+    "konu": "zararlı yazılımlar",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir sistemde 'root erişimi' ne anlama gelir?",
+    "cevap": "Root erişimi, sistemde en yüksek yetkilere sahip olmak demektir. Yanlış kullanılırsa sistem çökebilir.",
+    "etiket": "tanım",
+    "konu": "sistem yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Sahte bir Instagram mesajı aldım. Ne yapmalıyım?",
+    "cevap": "Bağlantıya tıklamadan önce mesajın gönderici hesabını kontrol et, resmi hesap değilse mesajı sil ve bildir.",
+    "etiket": "önlem",
+    "konu": "sosyal mühendislik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Ransomware bulaşırsa verilerimi nasıl kurtarabilirim?",
+    "cevap": "Yedekleme yaptıysan oradan geri yükleyebilirsin. Fidye ödemek önerilmez. Uzmanlardan yardım alman gerekir.",
+    "etiket": "önlem",
+    "konu": "zararlı yazılımlar",
+    "seviye": "orta"
+  },
+  {
+    "soru": "VPN nedir ve neden kullanılır?",
+    "cevap": "VPN, internet bağlantını şifreleyerek gizliliğini korur. Kamusal ağlarda veri güvenliği sağlar.",
+    "etiket": "tanım",
+    "konu": "gizlilik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir kişi ağ trafiğimi izleyebilir mi?",
+    "cevap": "Evet, özellikle açık Wi-Fi ağlarında. Bu yüzden HTTPS siteleri tercih etmeli ve VPN kullanmalısın.",
+    "etiket": "önlem",
+    "konu": "ağ güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Nmap gibi araçlar yasal mı?",
+    "cevap": "Evet, doğru ve izinli şekilde kullanıldığında yasal araçlardır. İzin almadan tarama yapmak suç sayılabilir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik araçları",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Bilgisayarıma keylogger bulaşırsa ne olur?",
+    "cevap": "Keylogger, yazdığın tuşları kaydederek şifre ve kişisel bilgilerini çalabilir. Antivirüs yazılımı kullanmak koruyucu olur.",
+    "etiket": "zararlı yazılım",
+    "konu": "zararlı yazılımlar",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Bir e-posta bana çok acil ve önemli gibi geldiyse ne yapmalıyım?",
+    "cevap": "Panik yapmadan göndericiyi kontrol et, bağlantılara tıklama, imla hatalarına dikkat et. Sosyal mühendislik olabilir.",
+    "etiket": "önlem",
+    "konu": "sosyal mühendislik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Dark Web nedir?",
+    "cevap": "Dark Web, özel tarayıcılarla erişilebilen, genellikle gizlilik odaklı ama yasa dışı aktivitelerin de olduğu internetin gizli kısmıdır.",
+    "etiket": "tanım",
+    "konu": "internet güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Bilgisayarıma zararlı yazılım bulaştığını nasıl anlarım?",
+    "cevap": "Yavaşlama, ani açılan pencereler, tanımadığın uygulamalar, internet trafiğinde artış gibi belirtiler olabilir.",
+    "etiket": "önlem",
+    "konu": "zararlı yazılımlar",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir sistemde açık taraması yapmak etik midir?",
+    "cevap": "İzin almadan yapılan taramalar etik değildir ve yasal olmayabilir. Etik hacker’lar bunu sadece izinle yapar.",
+    "etiket": "etik",
+    "konu": "güvenlik testleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Bir USB belleği bilgisayara takmadan önce ne yapılmalı?",
+    "cevap": "Kaynağından emin olunmalı, antivirüsle taranmalı. Bilinmeyen USB’ler sisteminize zararlı yazılım bulaştırabilir.",
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "İnternette beni izleyen sistemler var mı?",
+    "cevap": "Evet. Web siteleri çerezler, IP adresi, tarayıcı bilgileri gibi verilerle seni izleyebilir. VPN ve tarayıcı eklentileriyle korunabilirsin.",
+    "etiket": "bilgi",
+    "konu": "gizlilik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Zararlı bir eklenti tarayıcıya bulaşırsa ne olur?",
+    "cevap": "Reklam gösterir, bilgilerini çalabilir, seni sahte sitelere yönlendirebilir. Tarayıcı ayarlarını sıfırlamak gerekebilir.",
+    "etiket": "zararlı yazılım",
+    "konu": "internet güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Birisi bana Instagram’dan hediye kazandığımı söyledi. Güvenmeli miyim?",
+    "cevap": "Büyük ihtimalle dolandırıcılıktır. Resmi hesap olmadığından emin ol ve bilgilerini paylaşma.",
+    "etiket": "önlem",
+    "konu": "sosyal mühendislik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Antivirüs programı ne işe yarar?",
+    "cevap": "Bilgisayarını virüs, trojan, ransomware gibi tehditlere karşı tarar, algılar ve temizler.",
+    "etiket": "tanım",
+    "konu": "zararlı yazılımlar",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir Wi-Fi ağına bağlanmadan önce neye dikkat etmeliyim?",
+    "cevap": "Ağın ismi (SSID) güvenilir mi, açık mı şifreli mi, kamusal ağ mı özel mi kontrol etmelisin. Açık Wi-Fi'larda VPN önerilir.",
+    "etiket": "önlem",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "VPN ne işe yarar?",
+    "cevap": "VPN, internet trafiğini şifreleyerek verilerini gizler ve konumunu maskeler. Özellikle halka açık Wi-Fi'da güvenlik sağlar.",
+    "etiket": "tanım",
+    "konu": "gizlilik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Yapay zekalı bir antivirüsün farkı nedir?",
+    "cevap": "Klasik antivirüsler imza tabanlıdır; yapay zekalı olanlar davranış analizi ile bilinmeyen tehditleri de tanıyabilir.",
+    "etiket": "bilgi",
+    "konu": "yapay zeka ve güvenlik",
+    "seviye": "ileri"
+  },
+  {
+    "soru": "Ransomware nedir?",
+    "cevap": "Ransomware, dosyalarını şifreleyen ve çözmek için fidye isteyen zararlı yazılımdır. Dosya yedeklemesi önemlidir.",
+    "etiket": "tanım",
+    "konu": "zararlı yazılımlar",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Bir siteye girdiğimde HTTPS yoksa ne olur?",
+    "cevap": "Verilerin şifrelenmeden gönderilir, bu da üçüncü kişilerce okunabileceği anlamına gelir. Güvenli değil.",
+    "etiket": "önlem",
+    "konu": "şifreleme",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siber zorbalık nedir ve nasıl korunabilirim?",
+    "cevap": "İnternette tehdit, hakaret, taciz gibi davranışlara siber zorbalık denir. Ekran görüntüsü al, engelle ve şikayet et.",
+    "etiket": "önlem",
+    "konu": "etik ve güvenlik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Bir uygulama çok fazla izin istiyorsa ne yapmalıyım?",
+    "cevap": "Uygulamanın ihtiyaç dışı izinler istemesi güvenlik riski olabilir. Gerekli izinleri ver ve ayarları gözden geçir.",
+    "etiket": "önlem",
+    "konu": "mobil güvenlik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Şirketler neden log (kayıt) tutar?",
+    "cevap": "Olayları takip etmek, saldırı sonrası inceleme yapmak, kullanıcı aktivitelerini izlemek ve yasal yükümlülükler için log tutulur.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "QR kod ile zararlı bağlantı gönderilebilir mi?",
+    "cevap": "Evet, QR kod ile kötü niyetli sitelere yönlendirme yapılabilir. Tararken dikkatli olmalı, kaynağı sorgulamalısın.",
+    "etiket": "önlem",
+    "konu": "sosyal mühendislik",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Deepfake videolar güvenlik için tehdit midir?",
+    "cevap": "Evet, kişileri taklit ederek kimlik hırsızlığı, dolandırıcılık gibi amaçlarla kullanılabilir. Gerçeklik kontrolü önemlidir.",
+    "etiket": "bilgi",
+    "konu": "gelişmiş konular",
+    "seviye": "ileri"
+  },
+  {
+    "soru": "Hash fonksiyonu nedir ve nerelerde kullanılır?",
+    "cevap": "Hash fonksiyonu, herhangi bir veriyi sabit uzunlukta ve genellikle benzersiz bir koda dönüştürür. Parola saklama ve veri bütünlüğü kontrolünde kullanılır.",
+    "etiket": "tanım",
+    "konu": "kriptografi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Cross-Site Scripting (XSS) saldırısı nasıl yapılır?",
+    "cevap": "Bir web sitesine kötü amaçlı JavaScript kodu enjekte edilerek kullanıcıların tarayıcılarında zararlı kod çalıştırılmasıdır.",
+    "etiket": "tanım",
+    "konu": "web güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SQL Injection nedir?",
+    "cevap": "Kötü niyetli kişilerin, uygulamaların veritabanına zararlı SQL sorguları göndererek veri hırsızlığı veya değiştirme yapmasıdır.",
+    "etiket": "tanım",
+    "konu": "web güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Port taraması (port scanning) ne işe yarar?",
+    "cevap": "Bir sistemin açık portlarını tespit etmek için kullanılır. Bu sayede saldırganlar hangi servislerin çalıştığını öğrenir.",
+    "etiket": "bilgi",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Güvenli parola yönetimi nasıl olmalı?",
+    "cevap": "Parolalar karmaşık, uzun olmalı, farklı platformlarda aynı parola kullanılmamalı ve mümkünse parola yöneticisi kullanılmalıdır.",
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siber güvenlikte 'Zero Trust' yaklaşımı nedir?",
+    "cevap": "Her kullanıcı ve cihaz varsayılan olarak güvensiz kabul edilir ve erişimler sürekli doğrulanır. Güvenlik duvarı ötesi kontrol sağlar.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "ileri"
+  },
+  {
+    "soru": "Man-in-the-Middle (MitM) saldırısı nasıl önlenir?",
+    "cevap": "Şifreleme protokolleri (TLS/SSL), VPN kullanımı, sertifika doğrulama ve güvenli ağlar tercih ederek MitM saldırıları engellenebilir.",
+    "etiket": "önlem",
+    "konu": "ağ güvenliği",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Penetrasyon testi neden önemlidir?",
+    "cevap": "Bir sistemin güvenlik açıklarını gerçekçi saldırı simülasyonları ile bulup, bu açıkları kapatmak için yapılır.",
+    "etiket": "bilgi",
+    "konu": "güvenlik testleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Sosyal mühendislik saldırılarına karşı nasıl dirençli oluruz?",
+    "cevap": "Eğitim, bilinçlendirme, e-posta filtreleme, şüpheli iletişimlere karşı dikkatli olmak ve kişisel bilgileri korumak gerekir.",
+    "etiket": "önlem",
+    "konu": "sosyal mühendislik",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Güvenlik duvarı (Firewall) nasıl çalışır?",
+    "cevap": "Ağ trafiğini belirlenen kurallara göre izler, izin verir veya engeller. Ağ güvenliğinin ilk hattıdır.",
+    "etiket": "tanım",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
   }
+
 ]
