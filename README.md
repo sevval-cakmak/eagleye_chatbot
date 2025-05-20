@@ -21,6 +21,7 @@ Komut satırı arayüzü: Basit ve interaktif sohbet deneyimi.
 ## Gereksinimler
 
 Python 3.7 ve üzeri
+
 sentence-transformers kütüphanesi
 
 ## İleride Geliştirme Önerileri
