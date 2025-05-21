@@ -425,6 +425,194 @@
     "etiket": "tanım",
     "konu": "ağ güvenliği",
     "seviye": "başlangıç"
-  }
+  },
+  {
+    "soru": "Beyaz şapkalı hacker kimdir?",
+    "cevap": "Beyaz şapkalı hacker, sistemlerdeki güvenlik açıklarını yasal ve izinli şekilde test eden etik hacker’dır.",
+    "etiket": "tanım",
+    "konu": "etik hackerlar",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siyah şapkalı hacker ne yapar?",
+    "cevap": "Siyah şapkalı hacker, sistemlere yasa dışı yollarla girerek zarar verir, veri çalar ya da sistemleri ele geçirir.",
+    "etiket": "tanım",
+    "konu": "siber tehditler",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Gri şapkalı hacker nedir?",
+    "cevap": "Gri şapkalı hacker, sistemlere izinsiz girse de zarar vermez, bazen açıkları bildirir ama yöntemleri etik dışı olabilir.",
+    "etiket": "tanım",
+    "konu": "etik hackerlar",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Red Team ne yapar?",
+    "cevap": "Red Team, kurumsal sistemlere saldırı simülasyonu yaparak güvenlik açıklarını test eden ofansif güvenlik ekibidir.",
+    "etiket": "tanım",
+    "konu": "güvenlik ekipleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Blue Team’in görevi nedir?",
+    "cevap": "Blue Team, sistemleri savunur, tehditleri izler ve siber saldırılara karşı önleyici güvenlik önlemleri alır.",
+    "etiket": "tanım",
+    "konu": "güvenlik ekipleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Purple Team ne işe yarar?",
+    "cevap": "Purple Team, Red Team ile Blue Team arasında köprü kurar, saldırı ve savunma ekipleri arasında bilgi paylaşımını sağlar.",
+    "etiket": "tanım",
+    "konu": "güvenlik ekipleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Red Team ve Blue Team farkı nedir?",
+    "cevap": "Red Team saldırı yapar, Blue Team savunma yapar. Biri açıkları bulur, diğeri bu açıkları kapatmakla ilgilenir.",
+    "etiket": "karşılaştırma",
+    "konu": "güvenlik ekipleri",
+    "seviye": "orta"
+  },
+  {
+    "soru": "Purple Team neden önemlidir?",
+    "cevap": "Purple Team, Red ve Blue ekiplerinin daha verimli çalışmasını sağlar. Bilgi alışverişiyle kurumsal güvenliği artırır.",
+    "etiket": "bilgi",
+    "konu": "güvenlik ekipleri",
+    "seviye": "orta"
+  },{
+  "soru": "401 hata kodu neyi ifade eder?",
+  "bilgi": "401 hata kodu, yetkilendirme gerektiren ancak geçerli kimlik doğrulaması sağlanmadığı için erişimin reddedildiği durumu belirtir.",
+  "etiket": ["HTTP", "hata kodu", "yetkilendirme"],
+  "konu": "HTTP Hata Kodları",
+  "seviye": "Temel"
+},{
+  "id": "http_status_403",
+  "title": "403 Forbidden",
+  "description": "Kullanıcının kaynak üzerinde gerekli yetkileri olmadığı için erişim reddedilir.",
+  "category": "HTTP Hata Kodu",
+  "importance": "orta",
+  "examples": ["Yetkisiz kullanıcı admin paneline ulaşmak ister."]
+},{
+  "soru": "500 Internal Server Error hatası ne zaman alınır?",
+  "bilgi": "500 Internal Server Error hatası, sunucuda beklenmeyen bir durum oluştuğunda ve isteğe düzgün yanıt verilemediğinde meydana gelir.",
+  "etiket": ["HTTP", "hata kodu", "sunucu hatası"],
+  "konu": "HTTP Hata Kodları",
+  "seviye": "Temel"
+}
+,{
+  "soru": "RSA algoritması ne işe yarar?",
+  "bilgi": "RSA, açık anahtarlı bir şifreleme algoritmasıdır ve verilerin güvenli bir şekilde şifrelenmesini, dijital imza oluşturmayı sağlar.",
+  "etiket": ["RSA", "açık anahtar", "kriptografi"],
+  "konu": "Kriptografi",
+  "seviye": "Orta"
+}
+,{
+  "id": "hashing",
+  "title": "Hashing",
+  "description": "Verinin sabit uzunlukta eşsiz bir temsilini oluşturur. Geri döndürülemez ve genellikle parola saklamakta kullanılır.",
+  "category": "Kriptografi",
+  "importance": "yüksek",
+  "examples": ["SHA-256 ile parola hashleme."]
+},{
+  "id": "zero_day",
+  "title": "Zero-Day Saldırısı",
+  "description": "Henüz bilinmeyen bir güvenlik açığının kötü niyetli kişilerce kullanılması.",
+  "category": "Siber Tehdit",
+  "importance": "kritik",
+  "examples": ["Yayınlanmamış bir tarayıcı açığını kullanmak."]
+},{
+  "soru": "Hash fonksiyonu ne amaçla kullanılır?",
+  "bilgi": "Hash fonksiyonları, verileri sabit uzunlukta özetlere dönüştürerek parola saklama gibi güvenlik uygulamalarında kullanılır.",
+  "etiket": ["kriptografi", "hash", "güvenlik"],
+  "konu": "Kriptografi",
+  "seviye": "Temel"
+},{
+  "soru": "Phishing saldırısı nasıl gerçekleşir?",
+  "bilgi": "Phishing, kullanıcıları kandırarak kişisel bilgi veya giriş bilgilerini ele geçirmeyi amaçlayan sahte e-postalar ve web siteleri üzerinden yapılan saldırıdır.",
+  "etiket": ["phishing", "sosyal mühendislik", "siber saldırı"],
+  "konu": "Sosyal Mühendislik",
+  "seviye": "Temel"
+},{
+  "soru": "DDoS saldırılarının amacı nedir?",
+  "bilgi": "DDoS saldırıları, hedef sisteme çok sayıda istek göndererek hizmetin kesintiye uğramasını ve kullanıcıların erişememesini amaçlar.",
+  "etiket": ["DDoS", "ağ saldırısı", "erişim engelleme"],
+  "konu": "Ağ Güvenliği",
+  "seviye": "Orta"
+},
+  {
+    "soru": "SIEM nedir ve ne işe yarar?",
+    "cevap": "SIEM, güvenlik bilgilerini ve olay yönetimini sağlayan bir sistemdir. Ağ ve sistemlerden gelen logları toplayarak analiz eder, tehditleri tespit eder ve güvenlik olaylarına hızlı müdahale edilmesini sağlar.",
+    "etiket": "tanım",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SIEM sistemlerinde hangi veriler toplanır?",
+    "cevap": "SIEM sistemleri ağ trafiği logları, kullanıcı aktiviteleri, sistem logları, firewall ve IDS/IPS kayıtları gibi güvenlikle ilgili tüm verileri toplar.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SIEM sistemlerinin avantajları nelerdir?",
+    "cevap": "Güvenlik tehditlerini erken tespit, merkezi log yönetimi, olay analiz ve raporlama kolaylığı sağlar. Kurumların güvenlik duruşunu güçlendirir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SIEM ile SOC arasındaki fark nedir?",
+    "cevap": "SIEM, verileri toplayıp analiz eden yazılımsal bir araçtır. SOC (Security Operations Center) ise bu veriler üzerinden sürekli izleme ve müdahale yapan güvenlik ekibidir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SIEM nasıl kullanılır?",
+    "cevap": "Kurumun ağ ve sistemlerinden gelen loglar SIEM'e entegre edilir. SIEM, bu verileri gerçek zamanlı analiz eder ve şüpheli durumları güvenlik ekiplerine bildirir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SOAR nedir ve ne işe yarar?",
+    "cevap": "SOAR, güvenlik operasyonlarını otomatikleştiren, orkestre eden ve hızlandıran bir teknolojidir. Güvenlik olaylarına hızlı müdahale için çeşitli güvenlik araçlarını entegre eder ve otomatik yanıt süreçleri sağlar.",
+    "etiket": "tanım",
+    "konu": "güvenlik otomasyonu",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SOAR ve SIEM arasındaki temel fark nedir?",
+    "cevap": "SIEM, güvenlik verilerini toplayıp analiz ederken, SOAR bu verilerden elde edilen sonuçları kullanarak otomatik müdahale ve süreç yönetimi yapar.",
+    "etiket": "bilgi",
+    "konu": "güvenlik otomasyonu",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SOAR sistemlerinin avantajları nelerdir?",
+    "cevap": "Otomatikleştirilmiş güvenlik yanıtları sayesinde müdahale süresi kısalır, güvenlik ekiplerinin iş yükü azalır ve hata oranı düşer.",
+    "etiket": "bilgi",
+    "konu": "güvenlik otomasyonu",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SOAR platformları nasıl çalışır?",
+    "cevap": "SOAR platformları, farklı güvenlik araçlarından ve kaynaklardan veri toplar, bu verileri analiz eder ve önceden belirlenmiş senaryolara göre otomatik aksiyonlar alır.",
+    "etiket": "bilgi",
+    "konu": "güvenlik otomasyonu",
+    "seviye": "orta"
+  },
+  {
+    "soru": "SOAR uygulamalarında hangi süreçler otomatikleştirilebilir?",
+    "cevap": "Olay tespiti, tehdit istihbaratı entegrasyonu, uyarıların önceliklendirilmesi, olay çözümleme ve raporlama süreçleri otomatikleştirilebilir.",
+    "etiket": "bilgi",
+    "konu": "güvenlik otomasyonu",
+    "seviye": "orta"
+  },
+
+
+
 
 ]
