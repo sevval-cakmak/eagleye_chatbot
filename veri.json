@@ -611,6 +611,177 @@
     "konu": "güvenlik otomasyonu",
     "seviye": "orta"
   },
+  {
+    "etiket": "Cyber Kill Chain",
+    "konu": "Siber Saldırı Aşamaları",
+    "soru": "Cyber Kill Chain modeli nedir ve kaç aşamadan oluşur?",
+    "cevap": "Cyber Kill Chain, siber saldırıların yapılandırılmış şekilde analiz edilmesini sağlayan bir modeldir. Toplam 7 aşamadan oluşur: 1) Reconnaissance (Keşif), 2) Weaponization (Silahlandırma), 3) Delivery (Teslim), 4) Exploitation (Sömürme), 5) Installation (Kurulum), 6) Command and Control (C2), 7) Actions on Objectives (Hedefe Yönelik Eylemler).",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Cyber Kill Chain",
+    "konu": "İlk Aşama",
+    "soru": "Cyber Kill Chain modelinde 'Reconnaissance' aşamasında saldırgan ne yapar?",
+    "cevap": "Saldırgan, hedef hakkında bilgi toplar. Bu, IP adresleri, e-posta adresleri, açık portlar ve sosyal mühendislik verilerini içerebilir.",
+    "seviye": "Başlangıç"
+  },
+  {
+    "etiket": "MITRE ATT&CK",
+    "konu": "Giriş",
+    "soru": "MITRE ATT&CK çerçevesi nedir ve amacı nedir?",
+    "cevap": "MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge), gerçek dünya saldırılarını analiz eden ve belgelerle açıklayan bir bilgi tabanıdır. Kurumların tehdit algılama, analiz ve önleme süreçlerini güçlendirmeyi amaçlar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "MITRE ATT&CK",
+    "konu": "Taktikler ve Teknikler",
+    "soru": "MITRE ATT&CK çerçevesinde 'taktik' ve 'teknik' terimleri neyi ifade eder?",
+    "cevap": "'Taktik', saldırganın neyi başarmaya çalıştığını (örneğin: Persistence, Privilege Escalation) belirtir. 'Teknik' ise bu hedefe ulaşmak için kullandığı yöntemi ifade eder (örneğin: Valid Accounts, DLL Injection).",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "MITRE ATT&CK",
+    "konu": "Kullanım Alanı",
+    "soru": "MITRE ATT&CK çerçevesi bir kurumun güvenliğini nasıl artırabilir?",
+    "cevap": "MITRE ATT&CK, kurumların saldırı yüzeylerini analiz etmelerini, zayıf noktaları belirlemelerini ve saldırılara karşı daha etkili savunmalar geliştirmelerini sağlar. Aynı zamanda kırmızı takım testleri ve tehdit avcılığı için de kullanılır.",
+    "seviye": "Orta"
+  },,
+  {
+    "soru": "Port taraması (port scanning) ne işe yarar?",
+    "cevap": "Bir sistemin açık portlarını tespit etmek için kullanılır. Bu sayede saldırganlar hangi servislerin çalıştığını öğrenir.",
+    "etiket": "bilgi",
+    "konu": "ağ güvenliği",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Güvenli parola yönetimi nasıl olmalı?",
+    "cevap": "Parolalar karmaşık, uzun olmalı, farklı platformlarda aynı parola kullanılmamalı ve mümkünse parola yöneticisi kullanılmalıdır.",
+    "etiket": "önlem",
+    "konu": "temel önlemler",
+    "seviye": "başlangıç"
+  },
+  {
+    "soru": "Siber güvenlikte 'Zero Trust' yaklaşımı nedir?",
+    "cevap": "Her kullanıcı ve cihaz varsayılan olarak güvensiz kabul edilir ve erişimler sürekli doğrulanır. Güvenlik duvarı ötesi kontrol sağlar.",
+    "etiket": "bilgi",
+    "konu": "güvenlik yönetimi",
+    "seviye": "ileri"
+  },
+  {
+    "soru": "Man-in-the-Middle (MitM) saldırısı nasıl önlenir?",
+    "cevap": "Şifreleme protokolleri (TLS/SSL), VPN kullanımı, sertifika doğrulama ve güvenli ağlar tercih ederek MitM saldırıları engellenebilir.",
+    "etiket": "önlem",
+    "konu": "ağ güvenliği",
+    "seviye": "orta"
+  },{
+  "soru": "Advanced Persistent Threat (APT) nedir?",
+  "cevap": "APT, uzun süreli, hedef odaklı ve karmaşık siber saldırılar anlamına gelir. Saldırganlar, belirli bir kurumu veya hedefi sızdırmak için gelişmiş teknikler kullanarak kalıcı erişim sağlar.",
+  "etiket": ["APT", "ileri seviye", "siber saldırı"],
+  "konu": "Siber Tehditler",
+  "seviye": "ileri"
+},{
+  "soru": "Threat Hunting nedir ve nasıl uygulanır?",
+  "cevap": "Threat Hunting, kurum içinde aktif olarak var olan ancak tespit edilmemiş tehditleri proaktif olarak arama sürecidir. Tehdit göstergeleri, anomaliler ve log analizleri ile yürütülür.",
+  "etiket": ["Threat Hunting", "siber savunma", "ileri seviye"],
+  "konu": "Güvenlik Operasyonları",
+  "seviye": "ileri"
+},{
+  "soru": "Deception Technology nedir ve siber güvenlikte nasıl kullanılır?",
+  "cevap": "Aldatma teknolojileri, saldırganları yanıltmak ve gerçek sistemleri korumak için sahte kaynaklar (honeypot, honeynet) oluşturur. Böylece saldırılar erken aşamada tespit edilir.",
+  "etiket": ["Deception", "honeypot", "ileri seviye"],
+  "konu": "Ağ Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "SSDLC (Güvenli Yazılım Geliştirme Yaşam Döngüsü) nedir?",
+  "cevap": "Yazılım geliştirme süreçlerine güvenlik kontrollerinin entegre edildiği metodolojidir. Tasarım, kodlama, test ve bakım aşamalarında güvenlik açıklarının önlenmesi amaçlanır.",
+  "etiket": ["SSDLC", "güvenli yazılım", "güvenlik süreçleri"],
+  "konu": "Uygulama Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "Konteyner güvenliği neden önemlidir ve nasıl sağlanır?",
+  "cevap": "Konteynerler mikroservis mimarilerinde yaygın kullanılır, ancak izolasyon eksikliği ve yanlış yapılandırmalar güvenlik riskleri oluşturur. İyi erişim kontrolü, imaj taraması ve güncelleme politikaları gereklidir.",
+  "etiket": ["konteyner", "docker", "güvenlik"],
+  "konu": "Modern Siber Güvenlik",
+  "seviye": "ileri"
+},{
+  "soru": "Hardware Security Module (HSM) nedir ve ne işe yarar?",
+  "cevap": "HSM, kriptografik anahtarların güvenli bir şekilde saklandığı, yüksek güvenlikli fiziksel cihazlardır. Anahtar yönetimi ve işlemleri donanım tabanlı güvenlikle sağlar.",
+  "etiket": ["HSM", "kriptografi", "donanım güvenliği"],
+  "konu": "Kriptografi",
+  "seviye": "ileri"
+},{
+  "soru": "Siber güvenlikte davranışsal analiz nasıl kullanılır?",
+  "cevap": "Kullanıcıların ve sistemlerin normal davranışları analiz edilerek anormallikler tespit edilir. Bu sayede bilinmeyen saldırılar veya içeriden tehditler erkenden saptanabilir.",
+  "etiket": ["davranışsal analiz", "makine öğrenimi", "siber savunma"],
+  "konu": "Güvenlik Operasyonları",
+  "seviye": "ileri"
+},{
+  "soru": "Cyber Threat Intelligence (CTI) nedir ve nasıl kullanılır?",
+  "cevap": "CTI, siber tehditlerle ilgili bilgi toplama, analiz etme ve paylaşma sürecidir. Bu bilgiler kurumların saldırılara karşı önlem almasını ve hızlı yanıt vermesini sağlar.",
+  "etiket": ["CTI", "tehdit istihbaratı", "güvenlik"],
+  "konu": "Siber Tehditler",
+  "seviye": "ileri"
+},{
+  "soru": "Homomorphic Encryption nedir ve nerelerde kullanılır?",
+  "cevap": "Homomorphic Encryption, şifreli veriler üzerinde doğrudan işlem yapmayı mümkün kılan kriptografi türüdür. Böylece veriler çözümlenmeden analiz veya hesaplama yapılabilir. Bulut güvenliği ve gizlilik korumasında önemlidir.",
+  "etiket": ["homomorphic encryption", "kriptografi", "gizlilik"],
+  "konu": "Kriptografi",
+  "seviye": "ileri"
+},{
+  "soru": "Yan kanal saldırısı (Side-Channel Attack) nedir?",
+  "cevap": "Yan kanal saldırıları, bir cihazın işlem sırasında yaydığı fiziksel bilgileri (güç tüketimi, elektromanyetik sızıntı, zamanlama) kullanarak gizli verilere ulaşmaya çalışır.",
+  "etiket": ["side-channel attack", "saldırı", "donanım güvenliği"],
+  "konu": "Siber Saldırılar",
+  "seviye": "ileri"
+},{
+  "soru": "Trusted Execution Environment (TEE) nedir?",
+  "cevap": "TEE, cihazlarda güvenli işlemlerin yapıldığı, işletim sisteminden izole edilmiş güvenli alanlardır. Hassas veriler burada saklanır ve işlenir, dışarıdan erişim engellenir.",
+  "etiket": ["TEE", "trusted execution environment", "güvenli alan"],
+  "konu": "Donanım Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "Makine öğrenmesi siber saldırı tespitinde nasıl kullanılır?",
+  "cevap": "Makine öğrenmesi algoritmaları normal ağ trafiği ve kullanıcı davranışlarını öğrenerek anormal veya zararlı aktiviteleri tespit eder. Bu yöntem, imza tabanlı sistemlerden daha esnek ve adaptiftir.",
+  "etiket": ["machine learning", "intrusion detection", "yapay zeka"],
+  "konu": "Siber Savunma",
+  "seviye": "ileri"
+},{
+  "soru": "Blockchain teknolojisinde güvenlik nasıl sağlanır?",
+  "cevap": "Blockchain, dağıtık defter yapısı, kriptografi ve konsensüs algoritmaları ile güvenliği sağlar. Ancak 51% saldırıları, akıllı kontrat açıkları gibi riskler de vardır.",
+  "etiket": ["blockchain", "güvenlik", "kriptografi"],
+  "konu": "Dağıtık Sistemler",
+  "seviye": "ileri"
+},{
+  "soru": "Kuantum bilgisayarlar siber güvenliği nasıl etkiler?",
+  "cevap": "Kuantum bilgisayarlar klasik kriptografik algoritmaları kırma potansiyeline sahiptir. Bu nedenle kuantuma dayanıklı algoritmalar ve post-kuantum kriptografi geliştirilmesi önemlidir.",
+  "etiket": ["quantum computing", "post-quantum cryptography", "kriptografi"],
+  "konu": "Geleceğin Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "Kuantum bilgisayarlar siber güvenliği nasıl etkiler?",
+  "cevap": "Kuantum bilgisayarlar klasik kriptografik algoritmaları kırma potansiyeline sahiptir. Bu nedenle kuantuma dayanıklı algoritmalar ve post-kuantum kriptografi geliştirilmesi önemlidir.",
+  "etiket": ["quantum computing", "post-quantum cryptography", "kriptografi"],
+  "konu": "Geleceğin Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "Veri sızıntısı (data exfiltration) yöntemleri nelerdir?",
+  "cevap": "Veri sızıntısı, saldırganların gizli bilgileri dışarı çıkarmak için kullandığı yöntemlerdir. Bunlar arasında şifrelenmiş kanallar, steganografi, DNS tünelleme ve USB cihaz kullanımı bulunur.",
+  "etiket": ["data exfiltration", "veri sızıntısı", "siber saldırı"],
+  "konu": "Siber Saldırılar",
+  "seviye": "ileri"
+},{
+  "soru": "CSPM nedir ve bulut güvenliğinde nasıl bir rol oynar?",
+  "cevap": "Cloud Security Posture Management, bulut ortamlarındaki yanlış yapılandırmaları ve güvenlik açıklarını tespit edip düzeltmeye yarayan otomatik araçlardır. Bulut risklerini azaltmada kritik öneme sahiptir.",
+  "etiket": ["CSPM", "bulut güvenliği", "otomasyon"],
+  "konu": "Bulut Güvenliği",
+  "seviye": "ileri"
+},{
+  "soru": "İçeriden tehdit (insider threat) nedir ve nasıl tespit edilir?",
+  "cevap": "İçeriden tehdit, kurum içinden yetkili kişilerin kötü niyetle ya da hatayla güvenliği ihlal etmesidir. Anormal davranış analizi, erişim kontrolü ve denetim ile tespit edilmeye çalışılır.",
+  "etiket": ["insider threat", "davranışsal analiz", "güvenlik"],
+  "konu": "İnsan Faktörü Güvenliği",
+  "seviye": "ileri"
+},
 
 
 
