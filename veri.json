@@ -781,9 +781,146 @@
   "etiket": ["insider threat", "davranışsal analiz", "güvenlik"],
   "konu": "İnsan Faktörü Güvenliği",
   "seviye": "ileri"
+},{
+  "id": "csrf",
+  "ad": "Site Dışı İstek Sahteciliği (CSRF)",
+  "kategori": "Web Güvenliği",
+  "etiketler": ["web güvenliği", "csrf", "kullanıcı oturumu", "kimlik doğrulama", "tarayıcı zafiyeti"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "CSRF saldırıları, bir kullanıcının kimliğiyle, onun bilgisi dışında kötü amaçlı işlemlerin yapılmasına neden olur. Bu saldırı, oturumu açık olan bir kullanıcının tarayıcısından güvenilen bir siteye izinsiz istek gönderilmesini sağlar.",
+  "örnek": "Bir banka sitesinde oturumu açık olan kullanıcı, zararlı bir bağlantıya tıkladığında kendi bilgisi dışında para transferi yapılabilir.",
+  "çözüm": "CSRF token kullanımı, kullanıcıdan gelen isteklerin doğrulanması ve kritik işlemlerde ekstra kimlik doğrulama katmanları."
+},{
+  "id": "xxe",
+  "ad": "XML Dış Varlık Enjeksiyonu (XXE)",
+  "kategori": "Girdi Zafiyeti",
+  "etiketler": ["xxe", "xml", "enjeksiyon", "bilgi sızdırma", "dosya erişimi"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "XXE saldırıları, XML verileri işlenirken saldırganların harici sistem dosyalarına erişmesini veya hizmetleri bozmasını sağlar. Özellikle yapılandırılmamış XML ayrıştırıcılar bu zafiyete açıktır.",
+  "örnek": "<?xml version=\"1.0\"?><!DOCTYPE foo [ <!ENTITY xxe SYSTEM \"file:///etc/passwd\"> ]><foo>&xxe;</foo>",
+  "çözüm": "XML ayrıştırıcılarda harici varlıkların kapatılması, güvenli yapılandırma kullanımı ve alternatif veri formatlarına (JSON gibi) geçiş."
+},{
+  "id": "cmd_injection",
+  "ad": "Komut Enjeksiyonu",
+  "kategori": "Girdi Zafiyeti",
+  "etiketler": ["komut enjeksiyonu", "shell", "sistem komutları", "kod yürütme"],
+  "risk_düzeyi": "Çok Yüksek",
+  "açıklama": "Kötü niyetli kullanıcılar, uygulamalarda kullanıcı girdisiyle sistem komutları çalıştırıldığında zararlı kodlar enjekte edebilir. Bu saldırı sistem üzerinde tam kontrol elde etmeye kadar gidebilir.",
+  "örnek": "Bir form alanına `; rm -rf /` gibi komutlar girilmesi.",
+  "çözüm": "Kullanıcı girdilerinin filtrelenmesi, sistem çağrılarından kaçınılması, komut parametrelerinin güvenli şekilde ayrıştırılması."
+},{
+  "id": "brute_force",
+  "ad": "Kaba Kuvvet Saldırısı",
+  "kategori": "Kimlik Doğrulama Zafiyetleri",
+  "etiketler": ["şifre tahmini", "brute force", "kaba kuvvet", "kimlik doğrulama", "zayıf parola"],
+  "risk_düzeyi": "Orta",
+  "açıklama": "Brute Force saldırısı, sistemdeki kullanıcı adlarını veya şifreleri deneme-yanılma yöntemiyle tahmin etmeye çalışır. Özellikle zayıf şifre kullanılan sistemlerde etkilidir.",
+  "örnek": "admin kullanıcı adına sahip hesap için 123456, qwerty gibi çok bilinen şifrelerin denenmesi.",
+  "çözüm": "Şifre karmaşıklık politikaları, giriş denemelerine sınır koyma, CAPTCHA ve iki faktörlü kimlik doğrulama kullanımı."
+},{
+  "id": "clickjacking",
+  "ad": "Tıklama Kaçırma (Clickjacking)",
+  "kategori": "Kullanıcı Arayüzü Saldırıları",
+  "etiketler": ["clickjacking", "iframe", "kullanıcı kandırma", "tarayıcı güvenliği"],
+  "risk_düzeyi": "Orta",
+  "açıklama": "Kullanıcının, farkında olmadan başka bir butona ya da işleme tıklamasını sağlamak için kullanıcı arayüzü manipüle edilir. Genellikle iframe kullanılarak yapılır.",
+  "örnek": "Bir beğen butonunun üzerine şeffaf bir 'parayı gönder' butonu yerleştirilmesi.",
+  "çözüm": "X-Frame-Options başlıklarının doğru yapılandırılması ve modern tarayıcı güvenlik önlemleri."
+},{
+  "id": "dns_spoofing",
+  "ad": "DNS Zehirlemesi (Spoofing)",
+  "kategori": "Ağ Güvenliği",
+  "etiketler": ["dns spoofing", "dns cache poisoning", "ağ saldırısı", "trafiği yönlendirme"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "DNS yanıtlarını değiştirerek, kullanıcının sahte bir web sitesine yönlendirilmesini sağlar. Bu sayede oturum bilgileri çalınabilir.",
+  "örnek": "Bir bankacılık sitesine gitmek isteyen kullanıcı, saldırganın sahte sitesine yönlendirilir.",
+  "çözüm": "DNSSEC kullanımı, güvenli DNS sunucuları ve istemcide DNS sorgularının doğrulanması."
+},{
+  "id": "insecure_deserialization",
+  "ad": "Güvensiz Serileştirme (Insecure Deserialization)",
+  "kategori": "Uygulama Güvenliği",
+  "etiketler": ["serileştirme", "deserialize", "kod yürütme", "nesne manipülasyonu"],
+  "risk_düzeyi": "Çok Yüksek",
+  "açıklama": "Kullanıcıdan alınan serileştirilmiş verilerin doğrudan sistem tarafından işlenmesi, saldırganın sistemde rastgele kod çalıştırmasına veya veri yapısını bozmasına sebep olabilir.",
+  "örnek": "Java uygulamalarında `readObject()` gibi fonksiyonlar ile kullanıcıdan alınan verilerin kontrolsüz işlenmesi.",
+  "çözüm": "Sadece güvenilir kaynaklardan gelen verileri deserialize etmek, güvenli serileştirme kütüphaneleri kullanmak ve sınıf beyaz listesi uygulamak."
+},{
+  "id": "ssrf",
+  "ad": "Sunucu Taraflı İstek Sahteciliği (SSRF)",
+  "kategori": "Sunucu Güvenliği",
+  "etiketler": ["ssrf", "sunucu", "istek sahteciliği", "yerel ağ erişimi", "metadata çalma"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "SSRF, saldırganın sunucuyu kendi adına istek göndermeye zorladığı saldırılardır. Bu şekilde iç sistemlere veya yerel ağdaki servislere erişim sağlanabilir.",
+  "örnek": "Bir resim URL'si yüklenirken `http://169.254.169.254` gibi bir metadata adresine erişim sağlanması.",
+  "çözüm": "İstek yapılan hedef URL’lerin beyaz listeye alınması, IP aralıklarının engellenmesi ve yönlendirme kontrollerinin yapılması."
 },
 
-
-
-
+{
+  "id": "idor",
+  "ad": "Doğrudan Nesne Referansı Açığı (IDOR)",
+  "kategori": "Yetkilendirme Zafiyetleri",
+  "etiketler": ["idor", "yetkisiz erişim", "nesne referansı", "veri ifşası"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "Bir kullanıcının, başka kullanıcıya ait kaynaklara (dosya, kayıt vb.) URL veya parametre değiştirerek erişmesi.",
+  "örnek": "`/profil/123` olan bağlantının `124` yapılarak başka birinin profiline erişilmesi.",
+  "çözüm": "Her istekte kullanıcı yetkilerinin kontrol edilmesi, güvenli erişim kontrol mekanizmalarının uygulanması."
+},
+{
+  "id": "rce",
+  "ad": "Uzaktan Komut Çalıştırma (RCE)",
+  "kategori": "Uygulama Güvenliği",
+  "etiketler": ["rce", "kod çalıştırma", "uzaktan saldırı", "komut enjekte etme"],
+  "risk_düzeyi": "Çok Yüksek",
+  "açıklama": "Kötü niyetli kullanıcıların, bir uygulama aracılığıyla sistemde uzaktan komut çalıştırmasını sağlayan zafiyettir.",
+  "örnek": "Bir form alanından gelen verinin `system()` fonksiyonuyla filtrelenmeden çalıştırılması.",
+  "çözüm": "Kullanıcı girdilerinin kesinlikle filtrelenmesi, dış komut çalıştırmaktan kaçınılması, güvenli API kullanımı."
+},{
+  "id": "supply_chain",
+  "ad": "Tedarik Zinciri Saldırısı",
+  "kategori": "Geliştirme ve Yazılım Güvenliği",
+  "etiketler": ["supply chain", "tedarik zinciri", "bağımlılık saldırısı", "güvenlik açıkları"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "Üçüncü taraf kütüphaneler veya yazılım bileşenlerine yapılan saldırılar sonucunda tüm sistemin etkilenmesi.",
+  "örnek": "NPM üzerindeki popüler bir paketin içine kötü amaçlı kod eklenmesi.",
+  "çözüm": "Kütüphanelerin imzalanması, yazılım bileşenlerinin kontrol edilmesi ve güncel tutulması, bağımlılık yönetim sistemlerinin doğru yapılandırılması."
+},{
+  "id": "bluetooth_zaafiyetleri",
+  "ad": "Bluetooth Güvenlik Açıkları",
+  "kategori": "Mobil ve IoT Güvenliği",
+  "etiketler": ["bluetooth", "iot", "kablosuz saldırı", "yakın alan güvenliği", "ble"],
+  "risk_düzeyi": "Orta",
+  "açıklama": "Bluetooth protokolündeki açıklar sayesinde cihazlar dinlenebilir, kontrol edilebilir veya veri sızdırabilir.",
+  "örnek": "Bir Bluetooth cihazın pairing modundayken PIN brute force edilerek bağlantı sağlanması.",
+  "çözüm": "Cihazlarda varsayılan PIN’lerin değiştirilmesi, güncel yazılım kullanılması ve kullanılmayan bağlantıların kapatılması."
+},
+{
+  "id": "api_guvenligi",
+  "ad": "API Güvenliği Açıkları",
+  "kategori": "Web Güvenliği",
+  "etiketler": ["api", "web servisi", "kimlik doğrulama", "rate limit", "açık api"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "Güvenlik önlemleri alınmamış API’ler, kimlik doğrulama eksiklikleri ve veri ifşaları gibi sorunlara yol açar.",
+  "örnek": "JWT token kontrolü yapılmayan bir API'den başka bir kullanıcının verilerine erişmek.",
+  "çözüm": "Rate limiting, kimlik doğrulama, yetkilendirme ve şifreleme yöntemleri uygulanmalı. API'ler belgelenmeli ve test edilmelidir."
+},
+{
+  "id": "open_redirect",
+  "ad": "Açık Yönlendirme (Open Redirect)",
+  "kategori": "Web Güvenliği",
+  "etiketler": ["open redirect", "yönlendirme açığı", "link manipülasyonu", "oltalama yardımı"],
+  "risk_düzeyi": "Orta",
+  "açıklama": "Kullanıcının yönlendirildiği URL parametresi kontrol edilmezse, kötü niyetli bağlantılara yönlendirme yapılabilir.",
+  "örnek": "`https://site.com/redirect?url=evil.com` ile kullanıcıyı kötü niyetli siteye yönlendirmek.",
+  "çözüm": "URL parametrelerini sadece güvenilir alan adlarıyla sınırlamak, hardcoded yönlendirme listesi kullanmak."
+},
+{
+  "id": "directory_traversal",
+  "ad": "Dizin Gezinme Açığı (Directory Traversal)",
+  "kategori": "Dosya Sistemi Güvenliği",
+  "etiketler": ["directory traversal", "path traversal", "dosya erişimi", "yerel dosya ifşası"],
+  "risk_düzeyi": "Yüksek",
+  "açıklama": "Saldırgan, uygulamanın dizin yapısında gezinerek erişilmemesi gereken dosyalara erişebilir.",
+  "örnek": "`../../etc/passwd` gibi bir yol ile sunucudaki hassas sistem dosyasına erişilmesi.",
+  "çözüm": "Kullanıcı girdilerinden dosya yolu oluşturulmamalı. Gerçek dizin kontrolü yapılmalı ve path temizlenmelidir."
+},
 ]
