@@ -645,7 +645,7 @@
     "soru": "MITRE ATT&CK çerçevesi bir kurumun güvenliğini nasıl artırabilir?",
     "cevap": "MITRE ATT&CK, kurumların saldırı yüzeylerini analiz etmelerini, zayıf noktaları belirlemelerini ve saldırılara karşı daha etkili savunmalar geliştirmelerini sağlar. Aynı zamanda kırmızı takım testleri ve tehdit avcılığı için de kullanılır.",
     "seviye": "Orta"
-  },,
+  },
   {
     "soru": "Port taraması (port scanning) ne işe yarar?",
     "cevap": "Bir sistemin açık portlarını tespit etmek için kullanılır. Bu sayede saldırganlar hangi servislerin çalıştığını öğrenir.",
@@ -2001,7 +2001,6 @@
     "soru": "Firmware saldırılarına karşı nasıl korunulur?",
     "cevap": "Firmware saldırılarına karşı korunmak için donanım güvenlik modülleri (TPM), imzalı firmware güncellemeleri ve güvenli boot mekanizmaları kullanılır. Ayrıca düzenli firmware güncellemeleri de önemlidir.",
     "seviye": "İleri"
-  },
-
+  }
 
 ]
