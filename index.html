@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eagle Eye Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        #chatbox { width: 100%; max-width: 600px; margin: auto; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+        #messages { height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; }
+        .message { margin: 10px 0; }
+        .user { color: blue; }
+        .bot { color: green; }
+        input[type=text] { width: 80%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; border: none; background-color: #007BFF; color: white; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <h2>Eagle Eye Chatbot</h2>
+        <div id="messages"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" autocomplete="off" placeholder="Mesajınızı yazın..." required />
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("chat-form");
+        const input = document.getElementById("user-input");
+        const messages = document.getElementById("messages");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const userText = input.value.trim();
+            if (!userText) return;
+
+            addMessage(userText, "user");
+            input.value = "";
+
+            try {
+                const response = await fetch("/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: userText }),
+                });
+
+                const data = await response.json();
+                addMessage(data.response, "bot");
+            } catch (error) {
+                addMessage("Sunucuya bağlanırken hata oluştu.", "bot");
+            }
+        });
+
+        function addMessage(text, sender) {
+            const messageElem = document.createElement("div");
+            messageElem.classList.add("message", sender);
+            messageElem.textContent = text;
+            messages.appendChild(messageElem);
+            messages.scrollTop = messages.scrollHeight;
+        }
+    </script>
+</body>
+</html>
