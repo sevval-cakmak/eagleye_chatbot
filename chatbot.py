@@ -90,7 +90,7 @@ def chat():
     input_embedding = model.encode(user_input, convert_to_tensor=True)
     hits = util.semantic_search(input_embedding, faq_embeddings, top_k=1)
     hit = hits[0][0]
-    if hit['score'] > 0.55:
+    if hit['score'] > 0.5:
         matched_question = list(faq_data.keys())[hit['corpus_id']]
         return jsonify({"response": faq_data[matched_question]})
     else:
