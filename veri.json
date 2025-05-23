@@ -2001,6 +2001,9 @@
     "soru": "Firmware saldırılarına karşı nasıl korunulur?",
     "cevap": "Firmware saldırılarına karşı korunmak için donanım güvenlik modülleri (TPM), imzalı firmware güncellemeleri ve güvenli boot mekanizmaları kullanılır. Ayrıca düzenli firmware güncellemeleri de önemlidir.",
     "seviye": "İleri"
+  },
+  {
+    "soru": "En büyük kim?",
+    "cevap":"BEŞİKTAŞ!"
   }
-
 ]
