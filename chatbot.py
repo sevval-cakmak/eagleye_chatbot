@@ -1,3 +1,4 @@
+
 from flask import Flask, request, jsonify, render_template
 from sentence_transformers import SentenceTransformer, util
 import json
@@ -10,7 +11,12 @@ with open(os.path.join(dir_path, "veri.json"), "r", encoding="utf-8") as f:
     data_list = json.load(f)
 
 model = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v2')
-faq_data = {item['soru'].lower().strip(): item['cevap'] for item in data_list}
+faq_data = {
+    item['soru'].lower().strip(): item['cevap']
+    for item in data_list
+    if 'soru' in item and 'cevap' in item
+}
+
 faq_embeddings = model.encode(list(faq_data.keys()), convert_to_tensor=True)
 
 small_talk = {
