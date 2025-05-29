@@ -1,70 +1,47 @@
 from flask import Flask, request, jsonify, render_template
 from sentence_transformers import SentenceTransformer, util
+from llama_cpp import Llama
 import json
 import os
 
 app = Flask(__name__)
 
+# Veri dosyasını oku
 dir_path = os.path.dirname(os.path.realpath(__file__))
 with open(os.path.join(dir_path, "veri.json"), "r", encoding="utf-8") as f:
     data_list = json.load(f)
 
+# Embedding modeli
 model = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v2')
 faq_data = {
     item['soru'].lower().strip(): item['cevap']
     for item in data_list
     if 'soru' in item and 'cevap' in item
 }
-
 faq_embeddings = model.encode(list(faq_data.keys()), convert_to_tensor=True)
 
-small_talk = {
-    "merhaba": "Merhaba! Size nasıl yardımcı olabilirim?",
-    "selam": "Selam! Siber güvenlikle ilgili ne öğrenmek istersiniz?",
-    "teşekkürler": "Rica ederim, yardımcı olabildiysem ne mutlu!",
-    "teşekkür ederim": "Ne demek, her zaman buradayım!",
-    "görüşürüz": "Görüşmek üzere, kendinize dikkat edin!",
-    "hoşça kal": "Hoşça kal! Güvende kalın!"
-}
+# LLaMA modelini yükle
+llama_path = r"C:\Users\Elif\Desktop\rafa\models\Meta-Llama-3-8B.Q4_K_S.gguf"
+llm = Llama(model_path=llama_path, n_ctx=2048, n_threads=4, n_gpu_layers=30)
 
-last_quiz_answers = []
+# Sistem promptu: sadece siber güvenlik sorularına yanıt ver
+SYSTEM_PROMPT = (
+    "Sen bir siber güvenlik uzmanısın. Yalnızca ağ güvenliği, port tarama, protokoller, zafiyet analizleri gibi konularda cevap ver. "
+    "Konu dışı bir şey sorulursa 'Bu konuda yardımcı olamam. Siber güvenlikle ilgili bir soru sorabilirsin.' de.\n"
+)
 
-def filter_by_topic_or_level(user_input):
-    if user_input.startswith("/konu"):
-        topic = user_input.replace("/konu", "").strip().lower()
-        filtered = [f"- {item['soru']} → {item['cevap']}" for item in data_list if item['konu'].lower() == topic]
-        return "\n".join(filtered) if filtered else "Bu konuyla ilgili bir içerik bulunamadı."
-    elif user_input.startswith("/seviye"):
-        level = user_input.replace("/seviye", "").strip().lower()
-        filtered = [f"- {item['soru']} → {item['cevap']}" for item in data_list if item['seviye'].lower() == level]
-        return "\n".join(filtered) if filtered else "Bu seviyeye uygun bir içerik bulunamadı."
+def get_llama_response(prompt):
+    full_prompt = SYSTEM_PROMPT + "\nSoru: " + prompt + "\nCevap:"
+    output = llm(full_prompt, max_tokens=512, temperature=0.7, stop=["Soru:", "User:", "###"])
+    return output["choices"][0]["text"].strip()
+
+# Komut işleyici (nmap/tshark gibi)
+def handle_command(command):
+    if "tara" in command:
+        return "Nmap taraması başlatılıyor... (Bu sadece örnek bir çıktı!)"
+    elif "ağ trafiğini izle" in command or "trafiği izle" in command:
+        return "Tshark ile ağ trafiği izleniyor... (Bu sadece örnek bir çıktı!)"
     return None
-
-def parse_quiz_command(command):
-    topic = None
-    level = None
-    if "konu=" in command:
-        topic = command.split("konu=")[1].split()[0].strip().lower()
-    if "seviye=" in command:
-        level = command.split("seviye=")[1].split()[0].strip().lower()
-    return topic, level
-
-def generate_quiz(topic=None, level=None, num_questions=3):
-    filtered = data_list
-    if topic:
-        filtered = [item for item in filtered if item['konu'].lower() == topic]
-    if level:
-        filtered = [item for item in filtered if item['seviye'].lower() == level]
-    if not filtered:
-        return "Bu kriterlere uygun soru bulunamadı."
-    selected = filtered[:num_questions]
-    quiz_text = "Mini Quiz:\n"
-    for i, item in enumerate(selected, 1):
-        quiz_text += f"{i}. {item['soru']}\n"
-    global last_quiz_answers
-    last_quiz_answers = selected
-    quiz_text += "\nCevapları görmek için '/cevaplar' yazabilirsin."
-    return quiz_text
 
 @app.route("/", methods=["GET"])
 def home():
@@ -75,26 +52,25 @@ def chat():
     data = request.get_json()
     user_input = data.get("message", "").lower().strip()
 
-    if user_input in small_talk:
-        return jsonify({"response": small_talk[user_input]})
-    if user_input.startswith("/quiz"):
-        topic, level = parse_quiz_command(user_input)
-        return jsonify({"response": generate_quiz(topic, level)})
-    if user_input == "/cevaplar":
-        if not last_quiz_answers:
-            return jsonify({"response": "Henüz bir quiz yapılmadı."})
-        return jsonify({"response": "\n".join([f"{i+1}. {item['cevap']}" for i, item in enumerate(last_quiz_answers)])})
-    komut_cevap = filter_by_topic_or_level(user_input)
+    # Komut algılama
+    komut_cevap = handle_command(user_input)
     if komut_cevap:
         return jsonify({"response": komut_cevap})
+
+    # Embedding ile veri.json'dan yakın cevap çek (RAG)
     input_embedding = model.encode(user_input, convert_to_tensor=True)
     hits = util.semantic_search(input_embedding, faq_embeddings, top_k=1)
     hit = hits[0][0]
+
+    context_info = ""
     if hit['score'] > 0.5:
         matched_question = list(faq_data.keys())[hit['corpus_id']]
-        return jsonify({"response": faq_data[matched_question]})
-    else:
-        return jsonify({"response": "Üzgünüm, bunu anlayamadım. Başka bir soru sorabilir misiniz?"})
+        context_info = f"- Ek Bilgi: {faq_data[matched_question]}\n"
+
+    # LLaMA'dan cevap al
+    full_prompt = context_info + user_input
+    answer = get_llama_response(full_prompt)
+    return jsonify({"response": answer})
 
 if __name__ == "__main__":
     app.run(debug=True)
