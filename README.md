@@ -17,14 +17,23 @@ Komut satırı arayüzü: Basit ve interaktif sohbet deneyimi.
 ## Klasör yapısı
 
 eagleye/
+
 ├── templates/
+
 │   └── index.html
+
 │
+
 ├── models/
+
 │   └── Meta-Llama-3-8B.Q4_K_S.gguf
+
 │
+
 ├── chatbot.py
+
 ├── veri.json
+
 ├── README.md
 
 ## Gereksinimler
