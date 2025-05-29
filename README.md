@@ -22,6 +22,20 @@ veri.json dosyasına yeni soru-cevap çiftleri eklenerek bilgi tabanı zenginle�
 Komut satırı veya web arayüzü desteği:
 Terminal üzerinden sohbet edilebilir veya Flask tabanlı basit bir web arayüzü kullanılabilir.
 
+## Klasör Yapısı
+
+eagleye/
+├── templates/
+│   └── index.html
+│
+├── models/
+│   └── Meta-Llama-3-8B.Q4_K_S.gguf
+│
+├── chatbot.py
+├── veri.json
+├── requirements.txt
+├── README.md   
+
 ## Gereksinimler
 
 Python 3.7 veya üzeri
