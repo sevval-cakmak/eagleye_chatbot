@@ -1,49 +1,47 @@
-# EagleEye Chatbot
+# 🦅 EagleEye Chatbot
 
-EagleEye, Python ve HuggingFace SentenceTransformer modeli kullanarak geliştirilmiş, Türkçe destekli, siber güvenlik alanında soru-cevap yapabilen akıllı chatbot projesidir. İnternet bağlantısı gerektiren hazır modellerin embedding yeteneklerinden faydalanarak, basit ve genişletilebilir bir yapay zeka destekli sohbet asistanı sunar.
+EagleEye, Python, HuggingFace SentenceTransformer ve LLaMA tabanlı büyük dil modeli kullanılarak geliştirilmiş, Türkçe destekli ve siber güvenlik odaklı bir akıllı sohbet botudur. Anlamsal arama yeteneklerini LLaMA modeliyle birleştirerek güçlü ve esnek bir sohbet deneyimi sunar.
 
 ## Özellikler
 
-Çok dilli ve Türkçe destekli: Distiluse Base Multilingual cased v2 modeli kullanılır.
+LLaMA destekli güçlü yanıt motoru:
+GGUF formatında optimize edilmiş Meta LLaMA 3 modeli ile doğal ve anlamlı yanıtlar üretir.
 
-Siber güvenlik odaklı soru-cevap: Önceden tanımlanmış soru-cevap verisi ile hızlı ve alakalı yanıtlar verilir.
+Çok dilli ve Türkçe desteği:
+HuggingFace’in Distiluse-base-multilingual-cased-v2 modeli sayesinde Türkçe dahil birçok dili anlayabilir.
 
-Anlamsal benzerlik araması: Kullanıcı sorusunu embedding’e dönüştürerek en yakın soruyu bularak cevap verir.
+Siber güvenlik odaklı bilgi tabanı:
+Önceden tanımlanmış soru-cevap veri kümesi ile siber güvenlik konularında hızlı ve alakalı cevaplar sunar.
 
-Kolay genişletilebilirlik: veri.json dosyasına yeni sorular ve cevaplar ekleyerek bilgi tabanı zenginleştirilebilir.
+Anlamsal benzerlik arama:
+Kullanıcıdan gelen sorular embedding'e dönüştürülür, en yakın eşleşme veri.json üzerinden belirlenerek gerekirse LLaMA ile detaylandırılır.
 
-Komut satırı arayüzü: Basit ve interaktif sohbet deneyimi.
+Kolay genişletilebilir yapı:
+veri.json dosyasına yeni soru-cevap çiftleri eklenerek bilgi tabanı zenginleştirilebilir.
 
-## Klasör yapısı
-
-eagleye/
-
-├── templates/
-
-│   └── index.html
-
-│
-
-├── models/
-
-│   └── Meta-Llama-3-8B.Q4_K_S.gguf
-
-│
-
-├── chatbot.py
-
-├── veri.json
-
-├── README.md
+Komut satırı veya web arayüzü desteği:
+Terminal üzerinden sohbet edilebilir veya Flask tabanlı basit bir web arayüzü kullanılabilir.
 
 ## Gereksinimler
 
-Python 3.7 ve üzeri
+Python 3.7 veya üzeri
 
 Flask
 
-sentence-transformers kütüphanesi
+sentence-transformers
+
+llama-cpp-python
+
+## Gerekli kütüphaneleri kurmak için:
+
+pip install flask sentence-transformers llama-cpp-python
 
 ## Çalıştırma
 
 python chatbot.py
+
+## Notlar
+
+models/ klasörü altındaki .gguf dosyası oldukça büyük olabilir. LLaMA modelinin çalışabilmesi için sisteminizde yeterli RAM ve CPU/GPU kaynakları bulunmalıdır.
+
+LLaMA modeli ile entegrasyon, chatbot.py dosyasında llama-cpp-python üzerinden gerçekleştirilir.
