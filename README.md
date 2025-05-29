@@ -25,15 +25,25 @@ Terminal üzerinden sohbet edilebilir veya Flask tabanlı basit bir web arayüz�
 ## Klasör Yapısı
 
 eagleye/
+
 ├── templates/
+
 │   └── index.html
+
 │
+
 ├── models/
+
 │   └── Meta-Llama-3-8B.Q4_K_S.gguf
+
 │
+
 ├── chatbot.py
+
 ├── veri.json
+
 ├── requirements.txt
+
 ├── README.md   
 
 ## Gereksinimler
