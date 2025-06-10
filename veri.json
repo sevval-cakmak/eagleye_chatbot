@@ -2153,6 +2153,174 @@
         "answer": "Loglar toplanır, filtrelenir ve SIEM gibi araçlarla analiz edilerek güvenlik olayları izlenir."
       }
     ]
+  }, {
+    "question": "Kerberos kimlik doğrulama protokolü nedir ve nasıl çalışır?",
+    "answer": "Kerberos, istemci-sunucu ortamlarında kimlik doğrulama için kullanılan bir protokoldür. Temel olarak simetrik şifreleme kullanır ve üçüncü bir taraf olan Key Distribution Center (KDC) tarafından desteklenir. Kullanıcı oturum açarken, şifresiyle bir Ticket Granting Ticket (TGT) alır. Bu TGT daha sonra ağ kaynaklarına erişim için hizmet biletleri (service tickets) almak üzere kullanılır."
   },
+  {
+    "question": "Buffer overflow saldırısı nedir ve nasıl yapılır?",
+    "answer": "Buffer overflow, bir değişkenin tahsis edilen bellek sınırlarının ötesine veri yazılmasıyla oluşur. Bu durum, saldırganların belleğe zararlı kod yerleştirmesine ve programın akışını ele geçirmesine olanak tanır. Özellikle C/C++ gibi düşük seviye bellek yönetimi olan dillerde yaygındır. Koruma mekanizmaları arasında Stack Canaries, DEP ve ASLR yer alır."
+  },
+  {
+    "question": "OAuth 2.0 kimlik doğrulama protokolü nasıl çalışır?",
+    "answer": "OAuth 2.0, üçüncü taraf uygulamaların kullanıcı parolalarını paylaşmadan kaynaklara erişmesini sağlar. Dört ana akış (authorization code, implicit, resource owner password credentials, client credentials) üzerinden çalışır. En yaygın olan Authorization Code Flow, kullanıcıyı bir kimlik sağlayıcısına yönlendirir, kullanıcı onay verince access token alınır ve API kaynaklarına erişim sağlanır."
+  },
+  {
+    "question": "Zero Trust güvenlik modeli nedir?",
+    "answer": "Zero Trust, ağ içinde veya dışında hiçbir kullanıcıya varsayılan olarak güvenilmemesi prensibine dayanan bir güvenlik modelidir. Kullanıcılar ve cihazlar her erişim isteğinde kimliklerini doğrulamalı, yetkileri kontrol edilmeli ve bağlam doğrulanmalıdır. Mikro segmentasyon, sürekli doğrulama ve minimum ayrıcalık ilkesi bu modelin temel bileşenlerindendir."
+  },
+  {
+    "question": "CVE nedir ve ne işe yarar?",
+    "answer": "CVE, yazılım zafiyetlerini tanımlamak için kullanılan standart bir tanımlayıcı sistemidir. Her zafiyet CVE-YYYY-NNNNN formatında listelenir. Bu sistem sayesinde güvenlik açıkları hakkında dünya genelinde tutarlı bilgi paylaşımı sağlanır. NIST'in NVD (National Vulnerability Database) veritabanıyla birlikte çalışır."
+  },
+  {
+    "question": "APT saldırıları nedir ve nasıl çalışır?",
+    "answer": "APT saldırıları, devlet destekli ya da yüksek kaynaklara sahip tehdit aktörleri tarafından yürütülen uzun vadeli, hedef odaklı siber saldırılardır. Genellikle gizlilik, süreklilik ve veri sızdırma üzerine kurgulanır. Saldırganlar önce sosyal mühendislik ya da zararlı yazılımla içeri sızar, uzun süre sistemde kalır, verileri keşfeder ve dışarı sızdırır."
+  },
+  {
+    "question": "Log4Shell açığı nedir ve nasıl istismar edilir?",
+    "answer": "Log4Shell (CVE-2021-44228), Apache Log4j 2 kütüphanesinde bulunan kritik bir uzak kod yürütme (RCE) açığıdır. Kullanıcıdan alınan veriler doğrudan loglandığında, saldırgan özel olarak hazırlanmış bir JNDI sorgusuyla zararlı bir sunucuya yönlendirme yapabilir. Bu sayede hedef sistemde komut çalıştırabilir. Açık özellikle Minecraft sunucularında yaygın olarak suistimal edilmiştir."
+  },
+  {
+    "question": "SIEM nedir ve neden kullanılır?",
+    "answer": "SIEM (Security Information and Event Management), log toplama, analiz etme ve güvenlik olaylarını gerçek zamanlı izleme amacıyla kullanılan sistemlerdir. SIEM sistemleri saldırı tespiti, uyumluluk raporlaması ve olay müdahalesi için kritik öneme sahiptir. Örneğin Splunk, IBM QRadar, Elastic SIEM gibi araçlar yaygındır."
+  },
+  {
+    "question": "SOC (Güvenlik Operasyon Merkezi) nedir ve ne iş yapar?",
+    "answer": "SOC, bir kurumun siber güvenliğini 7/24 izleyen, olaylara müdahale eden ve tehditlere karşı strateji geliştiren ekip ya da birimdir. SOC analistleri, SIEM araçları, tehdit istihbaratı ve olay yönetim platformları kullanarak sistemleri gözetler, alarmları inceler ve gerektiğinde olaylara müdahale eder."
+  },
+  {
+    "question": "DNS spoofing saldırısı nasıl gerçekleşir?",
+    "answer": "DNS spoofing (veya DNS cache poisoning), DNS sorgularına yanlış yanıtlar verilerek kullanıcıların sahte web sitelerine yönlendirilmesidir. Saldırgan, DNS önbelleğine sahte bir IP bilgisi yerleştirir ve kurbanın orijinal bir siteye (örneğin banka) gittiğini düşünerek zararlı bir siteye girmesini sağlar."
+  }, {
+    "question": "TLS Handshake süreci nasıl çalışır ve hangi aşamalardan oluşur?",
+    "answer": "TLS Handshake, istemci ve sunucu arasında güvenli bir bağlantı kurmak için gerçekleşen bir dizi adımdır. İlk olarak, istemci desteklediği protokol sürümleri ve şifreleme algoritmalarını sunucuya gönderir (ClientHello). Sunucu, bu bilgileri alır ve uygun şifreleme yöntemini seçer (ServerHello). Ardından sunucu sertifikasını gönderir, istemci sertifikayı doğrular. Anahtar değişim protokolü (örneğin Diffie-Hellman) ile ortak bir oturum anahtarı oluşturulur. Son olarak, her iki taraf da oturum anahtarını kullanarak şifreli iletişime başlar."
+  },
+  {
+    "question": "Side-Channel Attack (Yan Kanal Saldırısı) nedir ve nasıl önlenir?",
+    "answer": "Yan kanal saldırısı, kriptografik sistemlerin işlem süresi, güç tüketimi, elektromanyetik sızıntılar gibi fiziksel özelliklerinden bilgi sızdırarak anahtarları veya hassas verileri elde etmeye çalışan saldırı türüdür. Önleme yöntemleri arasında zamanlama saldırılarına karşı sabit süreli algoritmalar kullanmak, güç tüketimini rastgeleleştirmek ve donanımda izolasyon sağlamak yer alır."
+  },
+  {
+    "question": "Ransomware saldırıları nasıl çalışır ve kurumlar nasıl korunabilir?",
+    "answer": "Ransomware, kurbanın dosyalarını şifreleyerek erişimi engelleyen ve fidye talep eden kötü amaçlı yazılımlardır. Saldırı genellikle kimlik avı e-postaları veya kötü amaçlı indirmelerle başlar. Korunmak için düzenli yedekleme, güncel antivirüs yazılımı, kullanıcı eğitimi ve ağ segmentasyonu önemlidir. Ayrıca, saldırı sonrası fidye ödemekten kaçınılmalı ve yasal yetkililere haber verilmelidir."
+  },
+  {
+    "question": "Sandboxing (Kum Havuzu) nedir ve zararlı yazılımlara karşı nasıl koruma sağlar?",
+    "answer": "Sandboxing, uygulamaların veya kod parçalarının izole bir ortamda çalıştırılarak sistem kaynaklarına erişimin sınırlandırılmasıdır. Bu sayede zararlı kodlar gerçek sisteme zarar vermeden analiz edilir veya engellenir. Anti-virüs ve güvenlik yazılımlarında yaygın kullanılır. Ayrıca yazılım geliştirme süreçlerinde güvenli test ortamı sağlar."
+  },
+  {
+    "question": "Man-in-the-Middle (MitM) saldırısı nasıl gerçekleşir ve nasıl önlenir?",
+    "answer": "MitM saldırısında, saldırgan iki taraf arasındaki iletişimi gizlice ele geçirir ve değiştirebilir. Genellikle halka açık Wi-Fi ağlarında veya zayıf şifreleme kullanılan bağlantılarda görülür. Korunmak için HTTPS kullanımı, güçlü şifreleme protokolleri, VPN kullanımı ve sertifika doğrulaması önemlidir."
+  },
+  {
+    "question": "Social Engineering (Sosyal Mühendislik) saldırılarının türleri nelerdir?",
+    "answer": "Sosyal mühendislik saldırıları, insan psikolojisini kullanarak bilgi veya erişim elde etmeye yöneliktir. Türleri arasında phishing (oltalama), pretexting (ön metin oluşturma), baiting (tuzak kurma), tailgating (izinsiz giriş) ve quid pro quo (karşılık verme) yer alır. Farkındalık eğitimi ve doğrulama prosedürleriyle önlenebilir."
+  },
+  {
+    "question": "DNSSEC nedir ve DNS güvenliğini nasıl artırır?",
+    "answer": "DNSSEC (Domain Name System Security Extensions), DNS sorgularının bütünlüğünü ve doğruluğunu sağlamak için kullanılan bir dizi protokoldür. Dijital imzalar sayesinde DNS verilerinin değiştirilmediği garanti edilir. Bu sayede DNS spoofing ve cache poisoning saldırıları önlenir."
+  },
+  {
+    "question": "APT saldırılarında kullanılan tipik sızma teknikleri nelerdir?",
+    "answer": "APT grupları sosyal mühendislik, sıfır gün açıkları (zero-day), spear phishing, kötü amaçlı yazılım dağıtımı, tedarik zinciri saldırıları gibi sofistike yöntemler kullanır. Uzun süre fark edilmeden kalabilmek için hareketlerini gizler, çeşitli backdoorlar kurar ve izin verilen ağ protokollerini kötüye kullanır."
+  },
+  {
+    "question": "XSS (Cross-Site Scripting) saldırılarının çeşitleri nelerdir ve nasıl korunulur?",
+    "answer": "XSS saldırıları temel olarak üç çeşittir: Stored (kalıcı), Reflected (yansıtılmış) ve DOM-based. Stored XSS, zararlı kodun sunucuya kaydedilip birçok kullanıcıya gönderilmesiyle olur. Reflected XSS, zararlı komutun URL veya input üzerinden yansıtılmasıdır. DOM-based ise istemci tarafı kodun manipülasyonudur. Korunmak için input validasyonu, output encoding ve Content Security Policy (CSP) uygulanmalıdır."
+  },
+  {
+    "question": "Blockchain teknolojisinin siber güvenlik açısından önemi nedir?",
+    "answer": "Blockchain, dağıtık ve değiştirilemez yapısı sayesinde veri bütünlüğü sağlar. Merkeziyetsiz mimarisiyle tek bir arıza noktası yoktur ve şeffaf kayıt tutar. Siber saldırılara karşı dirençli olmakla birlikte, akıllı kontratlar ve cüzdan güvenliği gibi alanlarda yeni tehditler doğurur. Doğru uygulandığında güvenlik süreçlerini iyileştirir."
+  },  {
+    "question": "Zero-Day açığı nedir ve bu tür açıklar nasıl tespit edilir?",
+    "answer": "Zero-Day açığı, geliştiriciler veya güvenlik uzmanları tarafından henüz keşfedilmemiş veya duyurulmamış güvenlik açığıdır. Saldırganlar bu açıklardan yararlanarak sistemlere sızabilir. Zero-Day açıkları tespit etmek zor olup, genellikle davranış analizi, anomali tespiti ve gelişmiş tehdit istihbaratı ile keşfedilir. Güncel yamaların uygulanması ve saldırı yüzeyinin azaltılması önemlidir."
+  },
+  {
+    "question": "Public Key Infrastructure (PKI) nedir ve nasıl çalışır?",
+    "answer": "PKI, dijital sertifikalar ve anahtar çiftleri aracılığıyla kimlik doğrulama ve güvenli iletişim sağlayan sistemdir. Sertifika otoriteleri (CA) güvenilir üçüncü taraf olarak çalışır, kullanıcıların ve sunucuların kimliklerini doğrular. PKI, SSL/TLS, e-imza ve şifreleme işlemlerinin temelidir."
+  },
+  {
+    "question": "Brute Force saldırısı nedir ve nasıl engellenir?",
+    "answer": "Brute Force saldırısı, tüm olası şifre kombinasyonlarını deneyerek sisteme erişim sağlamaya çalışan kaba kuvvet saldırısıdır. Korunmak için hesap kilitleme mekanizmaları, karmaşık şifre politikaları, CAPTCHA kullanımı ve çok faktörlü kimlik doğrulama (MFA) uygulanmalıdır."
+  },{
+    "question": "WAF (Web Application Firewall) nedir ve ne işe yarar?",
+    "answer": "WAF, web uygulamalarını SQL Injection, XSS gibi uygulama katmanı saldırılarına karşı koruyan bir güvenlik duvarıdır. HTTP trafiğini filtreler, kötü amaçlı istekleri engeller ve uygulama güvenliğini artırır."
+  }, {
+    "question": "Vulnerability Scanning (Zafiyet Taraması) nedir ve nasıl yapılır?",
+    "answer": "Zafiyet taraması, sistemlerdeki güvenlik açıklarını otomatik araçlar kullanarak tespit etme sürecidir. Bu sayede riskler belirlenir ve önlem alınır. Düzenli taramalar, yamaların uygulanması ve raporlama yapılması gereklidir."
+  },{
+    "question": "Mitre ATT&CK Framework nedir ve nasıl kullanılır?",
+    "answer": "Mitre ATT&CK, siber saldırganların taktik ve tekniklerini sınıflandıran açık bir bilgi tabanıdır. Güvenlik ekipleri saldırıları anlamak, savunma stratejileri geliştirmek ve olay müdahalesi yapmak için kullanır."
+  },{
+    "question": "Cross-Site Request Forgery (CSRF) nedir ve nasıl korunulur?",
+    "answer": "CSRF, kullanıcının tarayıcısı aracılığıyla, kullanıcının izni olmadan zararlı isteklerin hedef uygulamaya gönderilmesidir. Örneğin, kullanıcı bir web sitesinde oturum açmışken başka bir site zararlı istek gönderir. Korunmak için CSRF token kullanımı, SameSite cookie politikaları ve çift faktörlü doğrulama yöntemleri uygulanabilir."
+  },
+  {
+    "question": "SQL Injection saldırısı nasıl gerçekleşir ve önleme yöntemleri nelerdir?",
+    "answer": "SQL Injection, kullanıcı girdilerinin doğrulanmadan doğrudan SQL sorgularına eklenmesiyle veritabanına zararlı kod enjekte edilmesidir. Bu saldırı veri sızıntısına veya sistem kontrolüne yol açabilir. Önlemek için parametreli sorgular (prepared statements), ORM kullanımı, input validasyonu ve veritabanı izinlerinin kısıtlanması gereklidir."
+  },
+  {
+    "question": "Hashing nedir ve neden şifreleme yerine kullanılır?",
+    "answer": "Hashing, veriyi sabit uzunlukta ve tek yönlü bir biçime dönüştürme işlemidir. Şifrelerin saklanmasında kullanılır çünkü hash geri çevrilemez, yani orijinal veri çıkarılamaz. Bu sayede şifreler güvenli şekilde depolanır. MD5 ve SHA-1 gibi eski algoritmalar zayıf olduğundan SHA-256, bcrypt veya Argon2 tercih edilir."
+  },{
+    "question": "Sızma testi (Penetration Testing) nedir ve hangi aşamalardan oluşur?",
+    "answer": "Sızma testi, bir sistemin güvenlik açıklarını keşfetmek amacıyla kontrollü saldırılar düzenlenmesidir. Aşamaları: keşif (reconnaissance), tarama (scanning), erişim sağlama (gaining access), ayrıcalık yükseltme (privilege escalation), izleri temizleme (covering tracks) ve raporlama."
+  },
+  {
+    "question": "Botnet nedir ve hangi amaçlarla kullanılır?",
+    "answer": "Botnet, kötü amaçlı yazılımlarla enfekte edilmiş çok sayıda bilgisayarın oluşturduğu ağdır. Saldırganlar bu ağları DDoS saldırıları, spam gönderimi, kripto madenciliği veya veri hırsızlığı için kullanır. Korunmak için antivirüs güncellemeleri, firewall ve ağ trafiği analizi yapılmalıdır."
+  },
+  {
+    "question": "Sıfır güven (Zero Trust) modeli nedir ve nasıl uygulanır?",
+    "answer": "Zero Trust, hiçbir kullanıcıya veya cihaza otomatik güvenilmemesi esasına dayanan bir güvenlik modelidir. Sürekli kimlik doğrulama, erişim kontrolleri, mikro segmentasyon ve güvenlik politikalarının dinamik uygulanması ile sağlanır. Bu model modern ağlarda güvenliği artırır."
+  },
+  {
+    "question": "Malware türleri nelerdir ve çalışma prensipleri nasıl farklılık gösterir?",
+    "answer": "Malware, virüs, worm, trojan, ransomware, spyware, adware gibi çeşitli türlere ayrılır. Virüsler dosyalara bulaşır, wormlar ağlar üzerinden yayılır, trojanlar zararsız yazılım gibi görünür ama arka kapı açar. Her türün yayılma ve etkilenme yöntemleri farklıdır."
+  },
+  {
+    "question": "Siber tehdit istihbaratı (Threat Intelligence) nedir ve neden önemlidir?",
+    "answer": "Tehdit istihbaratı, siber saldırılar, zafiyetler ve saldırgan faaliyetler hakkında toplanan, analiz edilen ve paylaşılan bilgilerdir. Güvenlik ekiplerine önleyici tedbirler alma, saldırıları daha hızlı tespit ve müdahale etme imkanı verir."
+  },
+  {
+    "question": "Firewall türleri nelerdir ve nasıl çalışırlar?",
+    "answer": "Firewall'lar paket filtreleme, durum tabanlı (stateful) ve uygulama katmanı (proxy) gibi türlere ayrılır. Paket filtreleme temel olarak IP ve port bazlı erişimi kontrol eder. Stateful firewall bağlantı durumunu izler. Uygulama katmanı firewall ise HTTP, FTP gibi protokollerde detaylı filtreleme yapar."
+  },
+  {
+    "question": "Sosyal mühendislik saldırılarında kullanılan pretexting (ön metin oluşturma) nedir?",
+    "answer": "Pretexting, saldırganın bir rol veya hikaye uydurarak hedef kişiden bilgi veya erişim elde etmeye çalışmasıdır. Örneğin, teknik destek görevlisi gibi davranıp kullanıcıdan şifre istemek. Savunmada farkındalık eğitimi ve kimlik doğrulama prosedürleri önemlidir."
+  }{
+    "question": "OAuth protokolü nedir ve nasıl çalışır?",
+    "answer": "OAuth, kullanıcıların şifrelerini paylaşmadan üçüncü taraf uygulamalara belirli kaynaklara erişim izni vermesini sağlayan yetkilendirme protokolüdür. Temel akışta kullanıcı, OAuth sunucusuna giriş yapar ve uygulamaya erişim için token (erişim belirteci) verir. Uygulama bu token ile API çağrısı yapar. OAuth 2.0 en yaygın sürümdür ve yetkilendirme kodu akışı, implicit, resource owner password credentials gibi farklı akışları vardır."
+  },
+  {
+    "question": "Sıfır gün (Zero-Day) saldırılarının riskini azaltmak için hangi stratejiler uygulanabilir?",
+    "answer": "Risk azaltımı için ağ segmentasyonu, davranış analizi ve anomali tespiti sistemleri, saldırı tespit ve önleme sistemleri (IDS/IPS) kullanılır. Ayrıca düzenli güvenlik eğitimi, yama yönetimi ve uygulamalarda en az ayrıcalık prensibi (least privilege) uygulanması önemlidir."
+  },{
+    "question": "Siber güvenlikte 'defense in depth' (katmanlı savunma) nedir?",
+    "answer": "'Defense in depth', birden çok savunma katmanı oluşturarak sistemleri koruma stratejisidir. Örneğin, firewall, antivirüs, IDS/IPS, erişim kontrolleri ve kullanıcı eğitimi bir arada kullanılır. Böylece bir katman aşılırsa diğerleri sistemi korumaya devam eder."
+  },{
+    "question": "Kriptografide simetrik ve asimetrik şifreleme arasındaki farklar nelerdir?",
+    "answer": "Simetrik şifrelemede aynı anahtar hem şifreleme hem de şifre çözme için kullanılır, hızlıdır ama anahtar paylaşımı risklidir. Asimetrik şifrelemede ise farklı anahtarlar (genel ve özel anahtar) kullanılır, anahtar paylaşımı daha güvenlidir fakat işlem daha yavaştır. Genellikle hibrit sistemlerde birlikte kullanılırlar."
+  },
+  {
+    "question": "APT saldırılarında kullanılan ‘watering hole’ taktiği nedir?",
+    "answer": "Watering hole saldırısı, hedef grubun sık ziyaret ettiği web sitelerine zararlı kod yerleştirilerek yapılır. Hedef kullanıcılar bu siteyi ziyaret ettiğinde sistemlerine zararlı yazılım bulaşır. Bu yöntem hedef odaklı ve gizlidir."
+  },
+  {
+    "question": "Siber saldırılarda kullanılan 'Command and Control' (C2) sunucuları nedir?",
+    "answer": "C2 sunucuları, saldırganların kontrol ettiği kötü amaçlı yazılımlara komut göndermek ve veri almak için kullandıkları sunuculardır. Botnetlerin ve APT saldırılarının merkezi kontrol noktasıdır. Tespiti ağ trafiği analizi ve anomali takibi ile yapılabilir."
+  },
+  {
+    "question": "Kara liste (blacklist) ve beyaz liste (whitelist) kavramları nelerdir?",
+    "answer": "Blacklist, engellenen IP, domain veya uygulamaların listesi iken, whitelist izin verilenlerin listesidir. Whitelist daha güvenli kabul edilir çünkü sadece tanımlı kaynaklara izin verilir. Ancak yönetimi zordur, blacklist daha kolay ama hatalı engellemeler olabilir."
+  }, {
+    "question": "Sızma testi (penetration testing) ile güvenlik denetimi (security audit) arasındaki fark nedir?",
+    "answer": "Sızma testi, aktif olarak sistemde zayıflıkları kullanarak saldırı simülasyonu yaparken, güvenlik denetimi politikalar, prosedürler ve sistem yapılandırmalarının incelenmesidir. Sızma testi pratik saldırı testi, denetim ise belge ve uyumluluk kontrolüdür."
+  },
+  {
+    "question": "Honeypot nedir ve nasıl kullanılır?",
+    "answer": "Honeypot, saldırganları çekmek ve saldırı yöntemlerini incelemek için kasıtlı olarak zayıf veya sahte sistemlerin oluşturulmasıdır. Bu sistemler saldırganların aktivitelerini gözlemlemek ve savunma stratejileri geliştirmek için kullanılır."
+  }
 
 ]
