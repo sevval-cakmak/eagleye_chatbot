@@ -2641,7 +2641,457 @@
     "soru": "Biometric template nedir ve neden şifrelenmelidir?",
     "cevap": "Biometric template, kullanıcının biyometrik verilerinden çıkarılan ve kimlik doğrulamada karşılaştırılan dijital veridir. Şifrelenmezse kötü niyetli kişilerce ele geçirilebilir, taklit edilebilir ve kullanıcı mahremiyeti ihlal edilir. Bu nedenle template verileri güvenli şekilde saklanmalı ve aktarılmalıdır.",
     "seviye": "zor"
+  },{
+    "konu": "OAuth Protokolü ve Yetkilendirme",
+    "seviye": "Orta",
+    "soru": "OAuth protokolü nedir ve nasıl çalışır?",
+    "cevap": "OAuth, kullanıcıların şifrelerini paylaşmadan üçüncü taraf uygulamalara belirli kaynaklara erişim izni vermesini sağlayan bir yetkilendirme protokolüdür. Kullanıcı, OAuth sunucusuna giriş yapar ve uygulamaya erişim için bir erişim belirteci (token) verir. Bu token, uygulamanın kullanıcı adına API çağrıları yapmasına izin verir. OAuth 2.0 sürümü en yaygın kullanılan versiyondur ve güvenlik açısından birçok farklı yetkilendirme akışı sunar."
   },
-
-
+  {
+    "konu": "OAuth Protokolü ve Yetkilendirme",
+    "seviye": "Orta",
+    "soru": "OAuth 2.0 akış türleri nelerdir ve hangi durumlarda kullanılır?",
+    "cevap": "OAuth 2.0’da en yaygın akış türleri şunlardır: Authorization Code (Yetkilendirme Kodu), Implicit (Dolaylı), Resource Owner Password Credentials (Kaynak Sahibi Parola Kimlik Bilgileri), ve Client Credentials (İstemci Kimlik Bilgileri). Authorization Code akışı, güvenli ve yaygın kullanılan yöntemdir, genellikle sunucu tabanlı uygulamalarda tercih edilir. Implicit akışı daha hızlıdır ancak daha az güvenlidir, tarayıcı tabanlı uygulamalarda kullanılır. Resource Owner Password Credentials, kullanıcı parolasının doğrudan kullanıldığı nadir bir akıştır. Client Credentials ise uygulama-uygulama iletişimlerinde kullanılır."
+  },
+  {
+    "konu": "OAuth Protokolü ve Yetkilendirme",
+    "seviye": "İleri",
+    "soru": "OAuth token’ları nelerdir ve hangi amaçlarla kullanılır?",
+    "cevap": "OAuth'da iki ana token türü vardır: erişim tokenı (access token) ve yenileme tokenı (refresh token). Erişim tokenı, uygulamanın kaynaklara erişim izni verdiği kısa ömürlü bir anahtardır. Yenileme tokenı ise erişim tokenı süresi dolduğunda yeni token almak için kullanılır. Bu yapı, güvenliği artırır ve kullanıcı deneyimini iyileştirir. Tokenlar JSON Web Token (JWT) gibi formatlarda olabilir ve taşıdıkları bilgileri içerirler."
+  },
+  {
+    "konu": "OAuth Protokolü ve Yetkilendirme",
+    "seviye": "İleri",
+    "soru": "OAuth ve OpenID Connect arasındaki fark nedir?",
+    "cevap": "OAuth bir yetkilendirme protokolü olup, kullanıcıların üçüncü taraf uygulamalara belirli kaynaklara erişim izni vermesini sağlar. OpenID Connect ise OAuth 2.0 üzerine inşa edilmiş bir kimlik doğrulama protokolüdür. OpenID Connect, kullanıcı kimliğini doğrulamak için ek katmanlar ve ID tokenları kullanır. Böylece hem kimlik doğrulama hem de yetkilendirme sağlanabilir."
+  },
+  {
+    "konu": "OAuth Protokolü ve Yetkilendirme",
+    "seviye": "Orta",
+    "soru": "OAuth güvenlik açıkları nelerdir ve nasıl korunulur?",
+    "cevap": "OAuth sistemlerinde token hırsızlığı, token tekrar kullanımı (replay attacks), açık yönlendirme saldırıları (open redirectors) gibi riskler vardır. Bu risklere karşı, tokenlar kısa ömürlü yapılmalı, HTTPS kullanılmalı, redirect URI'ler kesinlikle doğrulanmalı ve istemci kimlik doğrulaması uygulanmalıdır. Ayrıca PKCE (Proof Key for Code Exchange) gibi ek güvenlik mekanizmaları tercih edilmelidir."
+  },
+  {
+    "konu": "Sıfır Gün (Zero-Day) Saldırıları",
+    "seviye": "İleri",
+    "soru": "Sıfır gün (Zero-Day) saldırıları nedir?",
+    "cevap": "Sıfır gün saldırıları, henüz bilinmeyen veya yamalanmamış güvenlik açıklarından yararlanılarak gerçekleştirilen saldırılardır. Yazılım üreticisi veya güvenlik topluluğu tarafından henüz fark edilmemiş bu açıklar, saldırganlara sistemlere sızmak veya veri çalmak için avantaj sağlar. Bu tür saldırılar yüksek risk taşır çünkü savunma önlemleri henüz geliştirilememiştir."
+  },
+  {
+    "konu": "Sıfır Gün (Zero-Day) Saldırıları",
+    "seviye": "İleri",
+    "soru": "Sıfır gün saldırılarının tespiti neden zordur?",
+    "cevap": "Sıfır gün saldırıları, daha önce bilinmeyen açıkları hedef aldığı için geleneksel imza tabanlı antivirüs ve IDS sistemleri tarafından kolayca tespit edilemez. Bu saldırılar genellikle davranış analizi, anomali tespiti ve makine öğrenimi teknikleri kullanılarak fark edilmeye çalışılır. Ancak, bu yöntemler de kesin sonuç vermez ve karmaşık analizler gerektirir."
+  },
+  {
+    "konu": "Sıfır Gün (Zero-Day) Saldırıları",
+    "seviye": "Orta",
+    "soru": "Sıfır gün saldırılarına karşı hangi savunma yöntemleri kullanılabilir?",
+    "cevap": "Sıfır gün saldırılarına karşı ağ segmentasyonu, saldırı tespit ve önleme sistemleri (IDS/IPS), davranış analizi ve anomali tespiti gibi yöntemler uygulanabilir. Ayrıca sistemlerin ve uygulamaların düzenli güncellenmesi, en az ayrıcalık prensibinin benimsenmesi ve kullanıcıların bilinçlendirilmesi riskleri azaltır. Son olarak, saldırı sonrası hızlı müdahale için olay müdahale planları oluşturulmalıdır."
+  },
+  {
+    "konu": "Siber Güvenlikte Katmanlı Savunma (Defense in Depth)",
+    "seviye": "Orta",
+    "soru": "Defense in depth (katmanlı savunma) nedir ve neden önemlidir?",
+    "cevap": "Katmanlı savunma, güvenliği tek bir önlemle sınırlamak yerine, birden fazla savunma katmanı oluşturarak sistemleri koruma stratejisidir. Örneğin firewall, antivirüs, IDS/IPS, erişim kontrolleri ve kullanıcı eğitimi gibi farklı güvenlik önlemleri birlikte kullanılır. Böylece bir savunma katmanı aşılırsa, diğerleri saldırıyı durdurabilir. Bu yaklaşım, saldırganların işini zorlaştırır ve güvenlik seviyesini yükseltir."
+  },
+  {
+    "konu": "Siber Güvenlikte Katmanlı Savunma (Defense in Depth)",
+    "seviye": "Orta",
+    "soru": "Katmanlı savunma stratejisinde hangi katmanlar bulunabilir?",
+    "cevap": "Katmanlı savunma stratejisinde ağ güvenliği (firewall, IDS/IPS), uç nokta güvenliği (antivirüs, EDR), kimlik ve erişim yönetimi (MFA, RBAC), veri güvenliği (şifreleme, DLP), fiziksel güvenlik ve kullanıcı eğitimi gibi katmanlar bulunur. Her katman farklı saldırı türlerine karşı koruma sağlar ve birlikte daha etkili bir savunma mekanizması oluşturur."
+  },
+  {
+    "konu": "Kriptografi",
+    "seviye": "Orta",
+    "soru": "Simetrik ve asimetrik şifreleme arasındaki temel farklar nelerdir?",
+    "cevap": "Simetrik şifrelemede aynı anahtar hem veriyi şifrelemek hem de şifre çözmek için kullanılır. Bu yöntem hızlıdır ancak anahtarın güvenli paylaşımı zordur. Asimetrik şifrelemede ise iki farklı anahtar vardır: genel (public) anahtar ve özel (private) anahtar. Genel anahtar şifrelemek, özel anahtar ise şifre çözmek için kullanılır. Asimetrik şifreleme daha güvenli ama daha yavaştır. Genellikle performans ve güvenlik dengesi için her iki yöntem birlikte kullanılır."
+  },
+  {
+    "konu": "Kriptografi",
+    "seviye": "İleri",
+    "soru": "Hibrit şifreleme sistemleri nedir ve neden kullanılır?",
+    "cevap": "Hibrit şifreleme sistemleri, simetrik ve asimetrik şifrelemeyi bir arada kullanır. Genellikle veri simetrik şifreleme ile hızlıca şifrelenirken, simetrik anahtar asimetrik şifreleme ile güvenli şekilde paylaşılır. Bu yöntem hem performans hem de güvenlik avantajı sağlar. Örneğin HTTPS protokolü hibrit şifreleme yöntemini kullanır."
+  },
+  {
+    "konu": "APT Saldırıları ve Taktikleri",
+    "seviye": "İleri",
+    "soru": "APT saldırılarında kullanılan ‘watering hole’ taktiği nedir?",
+    "cevap": "Watering hole taktiği, hedef grubun sık ziyaret ettiği web sitelerine zararlı kod yerleştirilerek gerçekleştirilen saldırıdır. Hedef kullanıcılar bu sitelere eriştiğinde sistemlerine kötü amaçlı yazılım bulaşır. Bu yöntem gizli ve hedef odaklıdır, saldırganların doğrudan hedefe ulaşmasını sağlar ve tespit edilmesi zordur."
+  },
+  {
+    "konu": "APT Saldırıları ve Taktikleri",
+    "seviye": "İleri",
+    "soru": "APT saldırılarının diğer yaygın taktikleri nelerdir?",
+    "cevap": "APT saldırıları uzun süreli, gizli ve hedef odaklıdır. Saldırganlar spear phishing, kimlik avı, sosyal mühendislik, sıfır gün açıkları, lateral hareket (iç ağda yayılma), gizli komut ve kontrol kanalları kullanır. Amaç veri çalmak, sistem kontrolünü ele geçirmek ve uzun süre fark edilmeden kalmaktır."
+  },
+  {
+    "konu": "APT Saldırıları ve Taktikleri",
+    "seviye": "İleri",
+    "soru": "APT saldırılarına karşı hangi savunma yöntemleri etkilidir?",
+    "cevap": "APT saldırılarına karşı katmanlı savunma, sürekli izleme, anomali tespiti, ağ segmentasyonu, güvenlik açıklarının hızlı kapatılması, kullanıcı eğitimi ve kapsamlı olay müdahale planları etkilidir. Ayrıca tehdit istihbaratı paylaşımı ve gelişmiş güvenlik çözümleri kullanılmalıdır."
+  },{
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "Orta",
+    "soru": "Tehdit avcılığı nedir ve neden önemlidir?",
+    "cevap": "Tehdit avcılığı, güvenlik sistemlerinin gözden kaçırdığı veya yeni ortaya çıkan tehditleri proaktif şekilde arama sürecidir. Geleneksel güvenlik önlemlerinin yakalayamadığı saldırıları erken tespit etmek ve müdahale etmek için çok önemlidir."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "Orta",
+    "soru": "Tehdit avcılığı süreci nasıl işler ve hangi aşamalardan oluşur?",
+    "cevap": "Süreç genellikle hipotez oluşturma, veri toplama, analiz, anomali tespiti ve sonuçların raporlanması aşamalarından oluşur. Güvenlik analistleri belirledikleri hipotezler doğrultusunda çeşitli veri kaynaklarını inceleyerek şüpheli aktiviteleri tespit eder."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "İleri",
+    "soru": "Tehdit avcılığında hangi araçlar kullanılır ve veri kaynakları nelerdir?",
+    "cevap": "SIEM, EDR, ağ trafik analiz araçları, sandbox ortamları ve özel scriptler yaygın kullanılır. Veri kaynakları arasında ağ logları, sistem ve uygulama logları, kullanıcı davranışları ve tehdit istihbaratı bulunur."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "İleri",
+    "soru": "Threat hunting ile threat intelligence arasındaki fark nedir?",
+    "cevap": "Threat intelligence, bilinen tehditlere dair toplanmış bilgidir ve genellikle otomatik sistemlere veri sağlar. Threat hunting ise bu bilgileri veya bağımsız olarak bilinmeyen tehditleri aktif olarak arama sürecidir."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "İleri",
+    "soru": "Hipotez nedir ve tehdit avcılığında nasıl kullanılır?",
+    "cevap": "Hipotez, belirli bir saldırı senaryosu veya anormal durumla ilgili varsayımdır. Tehdit avcılığında, bu hipotezler veri analizi için başlangıç noktası olur, örneğin ‘bir kullanıcının olağandışı saatlerde giriş yapması’ gibi."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "Orta",
+    "soru": "Tehdit avcılığı organizasyonlara ne gibi faydalar sağlar?",
+    "cevap": "Erken tehdit tespiti, saldırıların hızlı durdurulması, güvenlik seviyesinin artması, güvenlik ekibinin gelişimi ve proaktif savunma kültürünün oluşturulması gibi önemli faydalar sağlar."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "İleri",
+    "soru": "Tehdit avcılığına başlamadan önce hangi veriler toplanmalıdır?",
+    "cevap": "Ağ trafiği, sistem ve uygulama logları, kullanıcı aktiviteleri, dosya erişim kayıtları ve tehdit istihbaratı gibi kapsamlı veri kaynakları toplanmalı, analiz için hazır hale getirilmelidir."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "İleri",
+    "soru": "Anomali tespiti tehdit avcılığında neden önemlidir?",
+    "cevap": "Saldırganlar genellikle normal görünümlü aktiviteler gerçekleştirir. Anomali tespiti, beklenen davranıştan sapmaları yakalayarak gizli veya yeni saldırı tekniklerini ortaya çıkarır."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "Orta",
+    "soru": "Tehdit avcılığı ne sıklıkla yapılmalıdır ve neden?",
+    "cevap": "Sürekli veya periyodik olabilir. Sürekli tehdit avcılığı daha etkili sonuç verir ancak daha fazla kaynak gerektirir. Periyodik avcılık da belirli aralıklarla sistemin güvenlik durumu hakkında bilgi verir."
+  },
+  {
+    "konu": "Tehdit Avcılığı (Threat Hunting)",
+    "seviye": "Orta",
+    "soru": "Tehdit avcılığı ve otomatik güvenlik sistemleri arasındaki ilişki nedir?",
+    "cevap": "Otomatik sistemler bilinen tehditlere karşı hızlı yanıt verirken, tehdit avcılığı bilinmeyen ve gelişmekte olan tehditleri insan analistlerin proaktif araştırması ile ortaya çıkarır. Bu ikisi birbirini tamamlar."
+  },
+{
+    "soru": "Mobil cihazlarda en yaygın güvenlik açıkları nelerdir?",
+    "cevap": "Mobil cihazlarda yaygın güvenlik açıkları arasında kötü amaçlı uygulamalar, zayıf parola kullanımı, güncellenmeyen işletim sistemi, Wi-Fi ağlarının kötü kullanımı ve verilerin şifrelenmemesi bulunur. Bu açıklar saldırganlara cihaz kontrolü, veri hırsızlığı ve kimlik avı gibi riskler yaratır.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil uygulama güvenliği nasıl sağlanır?",
+    "cevap": "Mobil uygulama güvenliği için uygulamaların kaynak kodunun güvenli yazılması, hassas verilerin şifrelenmesi, güvenli API kullanımı, yetkilendirme kontrollerinin doğru yapılması ve düzenli güvenlik testleri yapılması gereklidir. Ayrıca uygulama mağazalarında güvenilir kaynaklardan uygulama indirmek önemlidir.",
+    "seviye": "İleri",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihazlarda veri şifreleme neden önemlidir ve nasıl yapılır?",
+    "cevap": "Mobil cihazlarda veri şifreleme, verilerin yetkisiz erişimlere karşı korunmasını sağlar. Cihazdaki veriler hem cihaz çalışırken hem de kapalıyken şifrelenebilir. Günümüzde çoğu mobil işletim sistemi (Android, iOS) dahili şifreleme desteği sunar. Bu sayede fiziksel cihaz ele geçirilse bile veri okunamaz.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihazlarda zararlı yazılımlar nasıl tespit edilir ve önlenir?",
+    "cevap": "Zararlı yazılımlar, güvenilir antivirüs uygulamalarıyla, şüpheli uygulama davranışlarının izlenmesiyle ve uygulama mağazalarının dışından uygulama yüklenmemesiyle tespit edilip önlenebilir. Kullanıcıların bilinmeyen linklere tıklamaması ve cihaz güncellemelerini düzenli yapması da önemlidir.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil ağlarda güvenliği sağlamak için hangi yöntemler kullanılır?",
+    "cevap": "Mobil ağlarda güvenliği sağlamak için VPN kullanımı, Wi-Fi ağlarının güvenli hale getirilmesi (WPA3 şifrelemesi), cihaz ve uygulama seviyesinde firewall kurulumu ve şifreleme protokollerinin uygulanması gereklidir. Ayrıca mobil cihazların ağ trafiği sürekli izlenmelidir.",
+    "seviye": "İleri",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihaz kaybı veya çalınması durumunda hangi güvenlik önlemleri alınmalıdır?",
+    "cevap": "Cihaz kaybı veya çalınması durumunda uzaktan silme (remote wipe) özelliği kullanılmalı, cihazın konumu takip edilmeli, cihazdaki veriler şifrelenmiş olmalı ve kullanıcıların güçlü parola veya biyometrik doğrulama kullanması gereklidir. Ayrıca cihazın SIM kart ve ağ erişimi engellenmelidir.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihazlarda iki faktörlü kimlik doğrulama nasıl uygulanır?",
+    "cevap": "İki faktörlü kimlik doğrulama (2FA), kullanıcı adı ve parola dışında ek bir doğrulama katmanı sağlar. Mobil cihazlarda bu genellikle SMS doğrulama, doğrulama uygulamaları (Google Authenticator, Authy) veya biyometrik doğrulama yoluyla yapılır. Bu yöntem hesap güvenliğini önemli ölçüde artırır.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihaz yönetimi (MDM) nedir ve neden önemlidir?",
+    "cevap": "MDM, kurumların mobil cihazlarını merkezi olarak yönetmesini ve güvenliğini sağlamasını sağlayan çözümlerdir. Cihazların politika ve güvenlik ayarlarının uygulanması, uygulama dağıtımı, cihaz takibi ve uzaktan yönetim gibi özellikler sunar. Kurumsal verilerin korunması için kritik öneme sahiptir.",
+    "seviye": "İleri",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihazlarda hangi biyometrik doğrulama yöntemleri güvenlidir?",
+    "cevap": "Parmak izi, yüz tanıma, iris taraması gibi biyometrik doğrulama yöntemleri yaygın olarak kullanılır. Bunlar kullanıcıya kolaylık sağlarken aynı zamanda güçlü güvenlik sunar. Ancak biyometrik verilerin güvenliği ve gizliliği için cihazlarda güvenli donanım ve yazılım desteği gereklidir.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },
+  {
+    "soru": "Mobil cihazlarda uygulama izinleri nasıl yönetilmelidir?",
+    "cevap": "Uygulama izinleri, sadece uygulamanın işlevselliği için gerekli olanlarla sınırlandırılmalıdır. Kullanıcılar gereksiz izinleri reddetmeli ve özellikle konum, kamera, mikrofon gibi hassas verilere erişim izni dikkatle verilmelidir. Düzenli izin kontrolleri ve bilinçli kullanım güvenliği artırır.",
+    "seviye": "Orta",
+    "konu": "Mobil Güvenlik"
+  },{
+    "soru": "KVKK (Kişisel Verilerin Korunması Kanunu) nedir ve kurumlar için önemi nedir?",
+    "cevap": "KVKK, Türkiye’de kişisel verilerin işlenmesi ve korunmasına dair kuralları belirleyen bir kanundur. Kurumlar, kişisel verileri işleme süreçlerinde KVKK’ya uyum sağlamak zorundadır. Aksi halde ağır para cezaları ve itibar kaybı yaşanabilir. Kanun, veri sahiplerinin haklarını ve veri güvenliğini korumayı amaçlar.",
+    "seviye": "Orta",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "GDPR (Genel Veri Koruma Yönetmeliği) nedir ve Türkiye’deki etkileri nelerdir?",
+    "cevap": "GDPR, Avrupa Birliği’nin veri koruma düzenlemesidir. Avrupa’daki bireylerin kişisel verilerinin korunmasını sağlar. Türkiye’deki şirketler de AB vatandaşlarına hizmet veriyorsa GDPR’ye uymak zorundadır. Bu yönetmelik veri işleme süreçlerinde şeffaflık, onay ve veri minimizasyonu gibi kurallar getirir.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Siber güvenlik alanında uyumluluk denetimleri neden önemlidir?",
+    "cevap": "Uyumluluk denetimleri, kurumların yürürlükteki yasalara ve standartlara uygun hareket edip etmediğini kontrol eder. Bu denetimler, veri güvenliği risklerinin azaltılması, yasal yaptırımlardan kaçınılması ve müşteri güveninin artırılması açısından önemlidir. Ayrıca süreç iyileştirmeleri ve risk yönetimi sağlar.",
+    "seviye": "Orta",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Siber suçlarla mücadelede hangi yasal düzenlemeler uygulanır?",
+    "cevap": "Siber suçlarla mücadelede Türk Ceza Kanunu’nun ilgili maddeleri, BTK düzenlemeleri, KVKK ve uluslararası iş birlikleri kullanılır. Suç tipleri arasında bilgisayar sistemine zarar verme, veri hırsızlığı, dolandırıcılık ve erişim engelleme gibi eylemler bulunur. Etkin soruşturma ve yaptırım için hukuki altyapı gereklidir.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Veri sızıntısı sonrası yasal yükümlülükler nelerdir?",
+    "cevap": "Veri sızıntısı tespit edilince kurumlar, ilgili kurumları ve etkilenen kişileri yasal sürelerde bilgilendirmek zorundadır. Sızıntının kapsamı, nedenleri ve alınan önlemler raporlanmalı, ihlal önlenmesi için hızla müdahale edilmelidir. Bu yükümlülükler KVKK, GDPR gibi düzenlemelerde açıkça belirtilmiştir.",
+    "seviye": "Orta",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Siber güvenlik politikaları hazırlanırken hangi yasal gereksinimler dikkate alınmalıdır?",
+    "cevap": "Siber güvenlik politikaları hazırlanırken KVKK, GDPR, ISO 27001 gibi standartlar ve sektörel mevzuatlar göz önünde bulundurulmalıdır. Politika; veri koruma, erişim kontrolleri, risk yönetimi ve eğitim gibi alanları kapsamalı, yasal uyumluluğu sağlamalıdır.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Bulut ortamında yasal uyumluluk nasıl sağlanır?",
+    "cevap": "Bulut hizmeti sağlayıcıları ile yapılan sözleşmelerde veri güvenliği ve yasal uyumluluk maddeleri yer almalıdır. Veri işleme, saklama ve erişim süreçleri KVKK ve GDPR standartlarına uygun olmalıdır. Ayrıca bulut servislerinin fiziksel lokasyonu ve yedekleme prosedürleri de uyumluluk açısından değerlendirilir.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Siber güvenlik eğitimlerinin yasal önemi nedir?",
+    "cevap": "Yasal düzenlemeler, kurumların çalışanlarını siber güvenlik konusunda bilinçlendirmesini zorunlu kılar. Eğitimler, insan faktöründen kaynaklanan güvenlik açıklarını azaltır, yasal uyumluluğu destekler ve kurumun savunma hattını güçlendirir. KVKK ve ISO standartları eğitimleri teşvik eder.",
+    "seviye": "Orta",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Veri işleyen üçüncü taraflarla sözleşmelerde nelere dikkat edilmelidir?",
+    "cevap": "Üçüncü taraf sözleşmelerinde veri gizliliği, veri işleme şartları, güvenlik önlemleri ve yasal uyumluluk maddeleri açıkça belirtilmelidir. Sözleşmede veri ihlali durumunda yapılacaklar ve sorumluluklar netleştirilmelidir. Bu, veri sızıntısı riskini azaltır ve yasal sorunları önler.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+  {
+    "soru": "Siber güvenlikte uluslararası uyumluluk neden gereklidir?",
+    "cevap": "Uluslararası uyumluluk, farklı ülkelerde faaliyet gösteren kurumların küresel standartlara uygun hareket etmesini sağlar. Bu, yasal yaptırımlardan korunmayı, müşteri güvenini artırmayı ve uluslararası iş birliklerini kolaylaştırır. ISO, GDPR gibi standartlar uluslararası uyumluluğun temel taşlarıdır.",
+    "seviye": "İleri",
+    "konu": "Siber Güvenlik Hukuku ve Uyumluluk"
+  },
+{
+    "soru": "Kritik altyapı nedir ve neden korunmalıdır?",
+    "cevap": "Kritik altyapı, bir ülkenin veya organizasyonun temel işleyişi için vazgeçilmez olan enerji, su, ulaşım, sağlık gibi sistemlerdir. Bu altyapılar saldırıya uğradığında ekonomik, sosyal ve güvenlik açısından büyük zararlar oluşur. Bu yüzden yüksek güvenlik standartları ile korunmaları gerekir.",
+    "seviye": "Orta",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılara yönelik siber tehditler nelerdir?",
+    "cevap": "Kritik altyapılara yönelik tehditler arasında DDoS saldırıları, kötü amaçlı yazılımlar, fidye yazılımları, fiziksel sabotaj ve iç tehditler bulunur. Bu saldırılar sistemlerin çalışmasını engelleyebilir, veri kaybına yol açabilir veya altyapının kontrolünü ele geçirebilir.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda risk yönetimi nasıl yapılır?",
+    "cevap": "Risk yönetimi, tehditlerin belirlenmesi, zafiyetlerin analiz edilmesi, risklerin değerlendirilmesi ve uygun önlemlerin alınmasını içerir. Sürekli izleme, acil durum planları, yedekleme ve test süreçleri kritik altyapıların güvenliği için şarttır.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "SCADA sistemleri kritik altyapılarda neden önemlidir ve nasıl korunur?",
+    "cevap": "SCADA sistemleri (Supervisory Control and Data Acquisition), endüstriyel süreçlerin kontrolünde kullanılır. Kritik altyapılarda SCADA sistemleri siber saldırılar için zayıf nokta olabilir. Bu nedenle ağ segmentasyonu, güçlü erişim kontrolleri, düzenli güncellemeler ve izleme ile korunmalıdır.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda olay müdahale planı nasıl hazırlanmalıdır?",
+    "cevap": "Olay müdahale planı, tehdit durumunda hızlı ve etkili aksiyon alınmasını sağlar. Plan; olayın tanımlanması, analiz, kontrol altına alma, iyileştirme ve raporlama aşamalarını içermelidir. Personel eğitimleri, iletişim protokolleri ve test tatbikatları da planın parçalarıdır.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Fiziksel güvenlik kritik altyapılarda nasıl sağlanır?",
+    "cevap": "Fiziksel güvenlik, kritik altyapı tesislerine yetkisiz erişimi engellemek için kamera sistemleri, kartlı geçiş sistemleri, güvenlik personeli ve alarm sistemleri kullanılarak sağlanır. Ayrıca altyapıların yerleşimi ve yedekleme tesisleri de güvenlik stratejisinin parçasıdır.",
+    "seviye": "Orta",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda çalışanların güvenlik farkındalığı neden önemlidir?",
+    "cevap": "İnsan faktörü, kritik altyapılarda güvenlikte en zayıf halka olabilir. Çalışanların sosyal mühendislik saldırılarına karşı bilinçlendirilmesi, güvenlik politikalarına uyumu ve doğru davranışlar kritik altyapının korunmasında büyük rol oynar.",
+    "seviye": "Orta",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda yedekleme ve felaket kurtarma planları nasıl olmalıdır?",
+    "cevap": "Yedekleme ve felaket kurtarma planları, altyapının iş sürekliliğini sağlamak için kritik öneme sahiptir. Düzenli yedekleme, farklı coğrafi lokasyonlarda saklama ve kurtarma prosedürlerinin test edilmesi gerekir. Planlar hızlı geri dönüşü ve veri kaybının minimuma indirilmesini hedefler.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda kullanılan şifreleme yöntemleri nelerdir?",
+    "cevap": "Kritik altyapılarda veri güvenliği için simetrik (AES) ve asimetrik (RSA, ECC) şifreleme yöntemleri kullanılır. Şifreleme hem veri iletiminde hem de depolamada uygulanır. Ayrıca anahtar yönetimi ve güvenli protokoller (TLS, IPsec) kritik altyapı güvenliğinde standarttır.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },
+  {
+    "soru": "Kritik altyapılarda siber güvenlik standartları ve regülasyonlar nelerdir?",
+    "cevap": "ISO 27001, NIST Cybersecurity Framework, IEC 62443 gibi standartlar kritik altyapıların güvenliği için rehberlik eder. Ayrıca yerel ve uluslararası regülasyonlar kapsamında uyumluluk zorunludur. Bu standartlar risk yönetimi, olay müdahalesi ve sürekli iyileştirme süreçlerini kapsar.",
+    "seviye": "İleri",
+    "konu": "Kritik Altyapı Güvenliği"
+  },{
+    "konu": "İç Tehditler ve Erişim Yönetimi",
+    "soru": "Insider Threat (İç tehdit) nedir ve kurumlar bu tehdide karşı nasıl önlem alabilir?",
+    "cevap": "İç tehdit, kurum içindeki çalışan veya yetkili kişilerin kasıtlı ya da kasıtsız olarak güvenlik açıklarına neden olmasıdır. Önlem olarak erişim yetkilerinin sınırlandırılması, davranış analizi, denetim kayıtlarının izlenmesi ve farkındalık eğitimleri uygulanabilir.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Zararlı Yazılım Analizi",
+    "soru": "Siber güvenlikte 'sandbox evasion' teknikleri nelerdir?",
+    "cevap": "Sandbox evasion, zararlı yazılımların analiz ortamlarını algılayıp davranışlarını gizlemesi teknikleridir. Örneğin, zaman geciktirme, ortam değişkenlerini kontrol etme veya kullanıcı hareketlerini taklit etme gibi yöntemler kullanılır.",
+    "seviye": "İleri"
+  },
+  {
+    "konu": "Yama Yönetimi",
+    "soru": "Siber güvenlikte ‘patch management’ (yama yönetimi) neden kritik öneme sahiptir?",
+    "cevap": "Yama yönetimi, yazılım açıklarının kapatılması için güncellemelerin sistemlere zamanında uygulanmasıdır. Zayıf veya güncellenmemiş sistemler saldırganlar için kolay hedef olur. Otomatik ve düzenli yama süreci güvenliği artırır.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Web Güvenliği",
+    "soru": "Web uygulamalarında kullanılan Content Security Policy (CSP) nedir ve nasıl saldırıları önler?",
+    "cevap": "CSP, web sayfasının hangi kaynaklardan içerik yükleyebileceğini belirten güvenlik mekanizmasıdır. Böylece XSS ve veri enjeksiyonu gibi saldırılar engellenir. Örneğin sadece belirli domainlerden script çalıştırmaya izin verilir.",
+    "seviye": "Orta"
+  },{
+    "konu": "Blokzincir Teknolojisi",
+    "soru": "Proof of Work (PoW) mekanizması nasıl çalışır ve avantajları ile dezavantajları nelerdir?",
+    "cevap": "PoW, madencilerin karmaşık matematiksel problemleri çözerek blok eklediği konsensüs mekanizmasıdır. Avantajı yüksek güvenlik ve saldırı zorluğudur. Dezavantajı ise yüksek enerji tüketimi ve işlem hızının düşük olmasıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Blokzincir Teknolojisi",
+    "soru": "Proof of Stake (PoS) konsensüs algoritması nedir ve PoW'dan farkı nedir?",
+    "cevap": "PoS, blok oluşturma hakkının coin miktarına (stake) göre dağıtıldığı enerji tasarruflu mekanizmadır. PoW'un aksine madencilik için yoğun hesaplama gerektirmez, daha hızlı ve çevre dostudur.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Akıllı Kontratlar",
+    "soru": "Akıllı kontratlar (smart contracts) ne işe yarar ve nasıl çalışır?",
+    "cevap": "Akıllı kontratlar, blokzincirde koşullar sağlandığında otomatik olarak çalışan kod parçacıklarıdır. Aracı gerektirmeden güvenilir ve şeffaf işlemler sağlar, sözleşme şartlarını yerine getirir.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Blokzincir Yapısı",
+    "soru": "Blokzincirde ‘fork’ nedir ve tipleri nelerdir?",
+    "cevap": "Fork, blokzincirin iki farklı versiyona ayrılmasıdır. Hard fork kalıcı değişikliktir ve eski sürümle uyumsuzdur. Soft fork ise geriye dönük uyumludur ve yeni kurallarla mevcut zinciri günceller.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Merkeziyetsiz Finans (DeFi)",
+    "soru": "Merkeziyetsiz finans (DeFi) nedir ve blockchain üzerindeki önemi nedir?",
+    "cevap": "DeFi, finansal işlemleri merkezi otorite olmadan blockchain üzerinde gerçekleştiren uygulamalardır. Aracıları ortadan kaldırarak maliyetleri azaltır ve erişimi genişletir.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Kripto Cüzdanlar",
+    "soru": "Kripto para cüzdanları (wallet) nasıl çalışır ve türleri nelerdir?",
+    "cevap": "Kripto cüzdanlar, kullanıcıların özel anahtarlarını saklar ve işlemleri imzalar. Yazılım cüzdanları (desktop, mobil), donanım cüzdanları ve kağıt cüzdanlar olmak üzere farklı türleri vardır.",
+    "seviye": "Temel"
+  },
+  {
+    "konu": "Merkeziyetsiz Uygulamalar (DApp)",
+    "soru": "Merkeziyetsiz uygulama (DApp) nedir ve nasıl çalışır?",
+    "cevap": "DApp, blockchain üzerinde çalışan merkezi otorite olmayan yazılımlardır. Akıllı kontratlar ile işlem yapar ve veriler ağ üzerinde dağıtık şekilde saklanır. Güvenli ve sansüre dayanıklıdır.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Bulut Bilişim Modelleri",
+    "soru": "IaaS, PaaS ve SaaS modellerinin temel farkları nelerdir?",
+    "cevap": "IaaS, altyapı hizmeti sunar (sunucu, depolama); PaaS, geliştirme platformu sağlar; SaaS ise uygulamaları internet üzerinden hizmet olarak sunar. Kullanıcı kontrolü IaaS’da en fazla, SaaS’da en azdır.",
+    "seviye": "Temel"
+  },
+  {
+    "konu": "Bulut Çoklu Kullanım Yapısı",
+    "soru": "Bulut bilişimde ‘multi-tenancy’ nedir ve ne gibi avantajları vardır?",
+    "cevap": "Multi-tenancy, bir bulut ortamının aynı altyapıyı birden çok müşteriye hizmet vermek için paylaşmasıdır. Kaynak verimliliği sağlar, maliyeti düşürür, ölçeklenebilirliği artırır.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Bulut Güvenliği",
+    "soru": "Bulut güvenliğinde kimlik ve erişim yönetimi (IAM) neden kritik öneme sahiptir?",
+    "cevap": "IAM, kullanıcıların kimlik doğrulama ve yetkilendirme süreçlerini yönetir. Yetkisiz erişimleri önler, kullanıcı aktivitelerini denetler ve güvenlik politikalarının uygulanmasını sağlar.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Veri Gizliliği",
+    "soru": "Bulut servis sağlayıcıları arasında veri gizliliği nasıl sağlanır?",
+    "cevap": "Veri şifreleme, erişim kontrolü, yasal uyumluluk (GDPR, HIPAA), çok katmanlı güvenlik ve düzenli denetimlerle veri gizliliği korunur. Ayrıca verilerin fiziksel konumu da önemlidir.",
+    "seviye": "İleri"
+  },
+  {
+    "konu": "Sunucusuz Hesaplama",
+    "soru": "Bulutta ‘serverless computing’ (sunucusuz hesaplama) nedir ve avantajları nelerdir?",
+    "cevap": "Serverless computing, geliştiricilerin sunucu yönetmeden sadece kod yazarak hizmet sunmasını sağlar. Ölçeklenebilirlik, maliyet verimliliği ve hız avantajları vardır.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Yedekleme ve Felaket Kurtarma",
+    "soru": "Bulut ortamında yedekleme ve felaket kurtarma (disaster recovery) nasıl planlanır?",
+    "cevap": "Yedekleme stratejisi belirlenir, veri düzenli ve otomatik yedeklenir. Felaket kurtarma planında kritik sistemlerin hızlı geri getirilmesi için bulut kaynakları kullanılır. Test ve güncelleme önemlidir.",
+    "seviye": "İleri"
+  },
+  {
+    "konu": "Veri Entegrasyonu",
+    "soru": "Bulut hizmetlerinde veri taşıma ve entegrasyon zorlukları nelerdir?",
+    "cevap": "Farklı servisler arasında veri uyumsuzluğu, performans sorunları, güvenlik riskleri ve veri formatları sorun olabilir. Standart API’ler ve middleware çözümleriyle çözülür.",
+    "seviye": "İleri"
+  },
+  {
+    "konu": "Mikroservis Mimarisi",
+    "soru": "Bulut mimarisinde mikroservislerin rolü nedir?",
+    "cevap": "Mikroservisler, uygulamaları küçük bağımsız servisler olarak modüler hale getirir. Ölçeklenebilirlik, hata toleransı ve hızlı geliştirme avantajları sağlar.",
+    "seviye": "Orta"
+  },
+  {
+    "konu": "Bulut Güvenlik Duvarları",
+    "soru": "Bulut ortamında güvenlik duvarı (firewall) nasıl çalışır?",
+    "cevap": "Bulut firewall, gelen ve giden ağ trafiğini kontrol eder, zararlı bağlantıları engeller. Politikalar ve kurallar belirlenerek ağ güvenliği sağlanır.",
+    "seviye": "Temel"
+  },
+  {
+    "konu": "Kubernetes ve Konteyner Yönetimi",
+    "soru": "Kubernetes nedir ve bulut altyapısında ne amaçla kullanılır?",
+    "cevap": "Kubernetes, konteynerleştirilmiş uygulamaların otomatik dağıtımı, ölçeklendirilmesi ve yönetimi için açık kaynak platformdur. Bulut üzerinde mikroservislerin yönetimini kolaylaştırır.",
+    "seviye": "İleri"
+  }
+  
 ]
