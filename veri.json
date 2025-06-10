@@ -2321,6 +2321,32 @@
   {
     "question": "Honeypot nedir ve nasıl kullanılır?",
     "answer": "Honeypot, saldırganları çekmek ve saldırı yöntemlerini incelemek için kasıtlı olarak zayıf veya sahte sistemlerin oluşturulmasıdır. Bu sistemler saldırganların aktivitelerini gözlemlemek ve savunma stratejileri geliştirmek için kullanılır."
+  },
+  {
+    "question": "Ransomware saldırısının temel çalışma prensibi nedir ve kurumlar nasıl korunabilir?",
+    "answer": "Ransomware, dosyaları şifreleyip erişimi engeller ve şifre çözme karşılığında fidye talep eder. Korunmak için düzenli yedekleme, güncel antivirüs, şüpheli ek ve linklere dikkat, ve çalışan eğitimi çok önemlidir."
+  },{
+    "question": "Siber güvenlikte ‘sandboxing’ ne işe yarar ve nasıl uygulanır?",
+    "answer": "Sandboxing, şüpheli yazılımların izole edilmiş, kontrollü ortamda çalıştırılmasıdır. Böylece zararlı etkiler ana sisteme ulaşmadan analiz edilir. Bu yöntem, zararlı yazılım tespiti ve güvenlik açığı testlerinde yaygın kullanılır."
+  },  {
+    "question": "Hash tabanlı Message Authentication Code (HMAC) nedir ve neden kullanılır?",
+    "answer": "HMAC, veri bütünlüğü ve kimlik doğrulama için kullanılan bir kriptografik özet algoritmasıdır. Hem gizli anahtar hem de hash fonksiyonu kullanarak mesajın değiştirilmediğini ve gönderenin doğruluğunu garanti eder."
+  },{
+    "question": "Veri sızıntısı (data breach) sonrası yapılması gereken kritik adımlar nelerdir?",
+    "answer": "İlk olarak saldırının kapsamı belirlenmeli, etkilenen sistemler izole edilmeli, olay müdahale ekibi bilgilendirilmeli, yasal bildirimler yapılmalı, şifreler ve erişim izinleri güncellenmeli ve detaylı inceleme ile tekrarını önleyici tedbirler alınmalıdır."
+  },  {
+    "question": "IPv6'nın güvenlik açısından IPv4'e göre avantajları nelerdir?",
+    "answer": "IPv6, yerleşik IPsec desteği ile veri bütünlüğü ve gizliliği sağlar, adres uzayı geniş olduğu için NAT ihtiyacını azaltır, bu da bazı saldırı vektörlerini kapatır. Ayrıca otomatik yapılandırma ve daha güvenli multicast özellikleri sunar."
+  },
+  {
+    "question": "Siber güvenlikte ‘honeynet’ kavramı nedir ve honeypot'tan farkı nedir?",
+    "answer": "Honeynet, çok sayıda honeypotun ağ olarak birleşmesiyle oluşan tuzak ağıdır. Tek bir honeypot yerine daha geniş, gerçekçi saldırı ortamları sağlar. Bu sayede daha karmaşık saldırılar analiz edilebilir."
+  },
+  {
+    "question": "Yapay zeka tabanlı siber saldırılar nasıl çalışır ve savunmada ne gibi zorluklar oluşturur?",
+    "answer": "AI tabanlı saldırılar, otomatik hedef seçimi, phishing kampanyalarının kişiselleştirilmesi ve saldırı tekniklerinin adaptasyonu gibi yeteneklere sahiptir. Savunma zorlaşır çünkü saldırılar daha hızlı, akıllı ve öngörülemez hale gelir. Bu nedenle AI destekli savunma araçları da geliştirilmektedir."
   }
+
+
 
 ]
