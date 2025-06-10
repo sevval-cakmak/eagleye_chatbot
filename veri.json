@@ -2001,5 +2001,158 @@
     "soru": "Firmware saldırılarına karşı nasıl korunulur?",
     "cevap": "Firmware saldırılarına karşı korunmak için donanım güvenlik modülleri (TPM), imzalı firmware güncellemeleri ve güvenli boot mekanizmaları kullanılır. Ayrıca düzenli firmware güncellemeleri de önemlidir.",
     "seviye": "İleri"
-  }
+  }, {
+    "soru": "İki faktörlü kimlik doğrulama (2FA) nedir ve neden önemlidir?",
+    "cevap": "İki faktörlü kimlik doğrulama (2FA), kullanıcıların bir hesaba erişim sağlarken yalnızca şifreye değil, ek bir doğrulama adımına da ihtiyaç duyduğu güvenlik yöntemidir. Bu ikinci adım genellikle bir mobil cihaza gönderilen doğrulama kodu, biyometrik veri (parmak izi, yüz tanıma) ya da fiziksel bir güvenlik anahtarı olabilir. 2FA, yalnızca şifresi ele geçirilen bir hesabın kötü niyetli kişilere karşı korunmasına yardımcı olur. Özellikle kimlik avı ve brute-force saldırılarına karşı etkili bir güvenlik katmanı sunar."
+  },
+  {
+    "soru": "DDoS saldırısı nedir ve nasıl çalışır?",
+    "cevap": "DDoS (Distributed Denial of Service - Dağıtık Hizmet Engelleme) saldırısı, hedef bir sunucu, hizmet veya ağ kaynağını aşırı trafikle doldurarak hizmet veremez hâle getirmeyi amaçlayan bir saldırı türüdür. Bu saldırılar, genellikle dünya genelindeki birçok ele geçirilmiş bilgisayar (botnet) üzerinden senkronize olarak gerçekleştirilir. DDoS saldırılarından korunmak için trafik analiz sistemleri, saldırı tespit ve önleme sistemleri (IDS/IPS) ve dağıtılmış altyapı çözümleri kullanılmalıdır. Ayrıca servis sağlayıcı desteğiyle gelen saldırılar filtrelenebilir."
+  },
+  {
+    "soru": "Antivirüs programları nasıl çalışır ve neden kullanılır?",
+    "cevap": "Antivirüs yazılımları, kötü amaçlı yazılımları (virüs, trojan, spyware, ransomware vb.) tespit etmek, engellemek ve sistemden temizlemek için geliştirilmiş güvenlik yazılımlarıdır. Bu programlar, imza tabanlı tarama, davranış analizi, gerçek zamanlı koruma ve sandbox (güvenli çalışma alanı) gibi tekniklerle çalışır. Antivirüs yazılımları, özellikle bireysel kullanıcıların ve kurumların sistemlerini bilinçsizce bulaşabilecek tehditlere karşı korumak için kritik öneme sahiptir. Güncel bir antivirüs programı, yeni çıkan tehditleri tanıyıp etkisiz hale getirebilir."
+  },
+  {
+    "soru": "Kimlik avı (Phishing) saldırısı nedir ve nasıl tanınır?",
+    "cevap": "Kimlik avı (phishing), saldırganların kullanıcıları kandırarak kişisel bilgilerini (şifreler, kredi kartı numaraları, kimlik bilgileri) elde etmeye çalıştığı sosyal mühendislik temelli bir siber saldırı yöntemidir. Bu saldırılar genellikle sahte e-postalar, mesajlar veya web siteleri aracılığıyla yapılır. Gerçek gibi görünen bir banka mesajı ya da kurumsal bildirim gibi hazırlanarak, kullanıcıların bağlantıya tıklaması ve bilgilerini girmesi sağlanır. Bu tür saldırılardan korunmak için bağlantılar dikkatlice incelenmeli, e-posta gönderenin adresi kontrol edilmeli ve mümkünse doğrudan resmi web sitesi üzerinden işlem yapılmalıdır."
+  },
+  {
+    "soru": "Veri şifreleme nedir ve neden önemlidir?",
+    "cevap": "Veri şifreleme, bilgilerin yetkisiz erişime karşı korunması amacıyla özel algoritmalar kullanılarak okunamaz hâle getirilmesidir. Şifrelenmiş veriler sadece doğru anahtara sahip kullanıcılar tarafından çözülebilir. Bu yöntem, hem iletim sırasında (örneğin internet üzerinden veri gönderirken) hem de depolama sırasında (örneğin sabit disklerde) veri güvenliğini sağlar. Özellikle kişisel verilerin, ticari sırların ve hassas belgelerin korunmasında kritik öneme sahiptir. Modern sistemlerde kullanılan AES, RSA ve ECC gibi şifreleme algoritmaları, veri gizliliğini sağlamak için yaygın olarak kullanılır."
+  },{
+    "paragraph": "Saldırganlar genelde hedef sistem üzerinde bellek taşması (buffer overflow) zafiyetlerini kullanarak kötü niyetli kod yürütürler. Bu tür istismarlar, sistemin istikrarsız hale gelmesine ve yetkisiz komutların çalışmasına yol açar.",
+    "qas": [
+      {
+        "question": "Buffer overflow saldırısı nedir?",
+        "answer": "Bellek taşması, hedef programın ayırdığı bellek alanına sınırdan fazla veri gönderilerek kontrol akışı değiştirilmesiyle kötü amaçlı kod yürütme yöntemidir."
+      },
+      {
+        "question": "Bu tür bir saldırı neye yol açabilir?",
+        "answer": "Sistem kararsızlığına, yetkisiz kod çalıştırılmasına ve potansiyel olarak sistemi ele geçirmeye neden olabilir."
+      }
+    ]
+  },"paragraph": "Phishing (oltalama) saldırıları, kullanıcıları sahte e-posta veya web siteleriyle kandırarak kişisel bilgi, şifre veya kredi kartı numarası vb. verilerini kaptırmayı hedefler. Gönderilen mesajlar resmi kurumlar gibi görünür ve kullanıcılar linke tıklayıp bilgilerini girerler.",
+    "qas": [
+      {
+        "question": "Phishing saldırısı nasıl çalışır?",
+        "answer": "Sahte e-postalar veya web siteleriyle kullanıcı kandırılarak bilgileri verilmesi sağlanır."
+      },
+      {
+        "question": "Phishing’e karşı nasıl korunabiliriz?",
+        "answer": "Mesajları dikkatle inceleyerek, gönderen adresini kontrol ederek ve resmi siteye doğrudan erişerek linklere tıklamadan önce emin olmak."
+      }
+    ] },
+    {
+    "paragraph": "Güvenlik duvarı (Firewall), bir ağı dış tehditlere karşı koruyan, gelen ve giden veri paketlerini belirli kurallar çerçevesinde filtreleyen güvenlik sistemidir. Bu sistemler donanım ya da yazılım tabanlı olabilir ve sadece izin verilen trafiğin ağa girmesine veya ağdan çıkmasına izin verir. Modern güvenlik duvarları, paket filtreleme, durum denetimi (stateful inspection), derin paket incelemesi (deep packet inspection) ve uygulama düzeyi denetimi gibi ileri düzey özelliklere sahiptir.",
+    "qas": [
+      {
+        "question": "Güvenlik duvarı nedir?",
+        "answer": "Ağ trafiğini kontrol ederek kötü niyetli bağlantıları engelleyen yazılım ya da donanım tabanlı sistemdir."
+      },
+      {
+        "question": "Modern güvenlik duvarlarının sunduğu ek özellikler nelerdir?",
+        "answer": "Durum denetimi, derin paket analizi, uygulama düzeyi kontrol ve saldırı algılama gibi gelişmiş güvenlik kontrolleri sağlar."
+      }
+    ]
+  },  {
+    "paragraph": "Sosyal mühendislik, insan psikolojisini manipüle ederek kullanıcıları kandırmaya yönelik bir siber saldırı türüdür. Saldırganlar, kurbanın güvenini kazanarak ondan şifre, kimlik bilgisi veya kurumsal veri gibi hassas bilgileri almaya çalışır. Bu saldırılar genellikle e-posta, telefon görüşmeleri ya da sahte web siteleri yoluyla gerçekleştirilir. Oltalama (phishing), en bilinen sosyal mühendislik türüdür.",
+    "qas": [
+      {
+        "question": "Sosyal mühendislik saldırılarının temel amacı nedir?",
+        "answer": "Kullanıcının güvenini kötüye kullanarak ondan hassas bilgileri elde etmektir."
+      },
+      {
+        "question": "Sosyal mühendislikte kullanılan yaygın yöntemler nelerdir?",
+        "answer": "Oltalama e-postaları, sahte çağrılar, kimlik taklidi ve sahte web sayfaları."
+      }
+    ]
+  },{
+    "paragraph": "VPN (Virtual Private Network), kullanıcıların internet bağlantılarını şifreleyerek verilerin güvenliğini sağlayan bir teknolojidir. VPN ile kullanıcılar, sanki uzaktaki bir özel ağdaymış gibi internete bağlanırlar. Böylece veri trafiği üçüncü şahıslar tarafından izlenemez, özellikle kamuya açık Wi-Fi ağlarında gizlilik ve güvenlik sağlanır. Ayrıca VPN sayesinde coğrafi kısıtlamalar aşılabilir ve bölgesel içeriklere erişim sağlanabilir.",
+    "qas": [
+      {
+        "question": "VPN ne işe yarar?",
+        "answer": "Veri trafiğini şifreleyerek internet bağlantısını güvenli hale getirir ve IP adresini gizler."
+      },
+      {
+        "question": "VPN hangi durumlarda kullanılmalıdır?",
+        "answer": "Halka açık Wi-Fi ağlarında, yurtdışı içeriklere erişmek istendiğinde ve uzaktan güvenli bağlantı gerektiğinde kullanılmalıdır."
+      }
+    ]
+  },{
+    "paragraph": "Ransomware (fidye yazılımı), bir cihazdaki dosyaları şifreleyerek kullanılamaz hale getiren ve kullanıcıdan çözüm anahtarı karşılığında fidye talep eden kötü amaçlı bir yazılımdır. Genellikle e-posta ekleri, zararlı bağlantılar ya da güvenlik açıkları üzerinden sisteme sızar. Dosyalar şifrelendikten sonra kullanıcıya fidye notu gösterilir. Fidye ödenmesi dosyaların geri alınacağı garantisini vermez. Bu nedenle yedekleme ve güvenlik önlemleri kritik önemdedir.",
+    "qas": [
+      {
+        "question": "Ransomware saldırısı nasıl çalışır?",
+        "answer": "Dosyaları şifreleyerek erişimi engeller ve kullanıcıdan şifre çözme anahtarı için fidye ister."
+      },
+      {
+        "question": "Ransomware'e karşı en etkili önlem nedir?",
+        "answer": "Düzenli veri yedekleme, güncel antivirüs yazılımı kullanma ve bilinmeyen bağlantılara tıklamaktan kaçınma."
+      }
+    ]
+  },{
+    "paragraph": "Kimlik avı saldırıları, kullanıcıları sahte web siteleri veya e-postalarla kandırarak giriş bilgilerini ya da finansal verilerini çalmayı amaçlar. Bu tür saldırılar, genellikle gerçek kurumları taklit eden görseller ve acil işlem talepleriyle dikkat çeker. Kullanıcı sahte bağlantıya tıklayıp bilgilerini girdiğinde, bu veriler doğrudan saldırganların eline geçer. Bu saldırılar sık sık banka, e-ticaret ya da sosyal medya hesaplarını hedef alır.",
+    "qas": [
+      {
+        "question": "Kimlik avı saldırısı nasıl tespit edilir?",
+        "answer": "Gönderen adresi, bağlantı URL'si ve mesaj içeriği kontrol edilerek sahte olup olmadığı anlaşılabilir."
+      },
+      {
+        "question": "Bu tür saldırılardan korunmak için ne yapılmalıdır?",
+        "answer": "Gelen e-postaların doğruluğu sorgulanmalı, bağlantılar doğrudan tarayıcıya yazılmalı ve çift faktörlü kimlik doğrulama kullanılmalıdır."
+      }
+    ]
+  },{
+    "paragraph": "Kali Linux, penetrasyon testleri ve güvenlik değerlendirmeleri için özel olarak tasarlanmış Debian tabanlı bir Linux dağıtımıdır. İçinde yüzlerce önceden yüklenmiş araç bulundurur; örneğin ağ tarama, zafiyet analizi, kablosuz saldırılar, parola kırma ve sosyal mühendislik gibi alanlarda kullanılır. Kali Linux, siber güvenlik uzmanları ve etik hackerlar tarafından sistem güvenliğini test etmek için tercih edilir.",
+    "qas": [
+      {
+        "question": "Kali Linux nedir ve ne amaçla kullanılır?",
+        "answer": "Penetrasyon testleri ve güvenlik analizleri için geliştirilmiş, önceden birçok araç barındıran Debian tabanlı bir Linux dağıtımıdır."
+      },
+      {
+        "question": "Kali Linux’ta hangi tür araçlar bulunur?",
+        "answer": "Ağ tarama, parola kırma, kablosuz ağ saldırıları, zafiyet tarayıcıları, sosyal mühendislik araçları ve adli bilişim araçları içerir."
+      }
+    ]
+  },
+  {
+    "paragraph": "SQL Injection, web uygulamalarındaki veri tabanı sorgularına kötü amaçlı SQL kodlarının enjekte edilmesiyle veri hırsızlığı, veritabanı değiştirme veya silme gibi saldırıların yapılmasına olanak sağlar. Saldırgan, uygulamanın kullanıcı girdilerini doğru doğrulamaması durumunda bu açığı kullanarak veritabanında kontrol dışı işlemler gerçekleştirebilir. Güvenli kodlama teknikleri, parametrik sorgular ve input doğrulama bu saldırıdan korunmanın temel yöntemlerindendir.",
+    "qas": [
+      {
+        "question": "SQL Injection saldırısı nasıl gerçekleşir?",
+        "answer": "Kötü niyetli SQL kodu kullanıcı girişlerine eklenerek veri tabanında yetkisiz işlemler yapılmasıdır."
+      },
+      {
+        "question": "SQL Injection’a karşı nasıl önlem alınabilir?",
+        "answer": "Parametrik sorgular, input validasyonu ve güvenli kodlama uygulamak gerekir."
+      }
+    ]
+  },
+  {
+    "paragraph": "DDoS (Distributed Denial of Service) saldırısı, bir hedef sistemi aşırı trafikle boğarak hizmet veremez hale getirmeyi amaçlar. Saldırı genellikle birçok farklı kaynaktan eşzamanlı olarak gerçekleştirilir, bu nedenle engellemesi zordur. Botnet olarak adlandırılan ele geçirilmiş cihazlar bu saldırılarda sıkça kullanılır. Kurumlar DDoS önleme sistemleri, trafik analizleri ve kaynak filtreleme yöntemleriyle bu saldırılara karşı savunma geliştirir.",
+    "qas": [
+      {
+        "question": "DDoS saldırısı nedir?",
+        "answer": "Bir hedef sunucu veya ağı aşırı trafik ile doldurarak erişilemez hale getirmektir."
+      },
+      {
+        "question": "DDoS saldırılarına karşı nasıl korunulur?",
+        "answer": "Trafik filtreleme, botnet tespiti, yük dengeleme ve DDoS koruma hizmetleri kullanarak."
+      }
+    ]
+  },{
+    "paragraph": "Loglar, sistem ve uygulamalarda gerçekleşen olayların kayıt altına alındığı dosyalardır. Güvenlik açısından logların analizi, sistemdeki anormal davranışları, saldırı girişimlerini veya hataları tespit etmek için kritik öneme sahiptir. Log yönetimi ve merkezi log toplayıcılar (SIEM sistemleri gibi) kullanılarak güvenlik olayları gerçek zamanlı izlenebilir. Düzenli log analizi siber saldırıları önlemede ve olası güvenlik açıklarını bulmada önemli rol oynar.",
+    "qas": [
+      {
+        "question": "Siber güvenlikte logların önemi nedir?",
+        "answer": "Sistem aktivitelerinin kaydı sayesinde anormallikler ve saldırılar tespit edilir."
+      },
+      {
+        "question": "Log analizi nasıl yapılır?",
+        "answer": "Loglar toplanır, filtrelenir ve SIEM gibi araçlarla analiz edilerek güvenlik olayları izlenir."
+      }
+    ]
+  },
+
 ]
