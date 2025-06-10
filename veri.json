@@ -2072,11 +2072,11 @@
     "qas": [
       {
         "question": "VPN ne işe yarar?",
-        "answer": "Veri trafiğini şifreleyerek internet bağlantısını güvenli hale getirir ve IP adresini gizler."
+        "answer": "VPN, internet trafiğini şifreleyerek verilerini gizler ve konumunu maskeler. Özellikle halka açık Wi-Fi'da güvenlik sağlar. Veri trafiğini şifreleyerek internet bağlantısını güvenli hale getirir ve IP adresini gizler."
       },
       {
         "question": "VPN hangi durumlarda kullanılmalıdır?",
-        "answer": "Halka açık Wi-Fi ağlarında, yurtdışı içeriklere erişmek istendiğinde ve uzaktan güvenli bağlantı gerektiğinde kullanılmalıdır."
+        "answer": " yurtdışı içeriklere erişmek istendiğinde ve uzaktan güvenli bağlantı gerektiğinde kullanılmalıdır."
       }
     ]
   },{
