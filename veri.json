@@ -3092,6 +3092,112 @@
     "soru": "Kubernetes nedir ve bulut altyapısında ne amaçla kullanılır?",
     "cevap": "Kubernetes, konteynerleştirilmiş uygulamaların otomatik dağıtımı, ölçeklendirilmesi ve yönetimi için açık kaynak platformdur. Bulut üzerinde mikroservislerin yönetimini kolaylaştırır.",
     "seviye": "İleri"
-  }
+  },{
+    "soru": "Zero-Knowledge Proof (ZKP) nedir ve blockchain teknolojisinde nasıl kullanılır?",
+    "cevap": "ZKP, bir tarafın bir bilginin doğruluğunu karşı tarafa açıklamadan kanıtlayabilmesini sağlayan kriptografik bir tekniktir. Blockchain teknolojisinde gizlilik ve güvenlik artırmak amacıyla kullanılır, özellikle kullanıcı verilerinin gizli tutulması gereken uygulamalarda tercih edilir.",
+    "konu": "Blockchain Teknolojileri",
+    "seviye": "İleri"
+  },
+  {
+    "soru": "Layer 1 ve Layer 2 çözümleri arasındaki fark nedir?",
+    "cevap": "Layer 1, doğrudan ana blokzinciri temsil eder (örneğin Bitcoin, Ethereum gibi). Layer 2 çözümleri ise Layer 1 üzerine inşa edilen ve işlem maliyetini düşürüp hızı artırmayı hedefleyen katmanlardır (örneğin Optimistic Rollups, Lightning Network).",
+    "konu": "Blockchain Mimarisi",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "Cold wallet ve hot wallet arasındaki fark nedir?",
+    "cevap": "Hot wallet internete bağlı çalışır, bu sayede işlem yapma hızı yüksektir ancak siber saldırılara açıktır. Cold wallet ise çevrimdışıdır, genellikle donanım veya kağıt cüzdanlardır; daha güvenlidir fakat işlem yapmak için ek adımlar gerektirir.",
+    "konu": "Kripto Cüzdanlar",
+    "seviye": "Başlangıç"
+  },
+  {
+    "soru": "Blockchain oracle'ları nedir ve neden gereklidir?",
+    "cevap": "Oracle'lar, blockchain dışı verileri (örneğin hava durumu, hisse fiyatı gibi) akıllı kontratlara taşıyan sistemlerdir. Akıllı kontratların dış dünya ile etkileşim kurmasını sağlarlar ve DeFi uygulamaları için kritik öneme sahiptir.",
+    "konu": "Akıllı Kontratlar ve Oracle",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "Blockchain’de 'immutability' (değiştirilemezlik) neden önemlidir?",
+    "cevap": "İmmutability, blokzincire eklenen verilerin değiştirilememesi anlamına gelir. Bu özellik veri bütünlüğünü ve güvenilirliğini sağlar; dolayısıyla kayıtların sonradan manipüle edilememesi sayesinde güvenlik artar.",
+    "konu": "Blockchain Güvenliği",
+    "seviye": "Başlangıç"
+  },
+  {
+    "soru": "Smart contract'lar neden otomatiktir ve nasıl çalışır?",
+    "cevap": "Smart contract'lar belirli koşullar sağlandığında otomatik olarak tetiklenen kod parçalarıdır. Blockchain üzerinde saklanır ve çalışır, böylece aracıya gerek kalmadan güvenilir işlemler gerçekleştirilir.",
+    "konu": "Akıllı Kontratlar",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "Kripto paraların madencilik yöntemiyle elde edilmesi nasıl gerçekleşir?",
+    "cevap": "Kripto para madenciliği, bilgisayarların karmaşık matematiksel problemleri çözerek yeni bloklar oluşturması ve karşılığında ödül alması sürecidir. Bu işlem Proof of Work algoritmasına dayalıdır ve ağın güvenliğini sağlar.",
+    "konu": "Kripto Madencilik",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "Blockchain teknolojisi finans sektörü dışında nerelerde kullanılabilir?",
+    "cevap": "Blockchain; tedarik zinciri yönetimi, sağlık hizmetleri, kimlik doğrulama, dijital oy verme sistemleri gibi birçok alanda kullanılabilir. Bu alanlarda şeffaflık, güvenlik ve izlenebilirlik avantajları sağlar.",
+    "konu": "Blockchain Uygulamaları",
+    "seviye": "Başlangıç"
+  },
+  {
+    "soru": "NFT nedir ve hangi teknolojilerle ilişkilidir?",
+    "cevap": "NFT (Non-Fungible Token), benzersiz dijital varlıkları temsil eden token’lardır. Ethereum gibi blockchain platformları üzerinde çalışır ve özellikle sanat eserleri, dijital koleksiyonlar gibi alanlarda kullanılır.",
+    "konu": "NFT ve Dijital Varlıklar",
+    "seviye": "Başlangıç"
+  },
+  {
+    "soru": "Blockchain ağlarında konsensüs algoritmaları neden gereklidir?",
+    "cevap": "Konsensüs algoritmaları, ağdaki tüm düğümlerin ortak bir karara varmasını sağlar. Bu sayede işlemlerin doğruluğu ve zincirin bütünlüğü korunur. Örnek algoritmalar: Proof of Work, Proof of Stake, Practical Byzantine Fault Tolerance.",
+    "konu": "Blockchain Konsensüs",
+    "seviye": "İleri"
+  }, {
+    "soru": "Merkle Tree (Merkle Ağacı) nedir ve blokzincirde nasıl kullanılır?",
+    "cevap": "Merkle Tree, verilerin hash'lenerek hiyerarşik bir yapıda özetlenmesini sağlayan yapıdır. Blokzincirde, işlem verilerinin bütünlüğünü sağlamak ve hızlı doğrulama yapmak için kullanılır.",
+    "konu": "Blokzincir Veri Yapıları",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "51% saldırısı nedir ve blokzincir için ne gibi riskler oluşturur?",
+    "cevap": "51% saldırısı, bir blokzincir ağındaki hesaplama gücünün %51’inden fazlasının kötü niyetli bir grup tarafından ele geçirilmesidir. Bu durum çift harcama gibi saldırılara neden olabilir.",
+    "konu": "Blokzincir Güvenliği",
+    "seviye": "İleri"
+  }, {
+    "soru": "Merkle Tree (Merkle Ağacı) nedir ve blokzincirde nasıl kullanılır?",
+    "cevap": "Merkle Tree, verilerin hash'lenerek hiyerarşik bir yapıda özetlenmesini sağlayan yapıdır. Blokzincirde, işlem verilerinin bütünlüğünü sağlamak ve hızlı doğrulama yapmak için kullanılır.",
+    "konu": "Blokzincir Veri Yapıları",
+    "seviye": "Orta"
+  },
+  {
+    "soru": "51% saldırısı nedir ve blokzincir için ne gibi riskler oluşturur?",
+    "cevap": "51% saldırısı, bir blokzincir ağındaki hesaplama gücünün %51’inden fazlasının kötü niyetli bir grup tarafından ele geçirilmesidir. Bu durum çift harcama gibi saldırılara neden olabilir.",
+    "konu": "Blokzincir Güvenliği",
+    "seviye": "İleri"
+  },  {
+    "soru": "Gas fee nedir ve Ethereum ağı üzerinde neden gereklidir?",
+    "cevap": "Gas fee, Ethereum üzerindeki işlemler ve akıllı kontrat çalıştırmaları için ödenen işlem ücretidir. Ağı spam'den korur ve madencilere teşvik sağlar.",
+    "konu": "Ethereum Ekonomisi",
+    "seviye": "Orta"
+  },  {
+    "soru": "Stablecoin nedir ve neden kullanılır?",
+    "cevap": "Stablecoin, değeri genellikle bir fiat para birimine (örneğin dolara) sabitlenmiş kripto para türüdür. Volatiliteyi azaltmak ve dijital işlemlerde fiyat istikrarı sağlamak için kullanılır.",
+    "konu": "Kripto Paralar",
+    "seviye": "Başlangıç"
+  }, {
+    "soru": "Smart contract güvenlik açıkları nasıl oluşur?",
+    "cevap": "Kod hataları, tekrar giriş (reentrancy), erişim kontrol eksiklikleri gibi nedenlerle akıllı kontratlar güvenlik açıkları barındırabilir. Kod incelemesi ve testler bu riskleri azaltır.",
+    "konu": "Akıllı Kontrat Güvenliği",
+    "seviye": "İleri"
+  },{
+    "soru": "Zero Trust (Sıfır Güven) mimarisi nedir ve neden önemlidir?",
+    "cevap": "Zero Trust, hiçbir kullanıcıya veya cihaza varsayılan olarak güvenmeyen bir güvenlik yaklaşımıdır. Kimlik doğrulama, erişim kontrolü ve sürekli izlemeyi temel alır. Kurumsal ağlarda iç ve dış tehditleri azaltmak için önemlidir.",
+    "konu": "Ağ Güvenliği",
+    "seviye": "İleri"
+  },{
+    "soru": "Zero Trust (Sıfır Güven) mimarisi nedir ve neden önemlidir?",
+    "cevap": "Zero Trust, hiçbir kullanıcıya veya cihaza varsayılan olarak güvenmeyen bir güvenlik yaklaşımıdır. Kimlik doğrulama, erişim kontrolü ve sürekli izlemeyi temel alır. Kurumsal ağlarda iç ve dış tehditleri azaltmak için önemlidir.",
+    "konu": "Ağ Güvenliği",
+    "seviye": "İleri"
+  },
   
 ]
