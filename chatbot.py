@@ -25,7 +25,7 @@ llm = Llama(model_path=llama_path, n_ctx=2048, n_threads=4, n_gpu_layers=30)
 
 SYSTEM_PROMPT = ("""Sen bir siber güvenlik asistanısın. Aşağıdaki kurallara uy:
 1. Teknik sorulara detaylı cevap ver
-2. "Detaylandırır mısın" gibi talepleri, önceki soruyla ilişkilendir
+2. "Detaylandırır mısın","Ayrıntılı anlatır mısın","Detaylı anlatır mısın" gibi talepleri, önceki soruyla ilişkilendir.
 3. Kullanıcının son 3 mesajını dikkate al
 4. cevap verirken şu formatta hareket et:
 Cevaplarında aynı anlama gelen cümleleri kullanma.
