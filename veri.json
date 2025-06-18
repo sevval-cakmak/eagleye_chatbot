@@ -2037,39 +2037,33 @@
     "seviye": "orta",
     "konu": "kriptografi"
   },
-  {
-    "paragraph": "Saldırganlar genelde hedef sistem üzerinde bellek taşması (buffer overflow) zafiyetlerini kullanarak kötü niyetli kod yürütürler. Bu tür istismarlar, sistemin istikrarsız hale gelmesine ve yetkisiz komutların çalışmasına yol açar.",
-    "qas": [
       {
-        "question": "Buffer overflow saldırısı nedir?",
-        "answer": "Bellek taşması, hedef programın ayırdığı bellek alanına sınırdan fazla veri gönderilerek kontrol akışı değiştirilmesiyle kötü amaçlı kod yürütme yöntemidir.",
+        "soru": "Buffer overflow saldırısı nedir?",
+        "cevap": "Bellek taşması, hedef programın ayırdığı bellek alanına sınırdan fazla veri gönderilerek kontrol akışı değiştirilmesiyle kötü amaçlı kod yürütme yöntemidir.",
         "etiket": "tanım",
         "seviye": "ileri",
         "konu": "zafiyetler"
       },
       {
-        "question": "Bu tür bir saldırı neye yol açabilir?",
-        "answer": "Sistem kararsızlığına, yetkisiz kod çalıştırılmasına ve potansiyel olarak sistemi ele geçirmeye neden olabilir.",
+        "sru": "Bu tür bir saldırı neye yol açabilir?",
+        "cevap": "Sistem kararsızlığına, yetkisiz kod çalıştırılmasına ve potansiyel olarak sistemi ele geçirmeye neden olabilir.",
         "etiket": "etki",
         "seviye": "ileri",
         "konu": "zafiyetler"
-      }
-    ]
+
   },
-  {
-    "konu": "Phishing (Oltalama) Saldırıları",
-    "seviye": "Başlangıç",
-    "paragraf": "Phishing (oltalama) saldırıları, kullanıcıları sahte e-posta veya web siteleriyle kandırarak kişisel bilgi, şifre veya kredi kartı numarası vb. verilerini kaptırmayı hedefler. Gönderilen mesajlar resmi kurumlar gibi görünür ve kullanıcılar linke tıklayıp bilgilerini girerler.",
-    "sorular": [
       {
         "soru": "Phishing saldırısı nasıl çalışır?",
+         "konu": "Phishing (Oltalama) Saldırıları",
+    "seviye": "Başlangıç",
         "cevap": "Sahte e-postalar veya web siteleriyle kullanıcı kandırılarak bilgileri verilmesi sağlanır."
       },
       {
         "soru": "Phishing’e karşı nasıl korunabiliriz?",
+         "konu": "Phishing (Oltalama) Saldırıları",
+    "seviye": "Başlangıç",
         "cevap": "Mesajları dikkatle inceleyerek, gönderen adresini kontrol ederek ve resmi siteye doğrudan erişerek linklere tıklamadan önce emin olmak."
-      }
-    ]
+     
   },
   {
     "konu": "Güvenlik Duvarı (Firewall)",
@@ -2083,53 +2077,33 @@
       {
         "soru": "Modern güvenlik duvarlarının sunduğu ek özellikler nelerdir?",
         "cevap": "Durum denetimi, derin paket analizi, uygulama düzeyi kontrol ve saldırı algılama gibi gelişmiş güvenlik kontrolleri sağlar."
-      }
-    ]
+      
   },
-  {
-    "konu": "Sosyal Mühendislik",
-    "seviye": "Başlangıç",
-    "paragraf": "Sosyal mühendislik, insan psikolojisini manipüle ederek kullanıcıları kandırmaya yönelik bir siber saldırı türüdür. Saldırganlar, kurbanın güvenini kazanarak ondan şifre, kimlik bilgisi veya kurumsal veri gibi hassas bilgileri almaya çalışır. Bu saldırılar genellikle e-posta, telefon görüşmeleri ya da sahte web siteleri yoluyla gerçekleştirilir. Oltalama (phishing), en bilinen sosyal mühendislik türüdür.",
-    "sorular": [
       {
         "soru": "Sosyal mühendislik saldırılarının temel amacı nedir?",
+        "konu": "Sosyal Mühendislik",
+        "seviye": "Başlangıç",
         "cevap": "Kullanıcının güvenini kötüye kullanarak ondan hassas bilgileri elde etmektir."
       },
       {
         "soru": "Sosyal mühendislikte kullanılan yaygın yöntemler nelerdir?",
+         "konu": "Sosyal Mühendislik",
+    "seviye": "Başlangıç",
         "cevap": "Oltalama e-postaları, sahte çağrılar, kimlik taklidi ve sahte web sayfaları."
-      }
-    ]
+    
   },
-  {
-    "konu": "VPN (Sanal Özel Ağ)",
-    "seviye": "Orta",
-    "paragraf": "VPN (Virtual Private Network), kullanıcıların internet bağlantılarını şifreleyerek verilerin güvenliğini sağlayan bir teknolojidir. VPN ile kullanıcılar, sanki uzaktaki bir özel ağdaymış gibi internete bağlanırlar. Böylece veri trafiği üçüncü şahıslar tarafından izlenemez, özellikle kamuya açık Wi-Fi ağlarında gizlilik ve güvenlik sağlanır. Ayrıca VPN sayesinde coğrafi kısıtlamalar aşılabilir ve bölgesel içeriklere erişim sağlanabilir.",
-    "sorular": [
-      {
-        "soru": "VPN ne işe yarar?",
-        "cevap": "VPN, internet trafiğini şifreleyerek verilerini gizler ve konumunu maskeler. Özellikle halka açık Wi-Fi'da güvenlik sağlar."
-      },
-      {
-        "soru": "VPN hangi durumlarda kullanılmalıdır?",
-        "cevap": "Yurtdışı içeriklere erişmek istendiğinde ve uzaktan güvenli bağlantı gerektiğinde kullanılmalıdır."
-      }
-    ]
-  },
-  {
-    "konu": "Ransomware (Fidye Yazılımı)",
-    "seviye": "Orta",
-    "paragraf": "Ransomware (fidye yazılımı), bir cihazdaki dosyaları şifreleyerek kullanılamaz hale getiren ve kullanıcıdan çözüm anahtarı karşılığında fidye talep eden kötü amaçlı bir yazılımdır. Genellikle e-posta ekleri, zararlı bağlantılar ya da güvenlik açıkları üzerinden sisteme sızar. Dosyalar şifrelendikten sonra kullanıcıya fidye notu gösterilir. Fidye ödenmesi dosyaların geri alınacağı garantisini vermez. Bu nedenle yedekleme ve güvenlik önlemleri kritik önemdedir.",
-    "sorular": [
       {
         "soru": "Ransomware saldırısı nasıl çalışır?",
+         "konu": "Ransomware (Fidye Yazılımı)",
+    "seviye": "Orta",
         "cevap": "Dosyaları şifreleyerek erişimi engeller ve kullanıcıdan şifre çözme anahtarı için fidye ister."
       },
       {
         "soru": "Ransomware'e karşı en etkili önlem nedir?",
+         "konu": "Ransomware (Fidye Yazılımı)",
+    "seviye": "Orta",
         "cevap": "Düzenli veri yedekleme, güncel antivirüs yazılımı kullanma ve bilinmeyen bağlantılara tıklamaktan kaçınma."
-      }
-    ]
+     
   },
   {
     "konu": "Kimlik Avı (Phishing)",
@@ -2143,8 +2117,7 @@
       {
         "soru": "Bu tür saldırılardan korunmak için ne yapılmalıdır?",
         "cevap": "Gelen e-postaların doğruluğu sorgulanmalı, bağlantılar doğrudan tarayıcıya yazılmalı ve çift faktörlü kimlik doğrulama kullanılmalıdır."
-      }
-    ]
+      
   }
 ,
   {
@@ -2159,8 +2132,7 @@
       {
         "soru": "Kali Linux’ta hangi tür araçlar bulunur?",
         "cevap": "Ağ tarama, parola kırma, kablosuz ağ saldırıları, zafiyet tarayıcıları, sosyal mühendislik araçları ve adli bilişim araçları içerir."
-      }
-    ]
+      
   },
   {
     "konu": "SQL Injection (SQL Enjeksiyonu)",
@@ -2174,8 +2146,7 @@
       {
         "soru": "SQL Injection’a karşı nasıl önlem alınabilir?",
         "cevap": "Parametrik sorgular, input validasyonu ve güvenli kodlama uygulamak gerekir."
-      }
-    ]
+    
   },
   {
     "konu": "DDoS (Dağıtık Hizmet Reddi) Saldırıları",
@@ -2189,8 +2160,7 @@
       {
         "soru": "DDoS saldırılarına karşı nasıl korunulur?",
         "cevap": "Trafik filtreleme, botnet tespiti, yük dengeleme ve DDoS koruma hizmetleri kullanarak."
-      }
-    ]
+      
   },
   {
     "konu": "Log Analizi ve Güvenliği",
@@ -2204,8 +2174,6 @@
       {
         "soru": "Log analizi nasıl yapılır?",
         "cevap": "Loglar toplanır, filtrelenir ve SIEM gibi araçlarla analiz edilerek güvenlik olayları izlenir."
-      }
-    ]
   }
   , {
   "konu": "Siber Güvenlik",
@@ -2287,8 +2255,6 @@
       "cevap": "Dosyaları şifreleyip fidye ister. Korunmak için yedekleme, eğitim ve ağ segmentasyonu yapılmalıdır.",
       "seviye": "Orta",
       "kategori": "Zararlı Yazılımlar"
-    }
-  ]
 },
   {
   "konu": "Siber Güvenlik",
@@ -2394,9 +2360,7 @@
       "cevap": "Sızma testi, bir sistemin güvenlik açıklarını keşfetmek amacıyla kontrollü saldırılar düzenlenmesidir. Aşamaları: keşif (reconnaissance), tarama (scanning), erişim sağlama (gaining access), ayrıcalık yükseltme (privilege escalation), izleri temizleme (covering tracks) ve raporlama.",
       "seviye": "İleri",
       "kategori": "Sızma Testi"
-    }
-  ]
-},
+    },
    {
     "soru": "Botnet nedir ve hangi amaçlarla kullanılır?",
     "cevap": "Botnet, kötü amaçlı yazılımlarla enfekte olmuş birçok bilgisayarın bir araya gelerek oluşturduğu ağdır. Saldırganlar bu ağı DDoS saldırıları, spam gönderimi, kripto madenciliği ve veri hırsızlığı için kullanır. Korunmak için güncel antivirüs programları, güvenlik duvarları ve ağ trafiği analizleri yapılmalıdır.",
@@ -3198,6 +3162,6 @@
     "cevap": "Zero Trust, hiçbir kullanıcıya veya cihaza varsayılan olarak güvenmeyen bir güvenlik yaklaşımıdır. Kimlik doğrulama, erişim kontrolü ve sürekli izlemeyi temel alır. Kurumsal ağlarda iç ve dış tehditleri azaltmak için önemlidir.",
     "konu": "Ağ Güvenliği",
     "seviye": "İleri"
-  },
+  }
   
 ]
