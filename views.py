@@ -81,7 +81,7 @@ def run_tshark_capture(user_input, duration=10):
     except Exception as e:
         return f"Tshark hatası: {e}"
 
-def handle_command(command, session):  # buraya session eklendi
+def handle_command(command):
     command = command.lower()
 
     if not session.get("user_consent", False):
@@ -184,7 +184,7 @@ def chat(request):
     elif is_out_of_scope(user_input):
         response = "Bu konuda yardımcı olamam. Siber güvenlikle ilgili bir soru sorabilirsin."
     else:
-        komut_cevap = handle_command(user_input, session)
+        komut_cevap = handle_command(user_input)
 
         if not komut_cevap:
             input_embedding = model.encode(user_input, convert_to_tensor=True)
@@ -214,3 +214,4 @@ def chat(request):
     chat_history.append({"role": "bot", "content": response})
     session['chat_history'] = chat_history
     return JsonResponse({"response": response})
+    
