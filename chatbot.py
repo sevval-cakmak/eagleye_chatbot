@@ -84,7 +84,7 @@ def run_tshark_capture(user_input, duration=10):
 def handle_command(command, session):
     command = command.lower()
 
-    if not session.get("user_consent", False):
+    if not request.session.get("user_consent", False):
         return "Lütfen devam etmeden önce ağ taraması ve trafik izlemeye açık rıza verdiğinizi belirtin. 'Tarama için onay veriyorum' yazmanız yeterlidir."
 
     if "nmap" in command or "tara" in command:
