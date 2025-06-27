@@ -1,7 +1,6 @@
-Flask==2.3.3
-sentence-transformers==2.2.2
-torch>=1.13.1
-transformers>=4.30.2
-llama-cpp-python==0.2.63
-numpy>=1.21.0
-scipy>=1.5.4
+sentence-transformers==2.7.0
+torch==2.2.2
+transformers==4.39.3
+llama-cpp-python==0.2.72
+numpy>=1.26.4
+scipy>=1.13.0 
