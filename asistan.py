@@ -1,17 +1,16 @@
 import subprocess
-from flask import Flask, request, jsonify, render_template, session
-from sentence_transformers import SentenceTransformer, util
-from llama_cpp import Llama
 import json
 import os
 import re
 from uuid import uuid4
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from sentence_transformers import SentenceTransformer, util
+from llama_cpp import Llama
 
-app = Flask(__name__)
-app.secret_key = 'rafa27'
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(os.path.join(dir_path, "veri.json"), "r", encoding="utf-8") as f:
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+with open(os.path.join(BASE_DIR, "veri.json"), "r", encoding="utf-8") as f:
     data_list = json.load(f)
 
 model = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v2')
@@ -133,22 +132,21 @@ def is_out_of_scope(user_input):
         return False
     return True
 
-@app.route("/", methods=["GET"])
-def home():
-    if 'session_id' not in session:
-        session['session_id'] = str(uuid4())
-        session['chat_history'] = []
-    return render_template("index.html")
+def home(request):
+    if 'session_id' not in request.session:
+        request.session['session_id'] = str(uuid4())
+        request.session['chat_history'] = []
+    return render(request, "index.html")
 
-@app.route("/chat", methods=["POST"])
-def chat():
-    data = request.get_json()
+@csrf_exempt
+def chat(request):
+    if request.method != "POST":
+        return JsonResponse({"response": "Invalid request method."}, status=405)
+
+    data = json.loads(request.body)
     user_input = data.get("message", "").strip()
-
-    if 'chat_history' not in session:
-        session['chat_history'] = []
-
-    chat_history = session['chat_history']
+    session = request.session
+    chat_history = session.get("chat_history", [])
 
     if "tarama için onay veriyorum" in user_input.lower():
         session["user_consent"] = True
@@ -156,7 +154,7 @@ def chat():
         chat_history.append({"role": "user", "content": user_input})
         chat_history.append({"role": "bot", "content": response})
         session['chat_history'] = chat_history
-        return jsonify({"response": response})
+        return JsonResponse({"response": response})
 
     intent = get_intent(user_input)
 
@@ -215,7 +213,4 @@ def chat():
     chat_history.append({"role": "user", "content": user_input})
     chat_history.append({"role": "bot", "content": response})
     session['chat_history'] = chat_history
-    return jsonify({"response": response})
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return JsonResponse({"response": response})
