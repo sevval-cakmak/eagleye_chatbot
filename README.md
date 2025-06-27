@@ -19,53 +19,10 @@ Kullanıcıdan gelen sorular embedding'e dönüştürülür, en yakın eşleşme
 Kolay genişletilebilir yapı:
 veri.json dosyasına yeni soru-cevap çiftleri eklenerek bilgi tabanı zenginleştirilebilir.
 
-Komut satırı veya web arayüzü desteği:
-Terminal üzerinden sohbet edilebilir veya Flask tabanlı basit bir web arayüzü kullanılabilir.
-
-## Klasör Yapısı
-
-eagleye/
-
-├── templates/
-
-│   └── index.html
-
-│
-
-├── models/
-
-│   └── Meta-Llama-3-8B.Q4_K_S.gguf
-
-│
-
-├── chatbot.py
-
-├── veri.json
-
-├── requirements.txt
-
-├── README.md   
-
-## Gereksinimler
-
-Python 3.7 veya üzeri
-
-Flask
-
-sentence-transformers
-
-llama-cpp-python
-
-## Gerekli kütüphaneleri kurmak için:
-
-pip install flask sentence-transformers llama-cpp-python
-
-## Çalıştırma
-
-python chatbot.py
+python asistan.py
 
 ## Notlar
 
 models/ klasörü altındaki .gguf dosyası oldukça büyük olabilir. LLaMA modelinin çalışabilmesi için sisteminizde yeterli RAM ve CPU/GPU kaynakları bulunmalıdır.
 
-LLaMA modeli ile entegrasyon, chatbot.py dosyasında llama-cpp-python üzerinden gerçekleştirilir.
+LLaMA modeli ile entegrasyon, asistan.py dosyasında llama-cpp-python üzerinden gerçekleştirilir.
