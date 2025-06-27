@@ -214,3 +214,4 @@ def chat(request):
     chat_history.append({"role": "bot", "content": response})
     session['chat_history'] = chat_history
     return JsonResponse({"response": response})
+    
