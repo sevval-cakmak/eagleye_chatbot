@@ -81,7 +81,7 @@ def run_tshark_capture(user_input, duration=10):
     except Exception as e:
         return f"Tshark hatası: {e}"
 
-def handle_command(command):
+def handle_command(command, session):
     command = command.lower()
 
     if not session.get("user_consent", False):
