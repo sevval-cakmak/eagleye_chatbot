@@ -22,7 +22,7 @@ faq_data = {
 }
 faq_embeddings = model.encode(list(faq_data.keys()), convert_to_tensor=True)
 
-llama_path = r"C:\Masaüstü\chatbot\models\Meta-Llama-3-8B.Q4_K_S.gguf"
+llama_path = r"LLAMA_MODELİNİN_YOLU"
 llm = Llama(model_path=llama_path, n_ctx=2048, n_threads=4, n_gpu_layers=30)
 
 SYSTEM_PROMPT = ("""Sen bir siber güvenlik asistanısın. Aşağıdaki kurallara uy:
